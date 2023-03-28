@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         testAdapter = new testadapter(this,list);
         recyclerView.setAdapter(testAdapter);
 
-// dũng nè 12345
+// dũng nè 123456
 
 
     }
