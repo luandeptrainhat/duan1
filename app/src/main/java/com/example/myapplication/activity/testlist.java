@@ -13,6 +13,5 @@ public class testlist extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testlist);
-        Toast.makeText(this, "dung khung", Toast.LENGTH_SHORT).show();
     }
 }
