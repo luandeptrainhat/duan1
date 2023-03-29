@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.myapplication.adapter.testadapter;
@@ -32,8 +33,5 @@ public class MainActivity extends AppCompatActivity {
         list = dao.getDSPRO();
         testAdapter = new testadapter(this,list);
         recyclerView.setAdapter(testAdapter);
-
-
-
     }
 }
