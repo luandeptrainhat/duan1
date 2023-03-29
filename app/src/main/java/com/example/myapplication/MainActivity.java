@@ -5,12 +5,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.example.myapplication.adapter.testadapter;
-import com.example.myapplication.dao.TestDAO;
-import com.example.myapplication.database.Dbhelper;
-import com.example.myapplication.model.Product;
 
 import java.util.ArrayList;
 
