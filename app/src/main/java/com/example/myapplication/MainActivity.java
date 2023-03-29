@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.myapplication.adapter.testadapter;
@@ -31,9 +32,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
         list = dao.getDSPRO();
         testAdapter = new testadapter(this,list);
+        Log.d("TAG>>>>>>>>>>>>>>>>>>>", "onCreate: Toasst");
         recyclerView.setAdapter(testAdapter);
 
-
+        // Luân Cức gà
 
     }
 }
