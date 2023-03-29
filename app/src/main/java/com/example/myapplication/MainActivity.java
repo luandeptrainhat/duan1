@@ -35,7 +35,5 @@ public class MainActivity extends AppCompatActivity {
         Log.d("TAG>>>>>>>>>>>>>>>>>>>", "onCreate: Toasst");
         recyclerView.setAdapter(testAdapter);
 
-        // Luân Cức gà
-
     }
 }
