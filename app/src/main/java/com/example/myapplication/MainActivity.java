@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
         list = dao.getDSPRO();
         testAdapter = new testadapter(this,list);
-        Log.d("TAG>>>>>>>>>>>>>>>>>>>", "onCreate: Toasst");
         recyclerView.setAdapter(testAdapter);
-
     }
 }
