@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
 import com.example.myapplication.model.LoaiGiay;
-import com.example.myapplication.model.Product;
 
 import java.util.ArrayList;
 
