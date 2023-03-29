@@ -15,11 +15,11 @@ import com.example.myapplication.model.Product;
 
 import java.util.ArrayList;
 
-public class testadapter extends RecyclerView.Adapter<testadapter.ViewHolder> {
+public class Giayadapter extends RecyclerView.Adapter<Giayadapter.ViewHolder> {
     private Context context;
     private ArrayList<Product> list;
 
-    public testadapter(Context context, ArrayList<Product> list) {
+    public Giayadapter(Context context, ArrayList<Product> list) {
         this.context = context;
         this.list = list;
     }

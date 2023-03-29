@@ -9,10 +9,10 @@ import com.example.myapplication.model.Product;
 
 import java.util.ArrayList;
 
-public class TestDAO {
+public class GiayDAO {
      Dbhelper dbhelper;
 
-    public TestDAO(Context context) {
+    public GiayDAO(Context context) {
         dbhelper = new Dbhelper(context);
     }
 
