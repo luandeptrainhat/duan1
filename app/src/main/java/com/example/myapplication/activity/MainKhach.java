@@ -27,7 +27,7 @@ public class MainKhach extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.fragmentchung, fragment).commit();
 
-        
+
         hienfragment();
 
 
