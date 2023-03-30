@@ -30,7 +30,7 @@ public class GiayDAO {
                         cursor.getInt(3),
                         cursor.getString(4),
                         cursor.getInt(5),
-                        cursor.getInt(6),
+                        cursor.getBlob(6),
                         cursor.getInt(7)
                         ));
             }while (cursor.moveToNext());
