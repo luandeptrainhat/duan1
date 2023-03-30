@@ -335,7 +335,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="60dp"
             android:background="@drawable/shapemain2"
             android:text="Thêm vào giỏ hàng"/>
 
