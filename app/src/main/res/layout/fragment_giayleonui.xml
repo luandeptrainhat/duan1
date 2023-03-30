@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#E11F1F1F">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/shapemain"
+        android:orientation="horizontal"
+
+        >
+
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Giảm 40%"
+                android:layout_gravity="left"
+                android:textColor="#C1FFFFFF"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Bitis Hunter Air 4"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:text="Nhận khuyến mãi cho mọi đơn hàng trong hôm nay"
+                android:textAlignment="textStart"
+                android:textColor="#B2FFFFFF"
+
+                />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/giayleonui"
+            android:layout_marginLeft="-50dp"
+            android:layout_marginTop="-10dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+
+        android:paddingLeft="15dp">
+
+
+
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="37dp"
+
+            android:layout_marginTop="3dp"
+
+            android:background="@drawable/shapemain3"
+
+            android:orientation="vertical"
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/giaythethao"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="1dp"
+               app:civ_circle_background_color="@color/white"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Giày leo núi"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:background="@drawable/shapemain2"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/giaythethao"
+              app:civ_border_color="#FF000000"
+                app:civ_border_width="1dp"
+                app:civ_circle_background_color="@color/white"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Giày leo núi"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/shapemain3"
+            android:orientation="vertical"
+            android:padding="3dp"
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/giaythethao"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="0dp"
+                app:civ_circle_background_color="@color/white"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Giày leo núi"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/shapemain3"
+            android:orientation="vertical"
+            android:padding="3dp"
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/giaythethao"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="0dp"
+                app:civ_circle_background_color="@color/white"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Giày leo núi"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+
+
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đề xuất"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xem tất cả"
+            android:textSize="14sp"
+            android:layout_marginLeft="220dp"
+            android:textColor="@color/white"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+
+            android:layout_marginLeft="25dp"
+
+            android:background="@drawable/shape4"
+
+            android:orientation="vertical"
+
+            >
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/giayleonui"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bán chạy nhất"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:textColor="#FD5F44"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nike Air Fly"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="end"
+                android:layout_marginTop="25dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.344.999 VNĐ"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="5dp"
+
+                    android:textColor="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="45dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/shapemain"
+
+                    android:orientation="vertical"
+
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="+"
+                        android:textColor="@color/black"
+                        android:textSize="27sp"
+
+
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+
+
+            android:background="@drawable/shape4"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical"
+
+            >
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/giayleonui"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bán chạy nhất"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:textColor="#FD5F44"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nike Air Zoom 95"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="end"
+                android:layout_marginTop="25dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.344.999 VNĐ"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="5dp"
+
+                    android:textColor="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="45dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_gravity="end"
+                    android:background="@drawable/shapemain"
+
+                    android:orientation="vertical"
+
+                    >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="+"
+                        android:textColor="@color/black"
+                        android:textSize="27sp"
+
+
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

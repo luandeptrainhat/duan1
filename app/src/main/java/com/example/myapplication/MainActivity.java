@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+
 import com.example.myapplication.adapter.Giayadapter;
 import com.example.myapplication.adapter.LoaiGiayAdapter;
 import com.example.myapplication.dao.GiayDAO;
@@ -35,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
         showloaigiay();
         showgiay();
+
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        list = dao.getDSPRO();
+//        testAdapter = new testadapter(this,list);
+        recyclerView.setAdapter(testAdapter);
+
 
 
 
