@@ -7,10 +7,10 @@ public class Product {
     private int soluong;
     private String mausac;
     private int kichco;
-    private int anh;
+    private byte [] anh;
     private int maloaigiay;
 
-    public Product(int magiay, String tengiay, int gia, int soluong, String mausac, int kichco, int anh, int maloaigiay) {
+    public Product(int magiay, String tengiay, int gia, int soluong, String mausac, int kichco, byte[] anh, int maloaigiay) {
         this.magiay = magiay;
         this.tengiay = tengiay;
         this.gia = gia;
@@ -69,11 +69,11 @@ public class Product {
         this.kichco = kichco;
     }
 
-    public int getAnh() {
+    public byte[] getAnh() {
         return anh;
     }
 
-    public void setAnh(int anh) {
+    public void setAnh(byte[] anh) {
         this.anh = anh;
     }
 
