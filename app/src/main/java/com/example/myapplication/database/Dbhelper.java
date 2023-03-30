@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class Dbhelper extends SQLiteOpenHelper {
     public Dbhelper(Context context) {
-        super(context, "FIVESOLE", null, 1);
+        super(context, "FIVESOLE", null, 2);
 
     }
 
@@ -31,12 +31,12 @@ public class Dbhelper extends SQLiteOpenHelper {
         db.execSQL(dbGioHang);
 
 
-//        db.execSQL( "INSERT INTO LOAIGIAY VALUES (1,'giày thể thao'), (2, 'giày lười'),(3, 'giày leo núi')");
-//        db.execSQL("INSERT INTO GIAY VALUES(1,'thuong dinh',2000,5,'den',42,65498312,1),(2,'bitis',2000,5,'trang',43,7845312,1)");
-//        db.execSQL("INSERT INTO NGUOIDUNG VALUES ('dungdo','123',0),('duysui','123',1)");
-//        db.execSQL("INSERT INTO DONHANG VALUES (1,2000,'dungdo'), (2,300, 'dungdo')");
-//        db.execSQL("INSERT INTO CTDH VALUES (1,1,1),(2,2,1)");
-//        db.execSQL("INSERT INTO GIOHANG VALUES(1,1,'dungdo')");
+        db.execSQL( "INSERT INTO LOAIGIAY VALUES (1,'giày thể thao'), (2, 'giày lười'),(3, 'giày leo núi')");
+    //    db.execSQL("INSERT INTO GIAY VALUES(1,'thuong dinh',2000,5,'den',42,65498312,1),(2,'bitis',2000,5,'trang',43,7845312,1)");
+        db.execSQL("INSERT INTO NGUOIDUNG VALUES ('dungdo','123',0),('duysui','123',1)");
+        db.execSQL("INSERT INTO DONHANG VALUES (1,2000,'dungdo'), (2,300, 'dungdo')");
+        db.execSQL("INSERT INTO CTDH VALUES (1,1,1),(2,2,1)");
+        db.execSQL("INSERT INTO GIOHANG VALUES(1,1,'dungdo')");
 
 
 
