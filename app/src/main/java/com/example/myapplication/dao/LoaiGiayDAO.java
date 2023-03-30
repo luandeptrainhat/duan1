@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.myapplication.database.Dbhelper;
 import com.example.myapplication.model.LoaiGiay;
-import com.example.myapplication.model.Product;
 
 import java.util.ArrayList;
 

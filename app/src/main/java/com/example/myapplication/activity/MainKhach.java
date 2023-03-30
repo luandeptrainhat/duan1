@@ -3,16 +3,14 @@ package com.example.myapplication.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.example.myapplication.R;
 
-public class testlist extends AppCompatActivity {
+public class MainKhach extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_testlist);
-//        luan dac cau
+        setContentView(R.layout.activity_mainkhach);
     }
 }
