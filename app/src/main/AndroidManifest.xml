@@ -12,10 +12,17 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".activity.motasanpham"
-            android:exported="true" >
+            android:name=".activity.testThemHienGiay"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.motasanpham"
+            android:exported="true"></activity>
         <activity
             android:name=".activity.doimatkhau"
             android:exported="true">
@@ -25,11 +32,8 @@
         </activity>
         <activity
             android:name=".activity.MainKhach"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="true">
+
         </activity>
         <activity
             android:name=".activity.quangcao"
@@ -48,9 +52,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

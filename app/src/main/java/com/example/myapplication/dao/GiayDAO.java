@@ -1,5 +1,6 @@
 package com.example.myapplication.dao;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -36,5 +37,19 @@ public class GiayDAO {
             }while (cursor.moveToNext());
         }
         return  list;
+    }
+// magiay integer primary key autoincrement , tengiay text, giagiay integer, soluong integer, mausac text, kichco integer, anh blob, maloaigiay integer
+    public boolean themGiay (Product product){
+        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("tengiay",product.getTengiay());
+        contentValues.put("giagiay",product.getGia());
+        contentValues.put("soluong",product.getSoluong());
+        contentValues.put("mausac",product.getMausac());
+        contentValues.put("kichco",product.getKichco());
+        contentValues.put("anh",product.getAnh());
+        contentValues.put("maloaigiay",product.getMaloaigiay());
+        long check  = sqLiteDatabase.insert("GIAY",null,contentValues);
+        return check > 0;
     }
 }
