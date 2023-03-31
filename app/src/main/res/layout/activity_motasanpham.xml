@@ -285,7 +285,7 @@
         <Button
             android:layout_width="40dp"
             android:layout_height="match_parent"
-            android:hint="+"
+            android:hint="-"
             android:textStyle="bold"
             android:textAlignment="center"
             android:backgroundTint="@color/white"
@@ -307,7 +307,7 @@
         <Button
             android:layout_width="40dp"
             android:layout_height="match_parent"
-            android:hint="-"
+            android:hint="+"
             android:textAlignment="center"
             android:backgroundTint="@color/white"
             android:textColor="@color/black"
