@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="#BCD5D3D3"
-    android:padding="25dp">
+    android:padding="10dp">
 
 
     <TextView
@@ -12,23 +12,24 @@
         android:layout_height="wrap_content"
         android:text="Thêm giày"
         android:textColor="#8F000000"
-        android:textSize="40sp"
+        android:textSize="25sp"
         android:layout_gravity="center"
         android:textStyle="bold"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="45dp"
-        android:layout_marginTop="20dp">
+
+        android:layout_marginTop="5dp">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+
             android:text="Mã giày"
             android:textColor="#8F000000"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textSize="15sp"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,17 +41,9 @@
 
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginRight="45dp"
-        >
-
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:hint="Nhập mã giày"
             android:textSize="20sp"
             android:background="@drawable/gradient_edittext"
@@ -58,21 +51,21 @@
             android:textStyle="italic"/>
 
 
-    </androidx.cardview.widget.CardView>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="45dp"
-        android:layout_marginTop="20dp">
+
+        android:layout_marginTop="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tên giày"
             android:textColor="#8F000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold"/>
         <TextView
             android:layout_width="wrap_content"
@@ -85,17 +78,11 @@
 
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginRight="45dp"
-        >
+
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:hint="Nhập tên giày"
             android:textSize="20sp"
             android:background="@drawable/gradient_edittext"
@@ -103,21 +90,21 @@
             android:textStyle="italic"/>
 
 
-    </androidx.cardview.widget.CardView>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="45dp"
-        android:layout_marginTop="20dp">
+
+        android:layout_marginTop="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Giá giày"
             android:textColor="#8F000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold"/>
         <TextView
             android:layout_width="wrap_content"
@@ -130,17 +117,9 @@
 
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginRight="45dp"
-        >
-
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:hint="Nhập giá giày"
             android:textSize="20sp"
             android:background="@drawable/gradient_edittext"
@@ -148,21 +127,21 @@
             android:textStyle="italic"/>
 
 
-    </androidx.cardview.widget.CardView>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="45dp"
-        android:layout_marginTop="20dp">
+
+        android:layout_marginTop="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Số lượng"
             android:textColor="#8F000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold"/>
         <TextView
             android:layout_width="wrap_content"
@@ -175,17 +154,9 @@
 
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginRight="45dp"
-        >
-
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:hint="Nhập số lương"
             android:textSize="20sp"
             android:background="@drawable/gradient_edittext"
@@ -193,21 +164,20 @@
             android:textStyle="italic"/>
 
 
-    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="45dp"
-        android:layout_marginTop="20dp">
+
+        android:layout_marginTop="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Màu sắc"
             android:textColor="#8F000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold"/>
         <TextView
             android:layout_width="wrap_content"
@@ -220,17 +190,11 @@
 
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginRight="45dp"
-        >
+
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:hint="Nhập màu sắc"
             android:textSize="20sp"
             android:background="@drawable/gradient_edittext"
@@ -238,21 +202,21 @@
             android:textStyle="italic"/>
 
 
-    </androidx.cardview.widget.CardView>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="45dp"
-        android:layout_marginTop="20dp">
+
+        android:layout_marginTop="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kích cỡ"
             android:textColor="#8F000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold"/>
         <TextView
             android:layout_width="wrap_content"
@@ -265,17 +229,11 @@
 
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginRight="45dp"
-        >
+
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:hint="Nhập kích cỡ"
             android:textSize="20sp"
             android:background="@drawable/gradient_edittext"
@@ -283,53 +241,52 @@
             android:textStyle="italic"/>
 
 
-    </androidx.cardview.widget.CardView>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="45dp"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="5dp"
+
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ảnh"
             android:textColor="#8F000000"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="*"
-            android:textSize="20sp"
             android:textColor="#FCFF0303"
-            android:textStyle="bold"/>
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
 
     <ImageView
-        android:layout_width="190dp"
-        android:layout_height="190dp"
-        android:src="@drawable/img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="5dp"
+        android:src="@drawable/img" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="45dp"
-        android:layout_marginTop="20dp">
+
+        android:layout_marginTop="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mã loại giày"
             android:textColor="#8F000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold"/>
         <TextView
             android:layout_width="wrap_content"
@@ -342,17 +299,11 @@
 
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginRight="45dp"
-        >
+
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:hint="Nhập mã loại giày"
             android:textSize="20sp"
             android:background="@drawable/gradient_edittext"
@@ -360,7 +311,7 @@
             android:textStyle="italic"/>
 
 
-    </androidx.cardview.widget.CardView>
+
 
 
 </LinearLayout>

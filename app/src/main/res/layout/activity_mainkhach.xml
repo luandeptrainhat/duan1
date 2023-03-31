@@ -236,7 +236,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
 
                 android:layout_width="18dp"
-                android:layout_height="18dp"
+                android:layout_height="23dp"
                 android:layout_gravity="center"
                 android:src="@drawable/giaythoitrang"
                 app:civ_border_color="#FF000000"
