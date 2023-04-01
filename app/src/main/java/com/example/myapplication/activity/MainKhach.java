@@ -21,11 +21,11 @@ import com.example.myapplication.fragment.fragmentLeoNui;
 import com.example.myapplication.fragment.fragmentTheThao;
 import com.example.myapplication.fragment.fragmentThoiTrang;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainKhach extends AppCompatActivity {
     LinearLayout fragmentchung;
-
+// dung da o day roi
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,8 +49,6 @@ public class MainKhach extends AppCompatActivity {
         LinearLayout linearthoitrang = findViewById(R.id.linearthoitrang);
         LinearLayout linearda = findViewById(R.id.linearda);
         LinearLayout linearleonui = findViewById(R.id.linearleonui);
-
-
         linearda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,10 +100,10 @@ public class MainKhach extends AppCompatActivity {
 
     private void SetColer(LinearLayout linearLayout) {
         linearLayout.setBackground(getDrawable(R.drawable.shapemain2));
-      //  linearLayout.setLayoutParams(new LinearLayout.LayoutParams(130, 65));
+        //  linearLayout.setLayoutParams(new LinearLayout.LayoutParams(130, 65));
         linearLayout.setOrientation(LinearLayout.HORIZONTAL);
         linearLayout.setGravity(CENTER);
-      //  linearLayout.setPadding(5, 5, 5, 5);
+        //  linearLayout.setPadding(5, 5, 5, 5);
 
         for (int i = 0; i < linearLayout.getChildCount(); i++) {
             View v = linearLayout.getChildAt(i);

@@ -49,6 +49,7 @@
       >
 
         <EditText
+            android:id="@+id/edttaikhoan"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Tên đăng nhập"
@@ -95,6 +96,7 @@
        >
 
         <EditText
+            android:id="@+id/edtmatkhau"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="************"
@@ -110,6 +112,7 @@
 
 
     <Button
+        android:id="@+id/btndangnhap"
         android:layout_width="match_parent"
         android:layout_height="50dp"
 
@@ -189,6 +192,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/txtdangki"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Đăng kí tài khoản FiveSole"
