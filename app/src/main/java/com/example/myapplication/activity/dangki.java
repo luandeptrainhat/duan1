@@ -34,9 +34,9 @@ public class dangki extends AppCompatActivity {
                 String taikhoan = edttaikhoan.getText().toString();
                 String matkhau = edtmatkhau1.getText().toString();
                 String pass2 = edtmatkhau2.getText().toString();
-
+///sadf
                 if(matkhau.equals(pass2)){
-                    if(nguoiDungDao.them(taikhoan,matkhau)){
+                    if(nguoiDungDao.them(taikhoan,matkhau,1)){
                         Intent intent = new Intent(dangki.this, com.example.myapplication.activity.dangnhap.class);
                         startActivity(intent);
                         Toast.makeText(dangki.this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
