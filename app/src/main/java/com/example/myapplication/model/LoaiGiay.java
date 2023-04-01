@@ -1,19 +1,19 @@
 package com.example.myapplication.model;
 
 public class LoaiGiay {
-    private int maloai;
+    private String maloai;
     private String tenloai;
 
-    public LoaiGiay(int maloai, String tenloai) {
+    public LoaiGiay(String maloai, String tenloai) {
         this.maloai = maloai;
         this.tenloai = tenloai;
     }
 
-    public int getMaloai() {
+    public String getMaloai() {
         return maloai;
     }
 
-    public void setMaloai(int maloai) {
+    public void setMaloai(String maloai) {
         this.maloai = maloai;
     }
 
