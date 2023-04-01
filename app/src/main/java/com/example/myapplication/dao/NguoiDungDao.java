@@ -26,11 +26,10 @@ public class NguoiDungDao {
         if (cursor.getCount() != 0){
 
             cursor.moveToFirst();
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString("taikhoan",cursor.getString(0));
-            editor.putString("matkhau",cursor.getString(1));
-            editor.putInt("phanquyen",cursor.getInt(2));
-            editor.commit();
+//            SharedPreferences.Editor editor = sharedPreferences.edit();
+//            editor.putString("taikhoan",cursor.getString(0));
+//            editor.putString("matkhau",cursor.getString(1));
+        //    editor.commit();
             return true;
         }else {
             return false;
@@ -51,28 +50,18 @@ public class NguoiDungDao {
     }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 public  boolean them(String taikhoan, String matkhau,int phanquyen){
-=======
-public  boolean them(String taikhoan, String matkhau, int phanquyen){
->>>>>>> parent of ac489e0 (homnay)
-=======
-public  boolean them(String taikhoan, String matkhau, int phanquyen){
->>>>>>> parent of ac489e0 (homnay)
+
+
+
     SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
     ContentValues contentValues = new ContentValues();
     contentValues.put("taikhoan", taikhoan);
     contentValues.put("matkhau",matkhau);
+
     contentValues.put("phanquyen",phanquyen);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> parent of ac489e0 (homnay)
-=======
-
->>>>>>> parent of ac489e0 (homnay)
     long check = sqLiteDatabase.insert("NGUOIDUNG", null,contentValues);
     if(check ==-1){
         return  false;
@@ -81,4 +70,6 @@ public  boolean them(String taikhoan, String matkhau, int phanquyen){
     return  true;
 
 }
+
+
 }

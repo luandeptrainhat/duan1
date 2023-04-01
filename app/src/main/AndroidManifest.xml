@@ -26,15 +26,19 @@
         <activity
             android:name=".activity.MainKhach"
             android:exported="true" >
-<<<<<<< HEAD
 
-=======
+            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
->>>>>>> parent of ac489e0 (homnay)
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
         </activity>
         <activity
             android:name=".activity.quangcao"
