@@ -20,7 +20,7 @@ import com.example.myapplication.R;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainKhach extends AppCompatActivity {
-Fragment fragmentchung;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
