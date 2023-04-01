@@ -4,7 +4,6 @@ import static android.view.Gravity.CENTER;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -15,21 +14,18 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+
 import com.example.myapplication.R;
-import com.example.myapplication.fragment.fragmentDa;
-import com.example.myapplication.fragment.fragmentLeoNui;
-import com.example.myapplication.fragment.fragmentTheThao;
-import com.example.myapplication.fragment.fragmentThoiTrang;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainKhach extends AppCompatActivity {
-    LinearLayout fragmentchung;
-
+Fragment fragmentchung;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainkhach);
+
 
         LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
         fragmentchung = findViewById(R.id.fragmentchung);
@@ -98,6 +94,7 @@ public class MainKhach extends AppCompatActivity {
                 SetColer(linearleonui);
             }
         });
+
     }
 
     private void SetColer(LinearLayout linearLayout) {
