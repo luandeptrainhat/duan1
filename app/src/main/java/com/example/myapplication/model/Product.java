@@ -20,6 +20,17 @@ public class Product {
         this.anh = anh;
         this.maloaigiay = maloaigiay;
     }
+//
+
+    public Product(String tengiay, int gia, int soluong, String mausac, int kichco, byte[] anh, int maloaigiay) {
+        this.tengiay = tengiay;
+        this.gia = gia;
+        this.soluong = soluong;
+        this.mausac = mausac;
+        this.kichco = kichco;
+        this.anh = anh;
+        this.maloaigiay = maloaigiay;
+    }
 
     public int getMagiay() {
         return magiay;
