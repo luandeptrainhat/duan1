@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="#E11F1F1F">
+    android:background="#E11F1F1F"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,9 +24,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="left"
                 android:layout_marginBottom="10dp"
                 android:text="Giảm 40%"
-                android:layout_gravity="left"
                 android:textColor="#C1FFFFFF"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -57,9 +57,9 @@
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/giaythoitrang"
             android:layout_marginLeft="-50dp"
-            android:layout_marginTop="-10dp"/>
+            android:layout_marginTop="-10dp"
+            android:src="@drawable/giaythoitrang" />
 
 
     </LinearLayout>
@@ -73,45 +73,30 @@
         android:paddingLeft="15dp">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="20dp"
         android:layout_marginTop="10dp"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Đề xuất"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"/>
+        android:orientation="horizontal"
+        android:paddingLeft="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Xem tất cả"
-            android:textSize="14sp"
-            android:layout_marginLeft="220dp"
+            android:text="Đề xuất"
             android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
+            android:text="Xem tất cả"
+            android:textColor="@color/white"
+            android:textSize="14sp"
 
             />
 
@@ -137,64 +122,63 @@
             android:orientation="vertical"
 
             >
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_gravity="center"
                 android:src="@drawable/giaythoitrang"
-                android:layout_gravity="center"
 
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="Bán chạy nhất"
-                android:textStyle="bold"
-                android:textSize="12sp"
-                android:layout_gravity="center"
                 android:textColor="#FD5F44"
-                />
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nike Air Fly"
-                android:textStyle="bold"
                 android:layout_gravity="center"
-                android:textSize="15sp"
+                android:text="Nike Air Fly"
                 android:textColor="@color/white"
-                />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_gravity="end"
                 android:layout_marginTop="25dp"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2.344.999 VNĐ"
-                    android:textStyle="bold"
                     android:layout_gravity="center"
-                    android:textSize="13sp"
                     android:layout_marginLeft="5dp"
+                    android:text="2.344.999 VNĐ"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
 
-                    android:textColor="@color/white"/>
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="45dp"
                     android:layout_height="37dp"
+                    android:layout_gravity="end"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="3dp"
-                    android:layout_gravity="end"
                     android:background="@drawable/shapemain"
 
                     android:orientation="vertical"
 
                     >
-
 
 
                     <TextView
@@ -212,10 +196,6 @@
 
 
             </LinearLayout>
-
-
-
-
 
 
         </LinearLayout>
@@ -225,68 +205,66 @@
             android:layout_height="match_parent"
 
 
-            android:background="@drawable/shape4"
             android:layout_marginLeft="30dp"
+            android:background="@drawable/shape4"
             android:orientation="vertical"
 
             >
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/giaythoitrang"
                 android:layout_gravity="center"
-                />
+                android:src="@drawable/giaythoitrang" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bán chạy nhất"
-                android:textStyle="bold"
-                android:textSize="12sp"
                 android:layout_gravity="center"
+                android:text="Bán chạy nhất"
                 android:textColor="#FD5F44"
-                />
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nike Air Zoom 95"
-                android:textStyle="bold"
                 android:layout_gravity="center"
-                android:textSize="15sp"
+                android:text="Nike Air Zoom 95"
                 android:textColor="@color/white"
-                />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_gravity="end"
                 android:layout_marginTop="25dp"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2.344.999 VNĐ"
-                    android:textStyle="bold"
                     android:layout_gravity="center"
-                    android:textSize="13sp"
                     android:layout_marginLeft="5dp"
+                    android:text="2.344.999 VNĐ"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
 
-                    android:textColor="@color/white"/>
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="45dp"
                     android:layout_height="37dp"
+                    android:layout_gravity="end"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="3dp"
-                    android:layout_gravity="end"
                     android:background="@drawable/shapemain"
 
                     android:orientation="vertical"
 
                     >
-
 
 
                     <TextView
@@ -306,12 +284,7 @@
             </LinearLayout>
 
 
-
-
-
-
         </LinearLayout>
-
 
 
     </LinearLayout>
