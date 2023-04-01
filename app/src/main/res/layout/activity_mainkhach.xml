@@ -142,27 +142,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
 
+        android:paddingLeft="15dp">
 
         <LinearLayout
             android:layout_width="110dp"
             android:layout_height="45dp"
             android:id="@+id/lineartheothao"
+<<<<<<< HEAD
+            android:background="@drawable/shapemain2"
+            android:orientation="horizontal"
+            android:padding="5dp"
+=======
+            android:layout_width="110dp"
+            android:layout_height="45dp"
             android:background="@drawable/shapemain2"
             android:orientation="horizontal"
             android:padding="5dp"
 
+            >
+>>>>>>> parent of d947d51 (Hoàn thiện fragment lần 3)
+
 >
             <de.hdodenhof.circleimageview.CircleImageView
 
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
                 android:src="@drawable/giaythethao"
                 app:civ_border_color="#FF000000"
-                app:civ_border_width="0dp"
+                app:civ_border_width="1dp"
                 app:civ_circle_background_color="@color/white"
 
                 />
@@ -172,8 +181,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Giày thể thao"
-                android:textColor="@color/black"
-                android:textSize="7sp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
                 android:textStyle="bold"
 
                 />
@@ -184,6 +193,12 @@
         <LinearLayout
             android:layout_width="75dp"
             android:layout_height="37dp"
+<<<<<<< HEAD
+=======
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/shapemain3"
+>>>>>>> parent of d947d51 (Hoàn thiện fragment lần 3)
 
             android:layout_marginLeft="10dp"
             android:id="@+id/linearleonui"
@@ -196,7 +211,7 @@
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_gravity="center"
-                android:src="@drawable/giayleonui"
+                android:src="@drawable/giaythethao"
                 app:civ_border_color="#FF000000"
                 app:civ_border_width="0dp"
                 app:civ_circle_background_color="@color/white"
@@ -220,6 +235,14 @@
         <LinearLayout
             android:layout_width="75dp"
             android:layout_height="37dp"
+<<<<<<< HEAD
+=======
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/shapemain3"
+            android:orientation="vertical"
+            android:padding="3dp"
+>>>>>>> parent of d947d51 (Hoàn thiện fragment lần 3)
 
             android:layout_marginLeft="10dp"
             android:id="@+id/linearda"
@@ -231,7 +254,7 @@
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_gravity="center"
-                android:src="@drawable/giayda"
+                android:src="@drawable/giaythethao"
                 app:civ_border_color="#FF000000"
                 app:civ_border_width="0dp"
                 app:civ_circle_background_color="@color/white"
@@ -242,7 +265,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Giày Da"
+                android:text="Giày leo núi"
                 android:textColor="@color/black"
                 android:textSize="7sp"
 
@@ -254,7 +277,7 @@
         <LinearLayout
             android:layout_width="75dp"
             android:layout_height="37dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:id="@+id/linearthoitrang"
             android:layout_marginTop="3dp"
             android:background="@drawable/shapemain3"
@@ -268,7 +291,7 @@
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_gravity="center"
-                android:src="@drawable/giaythoitrang"
+                android:src="@drawable/giaythethao"
                 app:civ_border_color="#FF000000"
                 app:civ_border_width="0dp"
                 app:civ_circle_background_color="@color/white"
@@ -279,7 +302,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Giày Thời Trang"
+                android:text="Giày leo núi"
                 android:textColor="@color/black"
                 android:textSize="7sp"
 
