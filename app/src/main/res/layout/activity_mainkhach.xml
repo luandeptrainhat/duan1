@@ -7,10 +7,12 @@
     android:background="#E11F1F1F"
     android:orientation="vertical"
     tools:context=".activity.MainKhach">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="horizontal">
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="80dp"
@@ -19,45 +21,62 @@
             android:src="@drawable/man"
             app:civ_border_color="#FF000000"
             app:civ_border_width="0dp" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chào buổi sáng"
                 android:textColor="@color/white" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ông chủ"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
+
+
         </LinearLayout>
+
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="25dp"
+
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="20dp"
                 android:src="@drawable/baseline_shopping_basket_24" />
+
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
                 android:src="@drawable/baseline_headphones_24" />
+
+
         </LinearLayout>
+
+
     </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <EditText
             android:layout_width="290dp"
             android:layout_height="50dp"
@@ -65,31 +84,28 @@
             android:background="#333333"
             android:drawableLeft="@drawable/baseline_search_24"
             android:padding="10dp"
-            android:text="Tìm kiếm loại giày,..."
+            android:hint="Tìm kiếm loại giày,..."
             android:textColor="#90F6F3F3"
             android:textFontWeight="@integer/material_motion_duration_medium_2"
             android:textSize="16sp"
+
             />
+
         <ImageView
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
             android:background="#333333"
             android:src="@drawable/baseline_sort_24" />
+
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
-<<<<<<< HEAD
-        android:orientation="horizontal"
-        android:paddingLeft="15dp">
-=======
         android:orientation="horizontal">
-
->>>>>>> parent of ae43dde (Revert "Hoàn thiện fragment lần 3")
-
         <LinearLayout
             android:id="@+id/lineartheothao"
             android:layout_width="75dp"
@@ -98,15 +114,11 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="3dp"
             android:background="@drawable/shapemain3"
-<<<<<<< HEAD
-=======
 
 
->>>>>>> parent of ae43dde (Revert "Hoàn thiện fragment lần 3")
             >
 
             <de.hdodenhof.circleimageview.CircleImageView
-
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_gravity="center"
@@ -116,6 +128,7 @@
                 app:civ_circle_background_color="@color/white"
 
                 />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -126,17 +139,8 @@
                 android:textStyle="bold"
 
                 />
-            <LinearLayout
-                android:layout_width="75dp"
-                android:layout_height="37dp"
-                android:layout_marginLeft="10dp"
-                android:id="@+id/linearthoitrang"
-                android:layout_marginTop="3dp"
-                android:background="@drawable/shapemain3"/>
 
         </LinearLayout>
-<<<<<<< HEAD
-=======
 
 
         <LinearLayout
@@ -215,10 +219,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="75dp"
-            android:layout_height="37dp"
-            android:layout_marginLeft="20dp"
             android:id="@+id/linearthoitrang"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="3dp"
             android:background="@drawable/shapemain3"
             android:orientation="vertical"
@@ -252,13 +256,13 @@
         </LinearLayout>
 
 
->>>>>>> parent of ae43dde (Revert "Hoàn thiện fragment lần 3")
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="20dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -266,6 +270,7 @@
             android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -273,11 +278,17 @@
             android:text="Xem tất cả"
             android:textColor="@color/white"
             android:textSize="14sp"
+
             />
+
     </LinearLayout>
+
+
     <LinearLayout
         android:id="@+id/fragmentchung"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" />
+
+
 </LinearLayout>

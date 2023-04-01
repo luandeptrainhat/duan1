@@ -21,11 +21,11 @@ import com.example.myapplication.fragment.fragmentLeoNui;
 import com.example.myapplication.fragment.fragmentTheThao;
 import com.example.myapplication.fragment.fragmentThoiTrang;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainKhach extends AppCompatActivity {
     LinearLayout fragmentchung;
-
+// dung da o day
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,13 +47,8 @@ public class MainKhach extends AppCompatActivity {
     private void hienfragment() {
         LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
         LinearLayout linearthoitrang = findViewById(R.id.linearthoitrang);
-
-
-<<<<<<< HEAD
-
-
-
-=======
+        LinearLayout linearda = findViewById(R.id.linearda);
+        LinearLayout linearleonui = findViewById(R.id.linearleonui);
         linearda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +63,6 @@ public class MainKhach extends AppCompatActivity {
 
 
         });
->>>>>>> parent of ae43dde (Revert "Hoàn thiện fragment lần 3")
         linearthoitrang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,9 +85,6 @@ public class MainKhach extends AppCompatActivity {
                 SetColer(lineartheothao);
             }
         });
-<<<<<<< HEAD
-
-=======
         linearleonui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,15 +96,14 @@ public class MainKhach extends AppCompatActivity {
                 SetColer(linearleonui);
             }
         });
->>>>>>> parent of ae43dde (Revert "Hoàn thiện fragment lần 3")
     }
 
     private void SetColer(LinearLayout linearLayout) {
         linearLayout.setBackground(getDrawable(R.drawable.shapemain2));
-      //  linearLayout.setLayoutParams(new LinearLayout.LayoutParams(130, 65));
+        //  linearLayout.setLayoutParams(new LinearLayout.LayoutParams(130, 65));
         linearLayout.setOrientation(LinearLayout.HORIZONTAL);
         linearLayout.setGravity(CENTER);
-      //  linearLayout.setPadding(5, 5, 5, 5);
+        //  linearLayout.setPadding(5, 5, 5, 5);
 
         for (int i = 0; i < linearLayout.getChildCount(); i++) {
             View v = linearLayout.getChildAt(i);
