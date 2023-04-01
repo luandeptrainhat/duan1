@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this);
         recyclerView.setLayoutManager(linearLayoutManager);
         list = dao.getDSPRO();
-        testAdapter = new Giayadapter(this,list);
+        testAdapter = new Giayadapter(this,list,dao);
         recyclerView.setAdapter(testAdapter);
     }
 

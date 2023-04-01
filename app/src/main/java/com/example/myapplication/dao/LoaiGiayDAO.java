@@ -22,7 +22,7 @@ public class LoaiGiayDAO {
             cursor.moveToFirst();
             do {
                 list.add( new LoaiGiay(
-                        cursor.getString(0),
+                        cursor.getInt(0),
                         cursor.getString(1)
                 ));
             }while (cursor.moveToNext());
