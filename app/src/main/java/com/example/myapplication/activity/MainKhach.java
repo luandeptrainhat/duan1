@@ -24,7 +24,7 @@ import com.example.myapplication.fragment.fragmentThoiTrang;
 
 public class MainKhach extends AppCompatActivity {
     LinearLayout fragmentchung;
-// dung da o day
+// dung da o day roi
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
