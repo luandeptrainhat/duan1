@@ -181,7 +181,7 @@
             android:layout_height="50dp"
             android:layout_margin="5dp"
             android:textSize="15sp"
-            android:text="Đăng nhập"
+            android:text="Google"
             android:textColor="#FD5F44"
             android:backgroundTint="#D9D9D9"
             android:paddingLeft="10dp"
