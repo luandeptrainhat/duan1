@@ -27,6 +27,12 @@ public class dangki extends AppCompatActivity {
         edtmatkhau2 = findViewById(R.id.edtnhaplaimatkhau);
         btndangki = findViewById(R.id.btndangki);
         btndangnhap = findViewById(R.id.btndangnhap);
+        btndangnhap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(dangki.this,dangnhap.class));
+            }
+        });
         nguoiDungDao = new NguoiDungDao(this);
         btndangki.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +40,7 @@ public class dangki extends AppCompatActivity {
                 String taikhoan = edttaikhoan.getText().toString();
                 String matkhau = edtmatkhau1.getText().toString();
                 String pass2 = edtmatkhau2.getText().toString();
-///sadf
+
                 if(matkhau.equals(pass2)){
                     if(nguoiDungDao.them(taikhoan,matkhau,1)){
                         Intent intent = new Intent(dangki.this, com.example.myapplication.activity.dangnhap.class);

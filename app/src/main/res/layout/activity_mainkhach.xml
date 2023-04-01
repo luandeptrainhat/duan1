@@ -82,8 +82,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
+<<<<<<< HEAD
         android:orientation="horizontal"
         android:paddingLeft="15dp">
+=======
+        android:orientation="horizontal">
+
+>>>>>>> parent of ae43dde (Revert "Hoàn thiện fragment lần 3")
 
         <LinearLayout
             android:id="@+id/lineartheothao"
@@ -93,6 +98,11 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="3dp"
             android:background="@drawable/shapemain3"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> parent of ae43dde (Revert "Hoàn thiện fragment lần 3")
             >
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -125,6 +135,124 @@
                 android:background="@drawable/shapemain3"/>
 
         </LinearLayout>
+<<<<<<< HEAD
+=======
+
+
+        <LinearLayout
+            android:id="@+id/linearleonui"
+            android:layout_width="75dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/shapemain3"
+
+            android:orientation="vertical"
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/giayleonui"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="0dp"
+                app:civ_circle_background_color="@color/white"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Giày leo núi"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+
+
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:id="@+id/linearda"
+            android:layout_height="37dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/shapemain3"
+            android:orientation="vertical"
+            android:padding="3dp"
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/giayda"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="0dp"
+                app:civ_circle_background_color="@color/white"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Giày Da"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/linearthoitrang"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/shapemain3"
+            android:orientation="vertical"
+            android:padding="3dp"
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/giaythoitrang"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="0dp"
+                app:civ_circle_background_color="@color/white"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Giày Thời Trang"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+
+
+                />
+
+        </LinearLayout>
+
+
+>>>>>>> parent of ae43dde (Revert "Hoàn thiện fragment lần 3")
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
