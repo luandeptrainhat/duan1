@@ -51,12 +51,28 @@ public class NguoiDungDao {
     }
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 public  boolean them(String taikhoan, String matkhau,int phanquyen){
+=======
+public  boolean them(String taikhoan, String matkhau, int phanquyen){
+>>>>>>> parent of ac489e0 (homnay)
+=======
+public  boolean them(String taikhoan, String matkhau, int phanquyen){
+>>>>>>> parent of ac489e0 (homnay)
     SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
     ContentValues contentValues = new ContentValues();
     contentValues.put("taikhoan", taikhoan);
     contentValues.put("matkhau",matkhau);
     contentValues.put("phanquyen",phanquyen);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of ac489e0 (homnay)
+=======
+
+>>>>>>> parent of ac489e0 (homnay)
     long check = sqLiteDatabase.insert("NGUOIDUNG", null,contentValues);
     if(check ==-1){
         return  false;

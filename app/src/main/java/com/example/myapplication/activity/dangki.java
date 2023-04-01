@@ -40,6 +40,7 @@ public class dangki extends AppCompatActivity {
                         Intent intent = new Intent(dangki.this, com.example.myapplication.activity.dangnhap.class);
                         startActivity(intent);
                         Toast.makeText(dangki.this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
+
                     }else {
                         Toast.makeText(dangki.this, "Đăng kí thất bại", Toast.LENGTH_SHORT).show();
                     }
