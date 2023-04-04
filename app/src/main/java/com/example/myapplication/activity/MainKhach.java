@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -12,6 +13,15 @@ import com.example.myapplication.R;
 
 public class MainKhach extends AppCompatActivity {
 
+
+import android.widget.LinearLayout;
+
+import com.example.myapplication.R;
+import com.example.myapplication.fragment.fragmentTheThao;
+
+public class MainKhach extends AppCompatActivity {
+LinearLayout fragmentchung;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,12 +29,16 @@ public class MainKhach extends AppCompatActivity {
 
 
 
+
         LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
 
+
         fragmentchung = findViewById(R.id.fragmentchung);
+
         Fragment fragment = new fragmentTheThao();
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.fragmentchung, fragment).commit();
+
 
 
         hienfragment();
@@ -76,6 +90,6 @@ public class MainKhach extends AppCompatActivity {
                 fragmentManager.beginTransaction().replace(R.id.fragmentchung, fragment).commit();
             }
         });
-//ghfgh
+
     }
 }
