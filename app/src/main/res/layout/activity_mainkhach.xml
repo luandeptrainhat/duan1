@@ -50,10 +50,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="25dp">
 
-
-            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="30dp"
@@ -77,8 +75,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:orientation="horizontal">
+
 
         <EditText
             android:layout_width="290dp"
@@ -90,9 +88,26 @@
             android:text="Tìm kiếm loại giày,..."
             android:textColor="#90F6F3F3"
             android:textFontWeight="@integer/material_motion_duration_medium_2"
+
             android:textSize="16sp"
 
             />
+
+
+        <EditText
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:background="#333333"
+            android:drawableLeft="@drawable/baseline_search_24"
+            android:hint="Tìm kiếm loại giày,..."
+            android:padding="10dp"
+            android:textColor="#90F6F3F3"
+            android:textFontWeight="@integer/material_motion_duration_medium_2"
+            android:textSize="16sp" />
+
+        />
+
 
         <ImageView
             android:layout_width="50dp"
@@ -103,11 +118,12 @@
 
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#E11F1F1F"
         android:layout_marginTop="20dp"
+        android:background="#E11F1F1F"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -116,10 +132,10 @@
             android:id="@+id/lineartheothao"
             android:layout_width="75dp"
             android:layout_height="37dp"
-            android:orientation="vertical"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="3dp"
             android:background="@drawable/shapemain3"
+            android:orientation="vertical"
 
 
             >
@@ -189,8 +205,8 @@
 
 
         <LinearLayout
-            android:layout_width="75dp"
             android:id="@+id/linearda"
+            android:layout_width="75dp"
             android:layout_height="37dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="3dp"
@@ -226,10 +242,10 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearthoitrang"
             android:layout_width="75dp"
             android:layout_height="37dp"
             android:layout_marginLeft="20dp"
-            android:id="@+id/linearthoitrang"
             android:layout_marginTop="3dp"
             android:background="@drawable/shapemain3"
             android:orientation="vertical"
@@ -264,12 +280,13 @@
 
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:background="#E11F1F1F"
-        android:padding="20dp">
+        android:orientation="horizontal">
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -292,12 +309,11 @@
     </LinearLayout>
 
 
-
     <LinearLayout
         android:id="@+id/fragmentchung"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" />
 
-
 </LinearLayout>
+
