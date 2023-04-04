@@ -4,12 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+//<<<<<<< HEAD
 
 import android.view.View;
 import android.widget.LinearLayout;
 
 
 import com.example.myapplication.R;
+//=======
+import android.view.View;
+import android.widget.LinearLayout;
+
+import com.example.myapplication.R;
+import com.example.myapplication.fragment.fragmentDa;
+import com.example.myapplication.fragment.fragmentLeoNui;
+import com.example.myapplication.fragment.fragmentTheThao;
+import com.example.myapplication.fragment.fragmentThoiTrang;
+//>>>>>>> parent of d947d51 (Hoàn thiện fragment lần 3)
 
 public class MainKhach extends AppCompatActivity {
 
@@ -27,18 +38,24 @@ LinearLayout fragmentchung;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainkhach);
 
+//<<<<<<< HEAD
 
 
 
         LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
 
 
+//=======
+//>>>>>>> parent of d947d51 (Hoàn thiện fragment lần 3)
         fragmentchung = findViewById(R.id.fragmentchung);
 
         Fragment fragment = new fragmentTheThao();
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.fragmentchung, fragment).commit();
-
+//<<<<<<< HEAD
+//
+//=======
+//>>>>>>> parent of d947d51 (Hoàn thiện fragment lần 3)
 
 
         hienfragment();
@@ -90,6 +107,9 @@ LinearLayout fragmentchung;
                 fragmentManager.beginTransaction().replace(R.id.fragmentchung, fragment).commit();
             }
         });
-
+//<<<<<<< HEAD
+//
+//=======
+//>>>>>>> parent of d947d51 (Hoàn thiện fragment lần 3)
     }
 }
