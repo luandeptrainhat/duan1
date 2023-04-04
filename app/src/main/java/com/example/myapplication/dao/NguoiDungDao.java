@@ -28,8 +28,12 @@ public class NguoiDungDao {
             cursor.moveToFirst();
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putString("taikhoan",cursor.getString(0));
+
             editor.putString("matkhau",cursor.getString(1));
             editor.putInt("phanquyen",cursor.getInt(2));
+
+            editor.putString("phanquyen",cursor.getString(2));
+
             editor.commit();
             return true;
         }else {
