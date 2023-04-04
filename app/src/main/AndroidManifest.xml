@@ -17,11 +17,7 @@
         <activity
             android:name=".activity.TestHienGiay"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".activity.testThemHienGiay"
@@ -40,26 +36,13 @@
         </activity>
         <activity
             android:name=".activity.MainKhach"
-
-
-
-            android:exported="true" >
-
-
-
-
-
-
+            android:exported="true">
         </activity>
-
-
-
-
 
 
         <activity
             android:name=".activity.quangcao"
-            android:exported="true" >
+            android:exported="true">
 
         </activity>
         <activity
@@ -67,13 +50,17 @@
             android:exported="true" />
         <activity
             android:name=".activity.dangnhap"
-            android:exported="true" >
+            android:exported="true">
 
         </activity>
         <activity
             android:name=".activity.SplashScreen"
-            android:exported="true" >
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activity.testlist"

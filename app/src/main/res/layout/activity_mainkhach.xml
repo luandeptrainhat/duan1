@@ -109,22 +109,25 @@
         android:paddingLeft="15dp">
 
         <LinearLayout
-            android:id="@+id/lineartheothao"
-            android:layout_width="110dp"
-            android:layout_height="45dp"
-            android:background="@drawable/shapemain2"
-            android:orientation="horizontal"
-            android:padding="5dp"
+            android:id="@+id/linearthethao"
+            android:layout_width="75dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/shapemain3"
+
+            android:orientation="vertical"
 
             >
 
             <de.hdodenhof.circleimageview.CircleImageView
 
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
                 android:src="@drawable/giaythethao"
                 app:civ_border_color="#FF000000"
-                app:civ_border_width="1dp"
+                app:civ_border_width="0dp"
                 app:civ_circle_background_color="@color/white"
 
                 />
@@ -133,10 +136,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Giày thể thao"
-                android:textColor="@color/white"
-                android:textSize="10sp"
-                android:textStyle="bold"
+                android:text="Giày thể thao"
+                android:textColor="@color/black"
+                android:textSize="7sp"
 
                 />
 
@@ -160,7 +162,7 @@
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_gravity="center"
-                android:src="@drawable/giaythethao"
+                android:src="@drawable/giayleonui"
                 app:civ_border_color="#FF000000"
                 app:civ_border_width="0dp"
                 app:civ_circle_background_color="@color/white"
@@ -198,7 +200,7 @@
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_gravity="center"
-                android:src="@drawable/giaythethao"
+                android:src="@drawable/giayda"
                 app:civ_border_color="#FF000000"
                 app:civ_border_width="0dp"
                 app:civ_circle_background_color="@color/white"
@@ -209,7 +211,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Giày leo núi"
+                android:text="Giày da"
                 android:textColor="@color/black"
                 android:textSize="7sp"
 
@@ -235,7 +237,7 @@
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_gravity="center"
-                android:src="@drawable/giaythethao"
+                android:src="@drawable/giaythoitrang"
                 app:civ_border_color="#FF000000"
                 app:civ_border_width="0dp"
                 app:civ_circle_background_color="@color/white"
@@ -246,7 +248,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Giày leo núi"
+                android:text="Giày thời trang"
                 android:textColor="@color/black"
                 android:textSize="7sp"
 
