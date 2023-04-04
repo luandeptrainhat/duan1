@@ -52,6 +52,7 @@
             android:layout_marginLeft="100dp"
             android:layout_marginTop="25dp"
 
+
             android:orientation="horizontal">
 
             <ImageView
@@ -76,10 +77,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of 8a97566 (1/4)
         android:orientation="horizontal">
 
         <EditText
@@ -269,10 +267,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:background="#E11F1F1F"
-=======
->>>>>>> parent of 8a97566 (1/4)
         android:orientation="horizontal"
         android:padding="20dp">
 
