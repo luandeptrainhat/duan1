@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E11F1F1F"
+
     android:orientation="vertical"
     tools:context=".activity.MainKhach">
 
@@ -51,6 +52,7 @@
             android:layout_marginLeft="100dp"
             android:layout_marginTop="25dp"
 
+
             android:orientation="horizontal">
 
             <ImageView
@@ -75,6 +77,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        
         android:orientation="horizontal">
 
         <EditText
@@ -103,6 +106,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#E11F1F1F"
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:orientation="horizontal">
@@ -264,6 +268,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="#E11F1F1F"
         android:padding="20dp">
 
         <TextView
