@@ -26,11 +26,10 @@ public class NguoiDungDao {
         if (cursor.getCount() != 0){
 
             cursor.moveToFirst();
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString("taikhoan",cursor.getString(0));
-            editor.putString("matkhau",cursor.getString(1));
-            editor.putInt("phanquyen",cursor.getInt(2));
-            editor.commit();
+//            SharedPreferences.Editor editor = sharedPreferences.edit();
+//            editor.putString("taikhoan",cursor.getString(0));
+//            editor.putString("matkhau",cursor.getString(1));
+        //    editor.commit();
             return true;
         }else {
             return false;
@@ -51,11 +50,16 @@ public class NguoiDungDao {
     }
 
 
-public  boolean them(String taikhoan, String matkhau, int phanquyen){
+
+public  boolean them(String taikhoan, String matkhau,int phanquyen){
+
+
+
     SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
     ContentValues contentValues = new ContentValues();
     contentValues.put("taikhoan", taikhoan);
     contentValues.put("matkhau",matkhau);
+
     contentValues.put("phanquyen",phanquyen);
 
     long check = sqLiteDatabase.insert("NGUOIDUNG", null,contentValues);
@@ -66,4 +70,6 @@ public  boolean them(String taikhoan, String matkhau, int phanquyen){
     return  true;
 
 }
+
+
 }
