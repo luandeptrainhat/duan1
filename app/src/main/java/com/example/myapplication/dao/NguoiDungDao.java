@@ -26,6 +26,7 @@ public class NguoiDungDao {
         if (cursor.getCount() != 0){
 
             cursor.moveToFirst();
+<<<<<<< HEAD
 
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putString("taikhoan",cursor.getString(0));
@@ -37,11 +38,16 @@ public class NguoiDungDao {
 
             editor.commit();
 
+=======
+>>>>>>> parent of 1eba36f (fix dao)
 //            SharedPreferences.Editor editor = sharedPreferences.edit();
 //            editor.putString("taikhoan",cursor.getString(0));
 //            editor.putString("matkhau",cursor.getString(1));
         //    editor.commit();
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 1eba36f (fix dao)
             return true;
         }else {
             return false;
