@@ -76,6 +76,6 @@ public class MainKhach extends AppCompatActivity {
                 fragmentManager.beginTransaction().replace(R.id.fragmentchung, fragment).commit();
             }
         });
-
+//ghfgh
     }
 }
