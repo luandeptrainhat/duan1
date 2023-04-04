@@ -15,7 +15,7 @@ public class Dbhelper extends SQLiteOpenHelper {
         String dbLoaiGiay = "CREATE TABLE LOAIGIAY(maloaigiay integer primary key autoincrement , tenloai text)";
         db.execSQL(dbLoaiGiay);
 
-        String dbGiay = "CREATE TABLE GIAY (magiay integer primary key autoincrement , tengiay text, giagiay integer, soluong integer, mausac text, kichco integer, anh blob, maloaigiay integer references LOAIGIAY(maloaigiay))";
+        String dbGiay = "CREATE TABLE GIAY (magiay integer primary key autoincrement , tengiay text, giagiay integer, mausac text, kichco integer, anh blob, maloaigiay integer references LOAIGIAY(maloaigiay))";
         db.execSQL(dbGiay);
 
         String dbNguoiDung = "CREATE TABLE NGUOIDUNG (taikhoan text primary key, matkhau text, phanquyen  integer )";
@@ -27,7 +27,7 @@ public class Dbhelper extends SQLiteOpenHelper {
         String dbdChitietdonhang = "CREATE TABLE CTDH (machitiet_donhang integer primary key autoincrement , magiay integer references GIAY(magiay) , madon integer references DONHANG(madon))";
         db.execSQL(dbdChitietdonhang);
 
-        String dbGioHang = "CREATE TABLE GIOHANG(magiohang integer primary key autoincrement, magiay integer references GIAY(magiay), taikhoan text references NGUOIDUNG(taikhoan))";
+        String dbGioHang = "CREATE TABLE GIOHANG(magiohang integer primary key autoincrement, magiay integer references GIAY(magiay),soluong integer ,taikhoan text references NGUOIDUNG(taikhoan))";
         db.execSQL(dbGioHang);
 
 
@@ -40,7 +40,7 @@ public class Dbhelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO NGUOIDUNG VALUES ('dungdo','123',0),('duysui','123',1)");
         db.execSQL("INSERT INTO DONHANG VALUES (1,2000,'dungdo'), (2,300, 'dungdo')");
         db.execSQL("INSERT INTO CTDH VALUES (1,1,1),(2,2,1)");
-        db.execSQL("INSERT INTO GIOHANG VALUES(1,1,'dungdo')");
+        db.execSQL("INSERT INTO GIOHANG VALUES(1,1,'dungdo',2)");
 
 
 

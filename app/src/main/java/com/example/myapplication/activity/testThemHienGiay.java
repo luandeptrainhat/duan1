@@ -76,7 +76,7 @@ public class testThemHienGiay extends AppCompatActivity {
             public void onClick(View v) {
                 String tengiay_ = tengiay.getText().toString();
                 int gia_ = Integer.parseInt(gia.getText().toString());
-                int soluong_ = Integer.parseInt(soluong.getText().toString());
+//                int soluong_ = Integer.parseInt(soluong.getText().toString());
                 String mausac_ = mausac.getText().toString();
                 int kichco_ = Integer.parseInt(kichco.getText().toString());
                 int maloaigiay_ = Integer.parseInt(maloaigiay.getText().toString());
@@ -87,7 +87,7 @@ public class testThemHienGiay extends AppCompatActivity {
                 bitmap.compress(Bitmap.CompressFormat.PNG,70,byteArrayOutputStream);
                 byte [] h_anh = byteArrayOutputStream.toByteArray();
 //                int magiay, String tengiay, int gia, int soluong, String mausac, int kichco, byte[] anh, int maloaigiay
-                Product product = new Product(tengiay_,gia_,soluong_,mausac_,kichco_,h_anh,maloaigiay_);
+                Product product = new Product(tengiay_,gia_,mausac_,kichco_,h_anh,maloaigiay_);
                 if (giayDAO.themGiay(product)){
                     Toast.makeText(testThemHienGiay.this, "Thêm thành công", Toast.LENGTH_SHORT).show();
                 }else {

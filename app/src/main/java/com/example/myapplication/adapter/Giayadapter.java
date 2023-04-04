@@ -42,7 +42,7 @@ public class Giayadapter extends RecyclerView.Adapter<Giayadapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-        View view = inflater.inflate(R.layout.item_giay, parent, false);
+        View view = inflater.inflate(R.layout.item_giay_admin, parent, false);
 
         return new ViewHolder(view);
     }
@@ -51,10 +51,6 @@ public class Giayadapter extends RecyclerView.Adapter<Giayadapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.tengiay.setText(list.get(position).getTengiay());
         holder.gia.setText(String.valueOf(list.get(position).getGia()));
-        holder.soluong.setText(String.valueOf(list.get(position).getSoluong()));
-        holder.mausac.setText(list.get(position).getMausac());
-        holder.kichco.setText(String.valueOf(list.get(position).getKichco()));
-        holder.maloaigiay.setText(String.valueOf(list.get(position).getMaloaigiay()));
         //        chuyen byte[] thanh bitmap
         byte [] hinh =  list.get(position).getAnh();
         Bitmap bitmap = BitmapFactory.decodeByteArray(hinh,0,hinh.length);
@@ -74,7 +70,7 @@ public class Giayadapter extends RecyclerView.Adapter<Giayadapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tengiay,gia,soluong,mausac,kichco,maloaigiay;
+        TextView tengiay,gia;
         ImageView anh;
         Button capNhat;
 
@@ -82,12 +78,9 @@ public class Giayadapter extends RecyclerView.Adapter<Giayadapter.ViewHolder> {
             super(itemView);
             tengiay = itemView.findViewById(R.id.tengiay);
             gia = itemView.findViewById(R.id.gia);
-            soluong = itemView.findViewById(R.id.soluong);
-            mausac = itemView.findViewById(R.id.mausac);
-            kichco = itemView.findViewById(R.id.kichco);
-            maloaigiay = itemView.findViewById(R.id.maloaigiay);
             anh = itemView.findViewById(R.id.anh);
             capNhat = itemView.findViewById(R.id.capNhat);
+
 
         }
     }
