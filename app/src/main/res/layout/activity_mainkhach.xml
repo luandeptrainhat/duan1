@@ -4,54 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="#E11F1F1F"
 
+=======
+    tools:context=".activity.MainKhach"
+>>>>>>> parent of d2ed704 (Merge branch 'luan' into duy)
     android:orientation="vertical"
-    tools:context=".activity.MainKhach">
+    android:background="#E11F1F1F">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal">
+
+<de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/profile_image"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:src="@drawable/man"
+    app:civ_border_color="#FF000000"
+    app:civ_border_width="0dp"
+    android:layout_marginTop="5dp"
+    />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal">
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile_image"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/man"
-            app:civ_border_color="#FF000000"
-            app:civ_border_width="0dp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Chào buổi sáng"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ông chủ"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="25dp"
+            android:text="Chào buổi sáng"
+            android:textColor="@color/white"/>
 
+<<<<<<< HEAD
 
             android:orientation="horizontal">
 
@@ -69,39 +58,89 @@
 
 
         </LinearLayout>
+=======
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ông chủ"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+           />
+>>>>>>> parent of d2ed704 (Merge branch 'luan' into duy)
 
 
     </LinearLayout>
 
 
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="25dp"
+
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/baseline_shopping_basket_24"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/baseline_headphones_24"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        
+<<<<<<< HEAD
+
         android:orientation="horizontal">
+=======
+        android:orientation="horizontal"
+       >
+>>>>>>> parent of d2ed704 (Merge branch 'luan' into duy)
 
-        <EditText
-            android:layout_width="290dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:background="#333333"
-            android:drawableLeft="@drawable/baseline_search_24"
-            android:padding="10dp"
-            android:text="Tìm kiếm loại giày,..."
-            android:textColor="#90F6F3F3"
-            android:textFontWeight="@integer/material_motion_duration_medium_2"
-            android:textSize="16sp"
+    <EditText
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:text="Tìm kiếm loại giày,..."
+        android:textColor="#90F6F3F3"
+        android:textSize="16sp"
+       android:background="#333333"
+      android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:drawableLeft="@drawable/baseline_search_24"
+       android:textFontWeight="@integer/material_motion_duration_medium_2"
 
-            />
+        />
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
             android:background="#333333"
-            android:src="@drawable/baseline_sort_24" />
+            android:src="@drawable/baseline_sort_24"/>
 
 
+<<<<<<< HEAD
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -264,40 +303,49 @@
 
 
     </LinearLayout>
+=======
+</LinearLayout>
+
+>>>>>>> parent of d2ed704 (Merge branch 'luan' into duy)
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+<<<<<<< HEAD
         android:background="#E11F1F1F"
         android:padding="20dp">
 
+=======
+        android:padding="20dp"
+        >
+>>>>>>> parent of d2ed704 (Merge branch 'luan' into duy)
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sản phẩm đặc biệt"
-            android:textColor="@color/white"
             android:textSize="17sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="140dp"
             android:text="Xem tất cả"
-            android:textColor="@color/white"
             android:textSize="14sp"
+           android:layout_marginLeft="140dp"
+            android:textColor="@color/white"
 
             />
 
     </LinearLayout>
 
-
-
     <LinearLayout
         android:id="@+id/fragmentchung"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" />
+        android:orientation="vertical"/>
+
+
 
 
 </LinearLayout>
