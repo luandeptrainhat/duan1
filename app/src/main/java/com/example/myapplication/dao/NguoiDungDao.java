@@ -26,10 +26,10 @@ public class NguoiDungDao {
         if (cursor.getCount() != 0){
 
             cursor.moveToFirst();
-//            SharedPreferences.Editor editor = sharedPreferences.edit();
-//            editor.putString("taikhoan",cursor.getString(0));
-//            editor.putString("matkhau",cursor.getString(1));
-        //    editor.commit();
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("taikhoan",cursor.getString(0));
+            editor.putString("phanquyen",cursor.getString(2));
+            editor.commit();
             return true;
         }else {
             return false;
