@@ -27,12 +27,6 @@ public class dangki extends AppCompatActivity {
         edtmatkhau2 = findViewById(R.id.edtnhaplaimatkhau);
         btndangki = findViewById(R.id.btndangki);
         btndangnhap = findViewById(R.id.btndangnhap);
-        btndangnhap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(dangki.this,dangnhap.class));
-            }
-        });
         nguoiDungDao = new NguoiDungDao(this);
         btndangki.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +40,7 @@ public class dangki extends AppCompatActivity {
                         Intent intent = new Intent(dangki.this, com.example.myapplication.activity.dangnhap.class);
                         startActivity(intent);
                         Toast.makeText(dangki.this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
+
                     }else {
                         Toast.makeText(dangki.this, "Đăng kí thất bại", Toast.LENGTH_SHORT).show();
                     }

@@ -33,7 +33,7 @@ public class quangcao extends AppCompatActivity {
         txtbatdau.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity( new Intent(quangcao.this,MainKhach.class));
+                startActivity( new Intent(quangcao.this,dangnhap.class));
             }
         });
     }

@@ -9,9 +9,6 @@ public class LoaiGiay {
         this.tenloai = tenloai;
     }
 
-    public LoaiGiay() {
-    }
-
     public String getMaloai() {
         return maloai;
     }

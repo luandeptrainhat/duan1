@@ -18,7 +18,7 @@ public class Dbhelper extends SQLiteOpenHelper {
         String dbGiay = "CREATE TABLE GIAY (magiay integer primary key autoincrement , tengiay text, giagiay integer, soluong integer, mausac text, kichco integer, anh blob, maloaigiay integer references LOAIGIAY(maloaigiay))";
         db.execSQL(dbGiay);
 
-        String dbNguoiDung = "CREATE TABLE NGUOIDUNG (taikhoan text primary key, matkhau text, phanquyen integer)";
+        String dbNguoiDung = "CREATE TABLE NGUOIDUNG (taikhoan text primary key, matkhau text, phanquyen  integer )";
         db.execSQL(dbNguoiDung);
 
         String Donhang = "CREATE TABLE DONHANG (madon integer primary key autoincrement, tien integer, taikhoan references NGUOIDUNG(taikhoan))";

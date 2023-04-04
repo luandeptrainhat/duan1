@@ -31,11 +31,19 @@
         <activity
             android:name=".activity.doimatkhau"
             android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
         <activity
             android:name=".activity.MainKhach"
 
             android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
 
@@ -48,9 +56,7 @@
         </activity>
         <activity
             android:name=".activity.dangki"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activity.dangnhap"
             android:exported="true" >
@@ -59,10 +65,7 @@
         <activity
             android:name=".activity.SplashScreen"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity
             android:name=".activity.testlist"
