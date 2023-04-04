@@ -28,11 +28,10 @@ public class GiayDAO {
                         cursor.getInt(0),
                         cursor.getString(1),
                         cursor.getInt(2),
-                        cursor.getInt(3),
-                        cursor.getString(4),
-                        cursor.getInt(5),
-                        cursor.getBlob(6),
-                        cursor.getInt(7)
+                        cursor.getString(3),
+                        cursor.getInt(4),
+                        cursor.getBlob(5),
+                        cursor.getInt(6)
                         ));
             }while (cursor.moveToNext());
         }
@@ -44,7 +43,6 @@ public class GiayDAO {
         ContentValues contentValues = new ContentValues();
         contentValues.put("tengiay",product.getTengiay());
         contentValues.put("giagiay",product.getGia());
-        contentValues.put("soluong",product.getSoluong());
         contentValues.put("mausac",product.getMausac());
         contentValues.put("kichco",product.getKichco());
         contentValues.put("anh",product.getAnh());
@@ -57,7 +55,6 @@ public class GiayDAO {
         ContentValues contentValues = new ContentValues();
         contentValues.put("tengiay",product.getTengiay());
         contentValues.put("giagiay",product.getGia());
-        contentValues.put("soluong",product.getSoluong());
         contentValues.put("mausac",product.getMausac());
         contentValues.put("kichco",product.getKichco());
         contentValues.put("anh",product.getAnh());

@@ -1,6 +1,7 @@
 package com.example.myapplication.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,8 +34,10 @@ public class TestHienGiay extends AppCompatActivity {
     }
     private void getDS (){
         list = giayDAO.getDSPRO();
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(TestHienGiay.this);
-        recyclerView.setLayoutManager(linearLayoutManager);
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(TestHienGiay.this);
+//        recyclerView.setLayoutManager(linearLayoutManager);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(TestHienGiay.this,2);
+        recyclerView.setLayoutManager(gridLayoutManager);
         giayadapter = new Giayadapter(this,list,giayDAO);
         recyclerView.setAdapter(giayadapter);
 

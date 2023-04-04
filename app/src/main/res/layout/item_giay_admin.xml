@@ -12,6 +12,7 @@
     >
 
     <Button
+        android:id="@+id/capNhat"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_gravity="right"
@@ -21,6 +22,7 @@
         />
 
     <ImageView
+        android:id="@+id/anh"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
@@ -28,16 +30,10 @@
 
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Bán chạy nhất"
-        android:textColor="#FD5F44"
-        android:textSize="12sp"
-        android:textStyle="bold" />
+
 
     <TextView
+        android:id="@+id/tengiay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -47,6 +43,7 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/gia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

@@ -26,11 +26,6 @@
         android:layout_height="wrap_content"
         android:hint="gia"/>
     <EditText
-        android:id="@+id/soluong"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="soluong"/>
-    <EditText
         android:id="@+id/mausac"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
