@@ -87,7 +87,7 @@
             android:background="#333333"
             android:drawableLeft="@drawable/baseline_search_24"
             android:padding="10dp"
-            android:text="Tìm kiếm loại giày,..."
+            android:hint="Tìm kiếm loại giày,..."
             android:textColor="#90F6F3F3"
             android:textFontWeight="@integer/material_motion_duration_medium_2"
             android:textSize="16sp"
@@ -111,8 +111,6 @@
         android:background="#E11F1F1F"
         android:gravity="center"
         android:orientation="horizontal">
-
-
         <LinearLayout
             android:id="@+id/lineartheothao"
             android:layout_width="75dp"
@@ -126,7 +124,6 @@
             >
 
             <de.hdodenhof.circleimageview.CircleImageView
-
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_gravity="center"

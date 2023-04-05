@@ -37,6 +37,7 @@ public class GiayDAO {
         }
         return  list;
     }
+
 // magiay integer primary key autoincrement , tengiay text, giagiay integer, soluong integer, mausac text, kichco integer, anh blob, maloaigiay integer
     public boolean themGiay (Product product){
         SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
@@ -67,4 +68,5 @@ public class GiayDAO {
         long check = sqLiteDatabase.delete("Giay","magiay=?",new String[]{String.valueOf(maGiay)});
         return check>0;
     }
+
 }

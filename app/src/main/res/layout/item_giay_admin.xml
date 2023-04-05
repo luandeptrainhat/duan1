@@ -2,14 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="160dp"
     android:layout_height="wrap_content"
-
-    android:layout_marginLeft="25dp"
-    android:padding="10dp"
-
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
     android:background="@drawable/shape4"
 
     android:orientation="vertical"
-    >
+
+    android:padding="10dp">
 
     <Button
         android:id="@+id/capNhat"
@@ -18,8 +17,7 @@
         android:layout_gravity="right"
         android:layout_marginTop="-5dp"
         android:backgroundTint="#AED8D4D4"
-        android:drawableBottom="@drawable/sua"
-        />
+        android:drawableBottom="@drawable/sua" />
 
     <ImageView
         android:id="@+id/anh"
@@ -29,7 +27,6 @@
         android:src="@drawable/air"
 
         />
-
 
 
     <TextView
@@ -51,8 +48,6 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold" />
-
-
 
 
 </LinearLayout>
