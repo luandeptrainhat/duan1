@@ -67,4 +67,24 @@ public class GiayDAO {
         long check = sqLiteDatabase.delete("Giay","magiay=?",new String[]{String.valueOf(maGiay)});
         return check>0;
     }
+    public ArrayList<Product> getDSPROLoai(int maloaigiay) {
+        ArrayList<Product> list = new ArrayList<>();
+        SQLiteDatabase sqLiteDatabase = dbhelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM GIAY WHERE maloaigiay =?", new String[]{String.valueOf(maloaigiay)});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            do {
+                list.add( new Product(
+                        cursor.getInt(0),
+                        cursor.getString(1),
+                        cursor.getInt(2),
+                        cursor.getString(3),
+                        cursor.getInt(4),
+                        cursor.getBlob(5),
+                        cursor.getInt(6)
+                ));
+            }while (cursor.moveToNext());
+        }
+        return  list;
+    }
 }

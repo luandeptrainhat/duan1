@@ -10,18 +10,11 @@
     android:orientation="vertical"
     >
 
-<Button
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:layout_gravity="right"
-    android:layout_marginTop="-5dp"
-    android:backgroundTint="#AED8D4D4"
-    android:drawableBottom="@drawable/xoa"
-    />
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:id="@+id/anh"
             android:layout_gravity="center"
             android:src="@drawable/air"
 
@@ -40,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:id="@+id/tengiay"
             android:text="Nike Air Fly"
             android:textColor="@color/white"
             android:textSize="15sp"
@@ -61,7 +55,7 @@
                 android:text="2.344.999 VNĐ"
                 android:textColor="@color/white"
                 android:textSize="13sp"
-
+                android:id="@+id/gia"
                 android:textStyle="bold" />
 
             <LinearLayout
