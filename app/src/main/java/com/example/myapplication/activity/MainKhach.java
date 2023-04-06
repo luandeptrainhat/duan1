@@ -5,31 +5,82 @@ import static android.view.Gravity.CENTER;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myapplication.R;
+import com.example.myapplication.adapter.SerchAdapter;
+import com.example.myapplication.dao.SerchDao;
 import com.example.myapplication.fragment.fragmentDa;
 import com.example.myapplication.fragment.fragmentLeoNui;
 import com.example.myapplication.fragment.fragmentTheThao;
 import com.example.myapplication.fragment.fragmentThoiTrang;
+import com.example.myapplication.model.Product;
+
+import java.util.ArrayList;
 
 
 public class MainKhach extends AppCompatActivity {
     LinearLayout fragmentchung;
+    private Context context;
+    EditText searchView;
+    RecyclerView recyclerView;
+    SerchDao serchDao;
+    SerchAdapter serchAdapter;
+    ArrayList<Product> list;
 // dung da o day roi
-    
+
+
+
+    //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainkhach);
+        recyclerView = findViewById(R.id.recycleview1);
+        recyclerView.setVisibility(View.GONE);
+        list = new ArrayList<>();
+        serchDao = new SerchDao(this);
+        getDSSerch();
+        searchView = findViewById(R.id.edtserch);
+
+
+
+        searchView.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                recyclerView.setVisibility(View.VISIBLE);
+                MainKhach.this.serchAdapter.getFilter().filter(s);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+
+        });
+
 
         LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
         fragmentchung = findViewById(R.id.fragmentchung);
@@ -166,4 +217,13 @@ public class MainKhach extends AppCompatActivity {
         linearleonui.setOrientation(LinearLayout.VERTICAL);
 
     }
+    private void getDSSerch(){
+        list = serchDao.getDS();
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainKhach.this);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        serchAdapter = new SerchAdapter(this,list,serchDao);
+        recyclerView.setAdapter(serchAdapter);
+
+    }
+
 }

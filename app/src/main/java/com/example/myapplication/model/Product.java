@@ -1,20 +1,29 @@
 package com.example.myapplication.model;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     private int magiay;
     private String tengiay;
     private int gia;
-    private int soluong;
     private String mausac;
     private int kichco;
     private byte [] anh;
     private int maloaigiay;
 
-    public Product(int magiay, String tengiay, int gia, int soluong, String mausac, int kichco, byte[] anh, int maloaigiay) {
+    public Product(int magiay, String tengiay, int gia, String mausac, int kichco, byte[] anh, int maloaigiay) {
         this.magiay = magiay;
         this.tengiay = tengiay;
         this.gia = gia;
-        this.soluong = soluong;
+        this.mausac = mausac;
+        this.kichco = kichco;
+        this.anh = anh;
+        this.maloaigiay = maloaigiay;
+    }
+
+    public Product(String tengiay, int gia, String mausac, int kichco, byte[] anh, int maloaigiay) {
+        this.tengiay = tengiay;
+        this.gia = gia;
         this.mausac = mausac;
         this.kichco = kichco;
         this.anh = anh;
@@ -43,14 +52,6 @@ public class Product {
 
     public void setGia(int gia) {
         this.gia = gia;
-    }
-
-    public int getSoluong() {
-        return soluong;
-    }
-
-    public void setSoluong(int soluong) {
-        this.soluong = soluong;
     }
 
     public String getMausac() {
@@ -83,19 +84,5 @@ public class Product {
 
     public void setMaloaigiay(int maloaigiay) {
         this.maloaigiay = maloaigiay;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "magiay=" + magiay +
-                ", tengiay='" + tengiay + '\'' +
-                ", gia=" + gia +
-                ", soluong=" + soluong +
-                ", mausac='" + mausac + '\'' +
-                ", kichco=" + kichco +
-                ", anh=" + anh +
-                ", maloaigiay=" + maloaigiay +
-                '}';
     }
 }

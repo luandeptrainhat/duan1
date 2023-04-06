@@ -14,7 +14,7 @@ public class LoaiGiay {
     public void setMaloai(int maloai) {
         this.maloai = maloai;
     }
-
+//
     public String getTenloai() {
         return tenloai;
     }
