@@ -28,7 +28,7 @@ public class quangcao extends AppCompatActivity {
         setContentView(R.layout.activity_quangcao);
         txtbatdau = findViewById(R.id.txtbatdau);
 
-
+//
 
         txtbatdau.setOnClickListener(new View.OnClickListener() {
             @Override

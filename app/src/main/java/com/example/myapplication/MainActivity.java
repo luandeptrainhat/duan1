@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Product> list;
      GiayDAO dao;
      LoaiGiayDAO loaiGiayDAO;
-
+//
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

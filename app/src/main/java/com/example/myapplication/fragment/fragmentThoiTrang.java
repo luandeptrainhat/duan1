@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 import com.example.myapplication.R;
 
 public class fragmentThoiTrang extends Fragment {
-    @Nullable
+    @Nullable//
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 

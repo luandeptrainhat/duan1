@@ -14,6 +14,7 @@ import com.example.myapplication.R;
 import com.example.myapplication.dao.NguoiDungDao;
 
 public class dangnhap extends AppCompatActivity {
+    //
     Button btndangnhap;
     EditText edttaikhoan, edtmatkhau;
     TextView txtdangki;
@@ -24,7 +25,7 @@ public class dangnhap extends AppCompatActivity {
 
         edttaikhoan = findViewById(R.id.edttaikhoan);
         edtmatkhau = findViewById(R.id.edtmatkhau);
-     btndangnhap = findViewById(R.id.btndangnhap);
+        btndangnhap = findViewById(R.id.btndangnhap);
         txtdangki = findViewById(R.id.txtdangki);
         txtdangki.setOnClickListener(new View.OnClickListener() {
             @Override

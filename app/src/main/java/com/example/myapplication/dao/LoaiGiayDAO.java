@@ -8,7 +8,7 @@ import com.example.myapplication.database.Dbhelper;
 import com.example.myapplication.model.LoaiGiay;
 
 import java.util.ArrayList;
-
+//
 public class LoaiGiayDAO {
     Dbhelper dbhelper;
     public LoaiGiayDAO(Context context) {

@@ -11,7 +11,7 @@ import com.example.myapplication.model.Product;
 import java.util.ArrayList;
 
 public class GiayDAO {
-     Dbhelper dbhelper;
+    Dbhelper dbhelper;
 
     public GiayDAO(Context context) {
         dbhelper = new Dbhelper(context);
@@ -32,13 +32,12 @@ public class GiayDAO {
                         cursor.getInt(4),
                         cursor.getBlob(5),
                         cursor.getInt(6)
-                        ));
+                ));
             }while (cursor.moveToNext());
         }
         return  list;
     }
-
-// magiay integer primary key autoincrement , tengiay text, giagiay integer, soluong integer, mausac text, kichco integer, anh blob, maloaigiay integer
+    // magiay integer primary key autoincrement , tengiay text, giagiay integer, soluong integer, mausac text, kichco integer, anh blob, maloaigiay integer
     public boolean themGiay (Product product){
         SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -68,5 +67,4 @@ public class GiayDAO {
         long check = sqLiteDatabase.delete("Giay","magiay=?",new String[]{String.valueOf(maGiay)});
         return check>0;
     }
-
 }

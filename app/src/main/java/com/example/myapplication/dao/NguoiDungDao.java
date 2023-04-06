@@ -26,35 +26,21 @@ public class NguoiDungDao {
         if (cursor.getCount() != 0){
 
             cursor.moveToFirst();
-
-
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putString("taikhoan",cursor.getString(0));
-
-            editor.putString("matkhau",cursor.getString(1));
-            editor.putInt("phanquyen",cursor.getInt(2));
-
-            editor.putString("phanquyen",cursor.getString(2));
-
+            editor.putInt("phanquyen", cursor.getInt(2));
             editor.commit();
-
-
-//            SharedPreferences.Editor editor = sharedPreferences.edit();
-//            editor.putString("taikhoan",cursor.getString(0));
-//            editor.putString("matkhau",cursor.getString(1));
-        //    editor.commit();
-
             return true;
         }else {
             return false;
         }
-    }
+    }//
     public int doimatkhau(String taikhoan, String matkhau,String matkhaumoi ){
         SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM NGUOIDUNG WHERE taikhoan = ? AND matkhau = ?",new String[]{taikhoan,matkhau});
         if (cursor.getCount() > 0){
             ContentValues contentValues = new ContentValues();
-            contentValues.put("matkhau  ",matkhaumoi);
+            contentValues.put("matkhau ",matkhaumoi);
             long check = sqLiteDatabase.update("NGUOIDUNG",contentValues,"taikhoan = ?",new String[]{taikhoan});
             if (check == -1)
                 return -1;
@@ -64,11 +50,16 @@ public class NguoiDungDao {
     }
 
 
-public  boolean them(String taikhoan, String matkhau, int phanquyen){
+
+public  boolean them(String taikhoan, String matkhau,int phanquyen){
+
+
+
     SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
     ContentValues contentValues = new ContentValues();
     contentValues.put("taikhoan", taikhoan);
     contentValues.put("matkhau",matkhau);
+
     contentValues.put("phanquyen",phanquyen);
 
     long check = sqLiteDatabase.insert("NGUOIDUNG", null,contentValues);
@@ -79,4 +70,6 @@ public  boolean them(String taikhoan, String matkhau, int phanquyen){
     return  true;
 
 }
+
+
 }
