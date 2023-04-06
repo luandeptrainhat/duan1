@@ -80,14 +80,14 @@
         <EditText
             android:id="@+id/edtserch"
             android:layout_width="290dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="20dp"
-            android:background="#333333"
+            android:background="#ABBFBFBF"
             android:iconifiedByDefault="false"
             android:drawableLeft="@drawable/baseline_search_24"
             android:padding="10dp"
             android:hint="Tìm kiếm loại giày,..."
-            android:textColor="#90F6F3F3"
+            android:textColor="#F7F1EEEE"
             android:textFontWeight="@integer/material_motion_duration_medium_2"
             android:textSize="16sp"
 
@@ -95,9 +95,9 @@
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:layout_marginLeft="15dp"
-            android:background="#333333"
+            android:background="#ABBFBFBF"
             android:src="@drawable/baseline_sort_24" />
 
 

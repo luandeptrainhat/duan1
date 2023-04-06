@@ -12,8 +12,8 @@
     <gradient
         android:type="linear"
         android:angle="180"
-        android:startColor="#BCD5D3D3"
-        android:endColor="#505050" />
+        android:startColor="#B2A3A0A0"
+        android:endColor="#2E2D2D" />
     <corners
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
