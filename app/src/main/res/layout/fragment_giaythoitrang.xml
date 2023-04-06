@@ -82,6 +82,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/xemgiay_theoloai"
             android:text="Xem tất cả"
             android:textSize="14sp"
             android:layout_marginLeft="220dp"
