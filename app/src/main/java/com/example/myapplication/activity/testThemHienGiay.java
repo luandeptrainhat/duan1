@@ -25,7 +25,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 public class testThemHienGiay extends AppCompatActivity {
-    EditText tengiay, gia, soluong, mausac, kichco, maloaigiay;
+    EditText tengiay, gia, mausac, kichco, maloaigiay;
     ImageView anh;
     int REQUEST_CODE_CAMERA = 123;
     int REQUEST_CODE_FOLD = 456;
@@ -38,7 +38,7 @@ public class testThemHienGiay extends AppCompatActivity {
         setContentView(R.layout.activity_test_them_hien_giay);
         tengiay = findViewById(R.id.tengiay);
         gia = findViewById(R.id.gia);
-        soluong = findViewById(R.id.soluong);
+//        soluong = findViewById(R.id.soluong);
         mausac = findViewById(R.id.mausac);
         kichco = findViewById(R.id.kichco);
         maloaigiay = findViewById(R.id.maloaigiay);

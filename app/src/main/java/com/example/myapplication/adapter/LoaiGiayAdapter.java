@@ -23,7 +23,7 @@ public class LoaiGiayAdapter extends RecyclerView.Adapter<LoaiGiayAdapter.ViewHo
         this.context = context;
         this.list = list;
     }
-
+//
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

@@ -13,7 +13,7 @@ public class NguoiDung {
         this.matkhau = matkhau;
         this.phanquyen = phanquyen;
     }
-
+//
     public String getTaikhoan() {
         return taikhoan;
     }
