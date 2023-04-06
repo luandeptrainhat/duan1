@@ -42,7 +42,7 @@ public class Giayadapter extends RecyclerView.Adapter<Giayadapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-        View view = inflater.inflate(R.layout.item_giay_admin, parent, false);
+        View view = inflater.inflate(R.layout.item_giay, parent, false);
 
         return new ViewHolder(view);
     }
