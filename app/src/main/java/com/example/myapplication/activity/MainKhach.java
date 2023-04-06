@@ -14,24 +14,6 @@ import com.example.myapplication.fragment.fragmentLeoNui;
 import com.example.myapplication.fragment.fragmentTheThao;
 import com.example.myapplication.fragment.fragmentThoiTrang;
 
-
-public class MainKhach extends AppCompatActivity {
-LinearLayout fragmentchung;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mainkhach);
-
-        fragmentchung = findViewById(R.id.fragmentchung);
-
-        Fragment fragment = new fragmentTheThao();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.fragmentchung, fragment).commit();
-
-
-
-
-
     public class MainKhach extends AppCompatActivity {
         LinearLayout fragmentchung;
         Fragment fragment;
