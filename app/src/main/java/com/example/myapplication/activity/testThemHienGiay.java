@@ -38,7 +38,6 @@ public class testThemHienGiay extends AppCompatActivity {
         setContentView(R.layout.activity_test_them_hien_giay);
         tengiay = findViewById(R.id.tengiay);
         gia = findViewById(R.id.gia);
-        soluong = findViewById(R.id.soluong);
         mausac = findViewById(R.id.mausac);
         kichco = findViewById(R.id.kichco);
         maloaigiay = findViewById(R.id.maloaigiay);
@@ -51,7 +50,7 @@ public class testThemHienGiay extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, REQUEST_CODE_CAMERA);
+
 
             }
         });
