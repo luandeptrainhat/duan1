@@ -8,7 +8,7 @@ import com.example.myapplication.database.Dbhelper;
 import com.example.myapplication.model.LoaiGiay;
 
 import java.util.ArrayList;
-
+//
 public class LoaiGiayDAO {
     Dbhelper dbhelper;
     public LoaiGiayDAO(Context context) {
@@ -22,7 +22,7 @@ public class LoaiGiayDAO {
             cursor.moveToFirst();
             do {
                 list.add( new LoaiGiay(
-                        cursor.getString(0),
+                        cursor.getInt(0),
                         cursor.getString(1)
                 ));
             }while (cursor.moveToNext());

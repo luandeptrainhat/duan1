@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@drawable/shapemain5"
     android:layout_margin="10dp"
     android:padding="10dp">
 
@@ -44,50 +43,14 @@
 
     </LinearLayout>
 
+
     <ImageView
+        android:id="@+id/anhGiay"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
         android:src="@drawable/giaythoitrang" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-
-        android:layout_marginTop="5dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-
-            android:text="Mã giày"
-            android:textColor="#8F000000"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*"
-            android:textSize="12sp"
-            android:textColor="#FCFF0303"
-            android:textStyle="bold"/>
-
-
-    </LinearLayout>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:hint="Vd:01"
-        android:textSize="20sp"
-        android:background="@drawable/gradient_edittext"
-        android:paddingLeft="10dp"
-        android:textStyle="italic"/>
-
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -117,6 +80,7 @@
 
 
     <EditText
+        android:id="@+id/tenGiay"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:hint="Vd:Nike Ultra"
@@ -154,6 +118,7 @@
     </LinearLayout>
 
     <EditText
+        android:id="@+id/giaGiay"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:hint="Vd:3.000.000vnđ"
@@ -191,6 +156,7 @@
     </LinearLayout>
 
     <EditText
+        android:id="@+id/soLuong"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:hint="Vd:100"
@@ -227,18 +193,15 @@
     </LinearLayout>
 
 
-
     <EditText
+        android:id="@+id/mauSac"
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:hint="Vd:trắng"
-        android:textSize="20sp"
         android:background="@drawable/gradient_edittext"
+        android:hint="Vd:trắng"
         android:paddingLeft="10dp"
-        android:textStyle="italic"/>
-
-
-
+        android:textSize="20sp"
+        android:textStyle="italic" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -268,6 +231,7 @@
 
 
     <EditText
+        android:id="@+id/kichCo"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:hint="Vd:42"
@@ -305,14 +269,15 @@
 
 
 
-    <EditText
+    <Spinner
+        android:id="@+id/spnLoaiGiay"
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:hint="Vd:01"
         android:textSize="20sp"
         android:background="@drawable/gradient_edittext"
         android:paddingLeft="10dp"
-        android:textStyle="italic"/>
+        android:textStyle="italic"
+        />
 
 
     <LinearLayout

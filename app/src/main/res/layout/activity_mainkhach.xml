@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context=".activity.MainKhach">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -52,7 +51,6 @@
             android:layout_marginLeft="100dp"
             android:layout_marginTop="25dp"
 
-
             android:orientation="horizontal">
 
             <ImageView
@@ -77,17 +75,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/edtserch"
             android:layout_width="290dp"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:background="#333333"
+            android:iconifiedByDefault="false"
             android:drawableLeft="@drawable/baseline_search_24"
             android:padding="10dp"
-            android:text="Tìm kiếm loại giày,..."
+            android:hint="Tìm kiếm loại giày,..."
             android:textColor="#90F6F3F3"
             android:textFontWeight="@integer/material_motion_duration_medium_2"
             android:textSize="16sp"
@@ -102,31 +101,38 @@
             android:src="@drawable/baseline_sort_24" />
 
 
-    </LinearLayout>
 
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="#E11F1F1F"
         android:gravity="center"
         android:orientation="horizontal">
-
-
         <LinearLayout
             android:id="@+id/lineartheothao"
             android:layout_width="75dp"
             android:layout_height="37dp"
+            android:orientation="vertical"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="3dp"
             android:background="@drawable/shapemain3"
-            android:orientation="vertical"
 
 
             >
 
             <de.hdodenhof.circleimageview.CircleImageView
-
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_gravity="center"
@@ -190,8 +196,8 @@
 
 
         <LinearLayout
-            android:id="@+id/linearda"
             android:layout_width="75dp"
+            android:id="@+id/linearda"
             android:layout_height="37dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="3dp"
@@ -220,6 +226,8 @@
                 android:text="Giày Da"
                 android:textColor="@color/black"
                 android:textSize="7sp"
+
+
                 />
 
         </LinearLayout>
@@ -227,7 +235,7 @@
         <LinearLayout
             android:id="@+id/linearthoitrang"
             android:layout_width="75dp"
-            android:layout_height="37dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="3dp"
             android:background="@drawable/shapemain3"
@@ -239,7 +247,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
 
                 android:layout_width="18dp"
-                android:layout_height="23dp"
+                android:layout_height="18dp"
                 android:layout_gravity="center"
                 android:src="@drawable/giaythoitrang"
                 app:civ_border_color="#FF000000"
@@ -263,11 +271,9 @@
 
 
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#E11F1F1F"
         android:orientation="horizontal"
         android:padding="20dp">
 
