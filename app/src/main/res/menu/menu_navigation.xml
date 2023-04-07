@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu1"
+        android:title="item1"
+        android:icon="@drawable/icon_trangchu">
+
+    </item>
+
+    <item android:id="@+id/menu2"
+        android:title="item2"
+        android:icon="@drawable/icon_trangchu">
+
+    </item>
+
+    <item android:id="@+id/menu3"
+        android:title="item3"
+        android:icon="@drawable/icon_trangchu">
+
+    </item>
+
+    <item android:id="@+id/menu4"
+        android:title="item4"
+        android:icon="@drawable/icon_trangchu">
+
+        <menu>
+            <item android:id="@+id/menu4.1"
+                android:title="item4.1 "
+                android:icon="@drawable/icon_trangchu"/>
+            <item android:id="@+id/menu4.2"
+                android:title="item4.2"
+                android:icon="@drawable/icon_trangchu"/>
+        </menu>
+
+    </item>
+
+    <item android:id="@+id/menu5"
+        android:title="item5"
+        android:icon="@drawable/icon_trangchu">
+
+        <menu>
+            <item android:id="@+id/menu5.1"
+                android:title="item5.1 "
+                android:icon="@drawable/icon_trangchu"/>
+            <item android:id="@+id/menu5.2"
+                android:title="item5.2"
+                android:icon="@drawable/icon_trangchu"/>
+        </menu>
+
+    </item>
+
+
+    <item android:id="@+id/menuThoat"
+        android:title="Thoát"
+
+        android:icon="@drawable/icon_trangchu">
+
+    </item>
+
+
+
+</menu>
