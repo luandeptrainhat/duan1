@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +28,8 @@ public class quangcao extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quangcao);
         txtbatdau = findViewById(R.id.txtbatdau);
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 //
 

@@ -1,6 +1,7 @@
 package com.example.myapplication.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
 
 public class Product implements Serializable {
     private int magiay;
@@ -84,5 +85,10 @@ public class Product implements Serializable {
 
     public void setMaloaigiay(int maloaigiay) {
         this.maloaigiay = maloaigiay;
+    }
+
+    @Override
+    public String toString() {
+        return "ten: "+tengiay;
     }
 }

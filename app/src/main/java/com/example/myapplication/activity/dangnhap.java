@@ -3,6 +3,7 @@ package com.example.myapplication.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -23,6 +24,8 @@ public class dangnhap extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dangnhap);
 
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         edttaikhoan = findViewById(R.id.edttaikhoan);
         edtmatkhau = findViewById(R.id.edtmatkhau);
         btndangnhap = findViewById(R.id.btndangnhap);
@@ -42,6 +45,7 @@ public class dangnhap extends AppCompatActivity {
                 String taikhoan = edttaikhoan.getText().toString();
                 String matkhau = edtmatkhau.getText().toString();
                 if (nguoiDungDao.kiemtradangnhap(taikhoan,matkhau)){
+
                     startActivity(new Intent(dangnhap.this,MainKhach.class));
 
                 }else {
