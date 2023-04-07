@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class Dbhelper extends SQLiteOpenHelper {
     public Dbhelper(Context context) {
-        super(context, "FIVESOLE", null, 3);
+        super(context, "FIVESOLE", null, 1);
 
     }
 
@@ -36,7 +36,7 @@ public class Dbhelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO NGUOIDUNG VALUES ('dungdo','123',0),('duysui','123',1)");
         db.execSQL("INSERT INTO DONHANG VALUES (1,2000,'dungdo'), (2,300, 'dungdo')");
         db.execSQL("INSERT INTO CTDH VALUES (1,1,1),(2,2,1)");
-        db.execSQL("INSERT INTO GIOHANG VALUES(1,1,2,'dungdo')");
+        db.execSQL("INSERT INTO GIOHANG VALUES(1,1,'dungdo',2)");
 
 
 
