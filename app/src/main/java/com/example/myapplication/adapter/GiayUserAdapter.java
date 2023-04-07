@@ -2,13 +2,16 @@ package com.example.myapplication.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -48,6 +51,20 @@ public class GiayUserAdapter extends RecyclerView.Adapter<GiayUserAdapter.ViewHo
         Bitmap bitmap = BitmapFactory.decodeByteArray(hinh,0,hinh.length);
         holder.anh.setImageBitmap(bitmap);
 
+        holder.btnthemGH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GiayDAO dao = new GiayDAO(v.getContext());
+                Intent  intent = new Intent();
+                String tk = intent.getStringExtra("tk");
+                if(dao.themVaoGH(list.get(position).getMagiay(),1,String.valueOf(tk))){
+                    Toast.makeText(v.getContext(), "thêm thành công", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(v.getContext(), "thất bại", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
 
     @Override
@@ -58,11 +75,13 @@ public class GiayUserAdapter extends RecyclerView.Adapter<GiayUserAdapter.ViewHo
     public  class ViewHolder extends RecyclerView.ViewHolder {
         TextView tengiay,gia;
         ImageView anh;
+        LinearLayout btnthemGH;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tengiay = itemView.findViewById(R.id.tengiay);
             gia = itemView.findViewById(R.id.gia);
             anh = itemView.findViewById(R.id.anh);
+            btnthemGH = itemView.findViewById(R.id.btnthemGH);
         }
     }
 }

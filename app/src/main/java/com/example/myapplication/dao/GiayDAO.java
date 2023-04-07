@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.myapplication.database.Dbhelper;
+import com.example.myapplication.model.ItemGioHang;
 import com.example.myapplication.model.Product;
 
 import java.util.ArrayList;
@@ -86,5 +87,36 @@ public class GiayDAO {
             }while (cursor.moveToNext());
         }
         return  list;
+    }
+    public boolean themVaoGH(int magiay, int soluong,String tk){
+        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("magiay",magiay);
+        contentValues.put("soluong",soluong);
+        contentValues.put("taikhoan",tk);
+        long check = sqLiteDatabase.insert("GIOHANG",null,contentValues);
+        return check > 0;
+    }
+    public ArrayList<ItemGioHang> layItemGioHang (String tk) {
+
+        ArrayList<ItemGioHang> list = new ArrayList<>();
+        SQLiteDatabase sqLiteDatabase = dbhelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT GIAY.tengiay,GIAY.giagiay,GIOHANG.soluong,GIAY.mausac,GIAY.anh " +
+                "FROM GIAY " +
+                "INNER JOIN GIOHANG " +
+                "ON GIAY.magiay = GIOHANG.magiay " +
+                "WHERE GIOHANG.taikhoan= ? ", new String[]{String.valueOf(tk)});
+        if (cursor.getCount()>0){
+            cursor.moveToFirst();
+            do {
+                list.add(new ItemGioHang(cursor.getString(0),
+                        cursor.getInt(1),
+                        cursor.getInt(2),
+                        cursor.getString(3),
+                        cursor.getBlob(4)
+                ));
+            }while (cursor.moveToNext());
+        }
+        return list;
     }
 }
