@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -21,6 +22,8 @@ public class doimatkhau extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doimatkhau);
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         edtmatkhau = findViewById(R.id.edtmatkhau);
         edtmatkhaumoi = findViewById(R.id.edtmatkhaumoi);
@@ -46,7 +49,7 @@ public class doimatkhau extends AppCompatActivity {
                         if (check == 1) {
                             Toast.makeText(doimatkhau.this, "Cập nhập mật khẩu thành công", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(doimatkhau.this, com.example.myapplication.activity.dangnhap.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                          //  intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
                         } else if (check == 0) {
                             Toast.makeText(doimatkhau.this, "Mật khẩu cũ không đúng", Toast.LENGTH_SHORT).show();
@@ -57,6 +60,7 @@ public class doimatkhau extends AppCompatActivity {
                         Toast.makeText(doimatkhau.this, "Nhập mật khẩu không khớp", Toast.LENGTH_SHORT).show();
                     }
                 }
+                //
             }
         });
     }
