@@ -116,8 +116,4 @@ public class GiayDAO {
         }
         return list;
     }
-    public void themChiTietGH(){
-        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
-        sqLiteDatabase.rawQuery("INSERT INTO GIOHANG VALUES (null,2,2,'dungdo')",null);
-    }
 }
