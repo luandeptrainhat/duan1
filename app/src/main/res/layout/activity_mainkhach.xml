@@ -86,7 +86,7 @@
             android:iconifiedByDefault="false"
             android:drawableLeft="@drawable/baseline_search_24"
             android:padding="10dp"
-            android:text="Tìm kiếm loại giày,..."
+            android:hint="Tìm kiếm loại giày,..."
             android:textColor="#90F6F3F3"
             android:textFontWeight="@integer/material_motion_duration_medium_2"
             android:textSize="16sp"

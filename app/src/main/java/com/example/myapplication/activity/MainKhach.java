@@ -82,7 +82,7 @@ public class MainKhach extends AppCompatActivity {
         });
 
 
-        LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
+        LinearLayout lineartheothao = findViewById(R.id.linearthethao);
         fragmentchung = findViewById(R.id.fragmentchung);
         Fragment fragment = new fragmentTheThao();
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -96,7 +96,7 @@ public class MainKhach extends AppCompatActivity {
     }
 
     private void hienfragment() {
-        LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
+        LinearLayout lineartheothao = findViewById(R.id.linearthethao);
         LinearLayout linearthoitrang = findViewById(R.id.linearthoitrang);
         LinearLayout linearda = findViewById(R.id.linearda);
         LinearLayout linearleonui = findViewById(R.id.linearleonui);
@@ -168,7 +168,7 @@ public class MainKhach extends AppCompatActivity {
     }
 
     private void Set() {
-        LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
+        LinearLayout lineartheothao = findViewById(R.id.linearthethao);
         LinearLayout linearthoitrang = findViewById(R.id.linearthoitrang);
         LinearLayout linearda = findViewById(R.id.linearda);
         LinearLayout linearleonui = findViewById(R.id.linearleonui);
