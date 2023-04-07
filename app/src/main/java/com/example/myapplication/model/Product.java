@@ -1,5 +1,7 @@
 package com.example.myapplication.model;
 
+import java.util.Arrays;
+
 public class Product {
     private int magiay;
     private String tengiay;
@@ -82,5 +84,10 @@ public class Product {
 
     public void setMaloaigiay(int maloaigiay) {
         this.maloaigiay = maloaigiay;
+    }
+
+    @Override
+    public String toString() {
+        return "ten: "+tengiay;
     }
 }

@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.view.LayoutInflater;
 
 import com.example.myapplication.database.Dbhelper;
 import com.example.myapplication.model.ItemGioHang;
@@ -95,4 +96,28 @@ public class GiayDAO {
         return list;
     }
 
+    public ArrayList<Product> getDsLoai(int maLoai){
+        ArrayList<Product> list = new ArrayList<>();
+        SQLiteDatabase sqLiteDatabase = dbhelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT GIAY.* FROM GIAY INNER JOIN LOAIGIAY ON GIAY.maloaigiay = LOAIGIAY.maloaigiay WHERE LOAIGIAY.maloaigiay = ?", new String[]{String.valueOf(maLoai)});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            do {
+                list.add(new Product(
+                        cursor.getInt(0),
+                        cursor.getString(1),
+                        cursor.getInt(2),
+                        cursor.getString(3),
+                        cursor.getInt(4),
+                        cursor.getBlob(5),
+                        cursor.getInt(6)
+                ));
+            } while (cursor.moveToNext());
+        }
+        return list;
+    }
+    public void themChiTietGH(){
+        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
+        sqLiteDatabase.rawQuery("INSERT INTO GIOHANG VALUES (null,2,2,'dungdo')",null);
+    }
 }
