@@ -42,7 +42,10 @@ public class dangnhap extends AppCompatActivity {
                 String taikhoan = edttaikhoan.getText().toString();
                 String matkhau = edtmatkhau.getText().toString();
                 if (nguoiDungDao.kiemtradangnhap(taikhoan,matkhau)){
-                    startActivity(new Intent(dangnhap.this,MainKhach.class));
+
+                    Intent intent = new Intent(dangnhap.this,MainKhach.class);
+                    intent.putExtra("tk",taikhoan);
+                    startActivity(intent);
 
                 }else {
                     Toast.makeText(dangnhap.this, "Bạn đã nhập sai Username hoặc PassWord", Toast.LENGTH_SHORT).show();

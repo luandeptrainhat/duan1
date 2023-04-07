@@ -13,4 +13,5 @@ public class motasanpham extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_motasanpham);
     }
+
 }//
