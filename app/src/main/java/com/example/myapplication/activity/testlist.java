@@ -21,12 +21,16 @@ public class testlist extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testlist);
         giayDAO = new GiayDAO(this);
-        list = new ArrayList<>();
-        list = giayDAO.layItemGioHang("dungdo");
-        for (ItemGioHang item : list ){
-            Toast.makeText(this, ""+item.getTen(), Toast.LENGTH_SHORT).show();
+//        list = new ArrayList<>();
+//        list = giayDAO.layItemGioHang("dungdo");
+//        for (ItemGioHang item : list ){
+//            Toast.makeText(this, ""+item.getTen(), Toast.LENGTH_SHORT).show();
+//        }
+        if(giayDAO.themVaoGH(1,2,"dungdo")){
+            Toast.makeText(this, "thêm thành công", Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(this, "thất bại", Toast.LENGTH_SHORT).show();
         }
-
 
     }
 

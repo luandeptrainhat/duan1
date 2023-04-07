@@ -36,6 +36,7 @@
         <activity
             android:name=".activity.MainKhach"
             android:exported="true">
+
         </activity>
 
 

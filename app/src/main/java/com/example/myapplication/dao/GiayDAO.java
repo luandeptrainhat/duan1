@@ -72,7 +72,16 @@ public class GiayDAO {
         long check = sqLiteDatabase.delete("Giay", "magiay=?", new String[]{String.valueOf(maGiay)});
         return check > 0;
     }
-
+//    magiohang integer , magiay integer ,soluong integer ,taikhoan text
+public boolean themVaoGH(int magiay, int soluong,String tk){
+    SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
+    ContentValues contentValues = new ContentValues();
+    contentValues.put("magiay",magiay);
+    contentValues.put("soluong",soluong);
+    contentValues.put("taikhoan",tk);
+    long check = sqLiteDatabase.insert("GIOHANG",null,contentValues);
+    return check > 0;
+}
     public ArrayList<ItemGioHang> layItemGioHang (String tk) {
 
         ArrayList<ItemGioHang> list = new ArrayList<>();

@@ -1,8 +1,9 @@
 package com.example.myapplication.model;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class Product {
+public class Product implements Serializable {
     private int magiay;
     private String tengiay;
     private int gia;
