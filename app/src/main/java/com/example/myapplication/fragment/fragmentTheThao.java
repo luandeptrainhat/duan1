@@ -28,6 +28,7 @@ public class fragmentTheThao extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ListAllProduct_theoloai.class);
                 intent.putExtra("loaigiay",1);
+                intent.putExtra("title", "Giày Thể Thao");
                 startActivity(intent);
             }
         });
