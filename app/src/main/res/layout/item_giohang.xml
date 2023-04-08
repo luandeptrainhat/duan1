@@ -25,6 +25,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:id="@+id/anh"
             android:layout_marginLeft="30dp"
             android:background="@drawable/shapemain5"
             android:padding="10dp"
@@ -40,7 +41,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+android:id="@+id/tengiay"
                 android:text="Bitis Hunter Air 4"
                 android:textColor="@color/black"
                 android:textSize="19sp"
@@ -72,7 +73,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+android:id="@+id/gia"
                 android:layout_gravity="left"
                 android:text="2.499.000VNĐ"
                 android:textColor="#F5FB0303"
@@ -86,7 +87,6 @@
             android:id="@+id/xoaGioHang"
             android:layout_width="40dp"
             android:layout_height="40dp"
-
 
             android:backgroundTint="#AED8D4D4"
             android:drawableBottom="@drawable/xoa"
