@@ -57,11 +57,13 @@ public class MainAdmin extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Fragment fragment = null;
-                switch (item.getItemId()){
+//                Fragment fragment = null;
+                int id = item.getItemId();
+                switch (id){
                     case R.id.menuThemGiay:
                         Toast.makeText(MainAdmin.this, "vi cho", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(MainAdmin.this,testThemHienGiay.class));
+                        Intent intent = new Intent(MainAdmin.this,testThemHienGiay.class);
+                        startActivity(intent);
                         break;
                     case R.id.menuThemLoai:
 
@@ -87,17 +89,17 @@ public class MainAdmin extends AppCompatActivity {
                         break;
 
                 }
-                if (fragment != null) {
-                    FragmentManager fragmentManager = getSupportFragmentManager();
-                    fragmentManager.beginTransaction()
-                            .replace(R.id.frameLayout, fragment)
-                            .commit();
-                    toolbar.setTitle(item.getTitle());
-                }
+//                if (fragment != null) {
+//                    FragmentManager fragmentManager = getSupportFragmentManager();
+//                    fragmentManager.beginTransaction()
+//                            .replace(R.id.frameLayout, fragment)
+//                            .commit();
+//                    toolbar.setTitle(item.getTitle());
+//                }
 
                 drawerLayout.closeDrawer(GravityCompat.START);
 
-                return false;
+                return false ;
             }
         });
 
