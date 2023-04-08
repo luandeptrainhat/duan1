@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,6 +25,8 @@ public class dangnhap extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dangnhap);
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         edttaikhoan = findViewById(R.id.edttaikhoan);
         edtmatkhau = findViewById(R.id.edtmatkhau);
@@ -46,7 +49,7 @@ public class dangnhap extends AppCompatActivity {
                 if (nguoiDungDao.kiemtradangnhap(taikhoan,matkhau)){
 
                     Intent intent = new Intent(dangnhap.this,MainKhach.class);
-                    intent.putExtra("tk",taikhoan);
+//                    intent.putExtra("tk",taikhoan);
                     startActivity(intent);
 
                 }else {

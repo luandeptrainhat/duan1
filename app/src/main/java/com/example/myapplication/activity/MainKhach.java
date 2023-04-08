@@ -18,6 +18,7 @@ import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -54,6 +55,8 @@ public class MainKhach extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainkhach);
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         recyclerView = findViewById(R.id.recycleview1);
         recyclerView.setVisibility(View.GONE);
         list = new ArrayList<>();
@@ -83,7 +86,7 @@ public class MainKhach extends AppCompatActivity {
         });
 
 
-        LinearLayout lineartheothao = findViewById(R.id.linearthethao);
+        LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
         fragmentchung = findViewById(R.id.fragmentchung);
         Fragment fragment = new fragmentTheThao();
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -104,7 +107,7 @@ public class MainKhach extends AppCompatActivity {
     }
 
     private void hienfragment() {
-        LinearLayout lineartheothao = findViewById(R.id.linearthethao);
+        LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
         LinearLayout linearthoitrang = findViewById(R.id.linearthoitrang);
         LinearLayout linearda = findViewById(R.id.linearda);
         LinearLayout linearleonui = findViewById(R.id.linearleonui);
@@ -176,7 +179,7 @@ public class MainKhach extends AppCompatActivity {
     }
 
     private void Set() {
-        LinearLayout lineartheothao = findViewById(R.id.linearthethao);
+        LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
         LinearLayout linearthoitrang = findViewById(R.id.linearthoitrang);
         LinearLayout linearda = findViewById(R.id.linearda);
         LinearLayout linearleonui = findViewById(R.id.linearleonui);

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,16 +20,25 @@ import com.example.myapplication.activity.dangnhap;
 
 public class quangcao extends AppCompatActivity {
     TextView txtbatdau;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quangcao);
         txtbatdau = findViewById(R.id.txtbatdau);
-            txtbatdau.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startActivity( new Intent(quangcao.this,dangnhap.class));
-                }
-            });
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+//
+
+        txtbatdau.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity( new Intent(quangcao.this,dangnhap.class));
+            }
+        });
     }
+
 }
