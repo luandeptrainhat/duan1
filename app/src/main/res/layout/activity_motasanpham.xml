@@ -350,7 +350,7 @@
         </androidx.cardview.widget.CardView>
 
         <Button
-            android:id="@+id/tnt"
+            android:id="@+id/btndathang"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:cardCornerRadius="20dp"
