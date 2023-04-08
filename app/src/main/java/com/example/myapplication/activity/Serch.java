@@ -29,7 +29,7 @@ import java.util.ArrayList;
 public class Serch extends AppCompatActivity {
     private  Context context;
     EditText searchView;
-       RecyclerView recyclerView;
+    RecyclerView recyclerView;
       SerchDao serchDao;
       SerchAdapter serchAdapter;
       ArrayList<Product> list;
@@ -38,7 +38,7 @@ public class Serch extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_serch);
         recyclerView = findViewById(R.id.recycleview1);
-
+        recyclerView.setVisibility(View.GONE);
         list = new ArrayList<>();
         serchDao = new SerchDao(this);
         getDSSerch();
@@ -52,13 +52,15 @@ public class Serch extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-              Serch.this.serchAdapter.getFilter().filter(s);
+                recyclerView.setVisibility(View.VISIBLE);
+                Serch.this.serchAdapter.getFilter().filter(s);
             }
 
             @Override
             public void afterTextChanged(Editable s) {
 
             }
+
         });
     }
     private void getDSSerch (){

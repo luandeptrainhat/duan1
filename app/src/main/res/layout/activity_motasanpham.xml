@@ -18,12 +18,12 @@
 
 
         <ImageView
-            android:layout_marginTop="-50dp"
-            android:layout_gravity="center"
+            android:id="@+id/imganhne"
             android:layout_width="200dp"
             android:layout_height="250dp"
-            android:src="@drawable/giayy"
-            />
+            android:layout_gravity="center"
+            android:layout_marginTop="-50dp"
+            android:src="@drawable/giayy" />
 
         <ImageView
 
@@ -349,25 +349,17 @@
                 android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
+        <Button
+            android:id="@+id/tnt"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:cardCornerRadius="20dp"
+            android:text="Thêm vào giỏ hàng"
             android:layout_marginLeft="80dp"
-
             android:backgroundTint="#FD5F44">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Thêm vào giỏ hàng"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:textAlignment="center"
-                android:gravity="center"/>
-        </androidx.cardview.widget.CardView>
+
+        </Button>
 
     </LinearLayout>
 
