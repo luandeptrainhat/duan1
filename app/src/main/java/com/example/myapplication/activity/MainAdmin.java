@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
@@ -58,22 +59,26 @@ public class MainAdmin extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment fragment = null;
                 switch (item.getItemId()){
-                    case R.id.menu1:
+                    case R.id.menuThemGiay:
+                        Toast.makeText(MainAdmin.this, "vi cho", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainAdmin.this,testThemHienGiay.class));
+                        break;
+                    case R.id.menuThemLoai:
 
                         break;
-                    case R.id.menu2:
+                    case R.id.menuXuLiDon:
 
                         break;
-                    case R.id.menu3:
-
-                        break;
-                    case R.id.menu4:
+                    case R.id.menuDoanhThu:
 
 
                         break;
-                    case R.id.menu5:
+                    case R.id.menuDangXuat:
 
                        break;
+                    case R.id.menuDoiMatKhau:
+                        startActivity(new Intent(MainAdmin.this,doimatkhau.class));
+                        break;
 
                     case R.id.menuThoat:
                         Intent intentt = new Intent(MainAdmin.this, dangnhap.class);
