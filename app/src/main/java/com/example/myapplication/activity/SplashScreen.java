@@ -29,7 +29,6 @@ public class SplashScreen extends AppCompatActivity {
                         onBoardingScreen = getSharedPreferences("onBoardingScreen",MODE_PRIVATE);
                         boolean isfirttime = onBoardingScreen.getBoolean("firstTime",true);
                         if (isfirttime){
-
                             SharedPreferences.Editor editor = onBoardingScreen.edit();
                             editor.putBoolean("firstTime",false);
                             editor.commit();
