@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
@@ -24,18 +26,26 @@ public class ListAllProduct_theoloai extends AppCompatActivity {
     GiayUserAdapter giayadapter;
     TextView title;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_all_product_theoloai);
         recycleviewallgiay=findViewById(R.id.recycleview);
+
+
         title= findViewById(R.id.title);
         Intent intent = getIntent();
         int maloaigiay = intent.getIntExtra("loaigiay", 0);
         String title1 = intent.getStringExtra("title");
         title.setText(title1);
         showList(maloaigiay);
+
+
+
+
     }
+
 
     private void showList(int maloaigiay) {
         list = new ArrayList<>();
@@ -46,5 +56,6 @@ public class ListAllProduct_theoloai extends AppCompatActivity {
         giayadapter = new GiayUserAdapter(this, list, dao);
         recycleviewallgiay.setAdapter(giayadapter);
     }
+
 
 }
