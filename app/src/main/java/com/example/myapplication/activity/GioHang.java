@@ -7,14 +7,12 @@ import android.view.WindowManager;
 
 import com.example.myapplication.R;
 
-public class motasanpham extends AppCompatActivity {
+public class GioHang extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_motasanpham);
-
+        setContentView(R.layout.activity_gio_hang);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
-
-}//
+}
