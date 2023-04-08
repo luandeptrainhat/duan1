@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -35,8 +37,8 @@ public class GioHangActivity extends AppCompatActivity {
     private void showList() {
         list = new ArrayList<>();
         dao = new GiayDAO(getApplicationContext());
-        Intent intent = new Intent();
-        String tk = intent.getStringExtra("tk");
+        SharedPreferences sharedPreferences = getSharedPreferences("THONGTIN",MODE_PRIVATE);
+        String tk = sharedPreferences.getString("taikhoan",null);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recycleviewGioHang.setLayoutManager(linearLayoutManager);
