@@ -7,92 +7,85 @@
 
     android:background="@drawable/shape4"
 
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
-<Button
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:layout_gravity="right"
-    android:layout_marginTop="-5dp"
-    android:backgroundTint="#AED8D4D4"
-    android:drawableBottom="@drawable/xoa"
-    />
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:src="@drawable/air"
+    <ImageView
+        android:id="@+id/anh"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/air"
 
-            />
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Bán chạy nhất"
+        android:textColor="#FD5F44"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tengiay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Nike Air Fly"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/gia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Bán chạy nhất"
-            android:textColor="#FD5F44"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Nike Air Fly"
+            android:layout_marginLeft="5dp"
+            android:text="2.344.999 VNĐ"
             android:textColor="@color/white"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:textStyle="bold" />
-
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/btnthemGH"
+            android:layout_width="45dp"
+            android:layout_height="37dp"
             android:layout_gravity="end"
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal">
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/shapemain"
+            android:orientation="vertical"
+
+            >
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:text="2.344.999 VNĐ"
-                android:textColor="@color/white"
-                android:textSize="13sp"
-
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="45dp"
-                android:layout_height="37dp"
-                android:layout_gravity="end"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="3dp"
-                android:background="@drawable/shapemain"
-
-                android:orientation="vertical"
-
-                >
+                android:text="+"
+                android:textColor="@color/black"
+                android:textSize="27sp"
 
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="+"
-                    android:textColor="@color/black"
-                    android:textSize="27sp"
-
-
-                    />
-
-            </LinearLayout>
-
+                />
 
         </LinearLayout>
 
 
     </LinearLayout>
+
+
+</LinearLayout>
 

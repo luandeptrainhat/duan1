@@ -4,7 +4,9 @@ public class LoaiGiay {
     private int maloai;
     private String tenloai;
 
-    public LoaiGiay() {
+    public LoaiGiay(int maloai, String tenloai) {
+        this.maloai = maloai;
+        this.tenloai = tenloai;
     }
 
     public int getMaloai() {
@@ -20,11 +22,6 @@ public class LoaiGiay {
     }
 
     public void setTenloai(String tenloai) {
-        this.tenloai = tenloai;
-    }
-
-    public LoaiGiay(int maloai, String tenloai) {
-        this.maloai = maloai;
         this.tenloai = tenloai;
     }
 }
