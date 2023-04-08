@@ -46,7 +46,7 @@ public class MainKhach extends AppCompatActivity {
     SerchDao serchDao;
     SerchAdapter serchAdapter;
     ArrayList<Product> list;
-// dung da o day roi
+// dung da o day roi1
 
 
 
