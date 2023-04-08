@@ -5,32 +5,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.view.Window;
+import android.os.Handler;
 import android.view.WindowManager;
 
 import com.example.myapplication.R;
 
-public class SplashScreen extends AppCompatActivity {
+public class Splash_Screen_new extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_splash_screen_new);
 
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 //
-        new CountDownTimer(1500,1000){
-
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onTick(long millisUntilFinished) {
-
+            public void run() {
+                startActivity(new Intent(Splash_Screen_new.this,dangnhap.class));
+                finish();
             }
-
-            @Override
-            public void onFinish() {
-                startActivity(new Intent(SplashScreen.this, quangcao.class));
-            }
-        }.start();
+        },6000);
     }
-}
+    }

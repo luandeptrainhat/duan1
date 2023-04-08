@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Thêm giày"
-        android:textColor="#8F000000"
+        android:textColor="#FAF6F3F3"
         android:textSize="25sp"
         android:layout_gravity="center"
         android:textStyle="bold"/>
@@ -28,7 +28,7 @@
             android:layout_height="match_parent"
 
             android:text="Mã giày"
-            android:textColor="#8F000000"
+            android:textColor="#8FF8F6F6"
             android:textSize="12sp"
             android:textStyle="bold" />
         <TextView
@@ -65,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tên giày"
-            android:textColor="#8F000000"
+            android:textColor="#8FF3F1F1"
             android:textSize="12sp"
             android:textStyle="bold"/>
         <TextView
@@ -104,7 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Giá giày"
-            android:textColor="#8F000000"
+            android:textColor="#8FF8F5F5"
             android:textSize="12sp"
             android:textStyle="bold"/>
         <TextView
@@ -141,7 +141,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Số lượng"
-            android:textColor="#8F000000"
+            android:textColor="#8FF6F5F5"
             android:textSize="12sp"
             android:textStyle="bold"/>
         <TextView
@@ -177,7 +177,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Màu sắc"
-            android:textColor="#8F000000"
+            android:textColor="#8FFAF9F9"
             android:textSize="12sp"
             android:textStyle="bold"/>
         <TextView
@@ -216,7 +216,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kích cỡ"
-            android:textColor="#8F000000"
+            android:textColor="#8FF8F5F5"
             android:textSize="12sp"
             android:textStyle="bold"/>
         <TextView
@@ -253,7 +253,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ảnh"
-            android:textColor="#8F000000"
+            android:textColor="#8FF8F5F5"
             android:textSize="12sp"
             android:textStyle="bold" />
 
@@ -286,7 +286,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mã loại giày"
-            android:textColor="#8F000000"
+            android:textColor="#8FFAF8F8"
             android:textSize="12sp"
             android:textStyle="bold"/>
         <TextView
