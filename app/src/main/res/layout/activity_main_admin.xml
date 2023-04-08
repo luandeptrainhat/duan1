@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
     android:background="@android:color/transparent"
-
+    tools:openDrawer="start"
 
     tools:context=".activity.MainKhach">
     <LinearLayout

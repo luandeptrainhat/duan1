@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -95,13 +94,6 @@ public class MainKhach extends AppCompatActivity {
 
 
         hienfragment();
-
-        SharedPreferences sharedPreferences = getSharedPreferences("THONGTIN",MODE_PRIVATE);
-        int phanquyen = sharedPreferences.getInt("phanquyen",1);
-        if ( phanquyen == 1){
-
-        }
-//
 
 
     }
@@ -236,7 +228,5 @@ public class MainKhach extends AppCompatActivity {
         recyclerView.setAdapter(serchAdapter);
 
     }
-
-
 
 }

@@ -20,6 +20,7 @@ import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.myapplication.R;
+import com.example.myapplication.fragment.fragmentThoiTrang;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -46,6 +47,7 @@ public class MainAdmin extends AppCompatActivity {
         navigationView = findViewById(R.id.navigationView);
         toolbar = findViewById(R.id.toolbar);
         View headerLayout = navigationView.getHeaderView(0);
+        TextView txtTen = headerLayout.findViewById(R.id.txtHeaderName);
 
 
         setSupportActionBar(toolbar);

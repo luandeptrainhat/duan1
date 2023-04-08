@@ -3,7 +3,6 @@ package com.example.myapplication.activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -21,6 +20,7 @@ public class dangnhap extends AppCompatActivity {
     Button btndangnhap;
     EditText edttaikhoan, edtmatkhau;
     TextView txtdangki;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,10 +35,9 @@ public class dangnhap extends AppCompatActivity {
         txtdangki.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity( new Intent(dangnhap.this,dangki.class));
+                startActivity(new Intent(dangnhap.this, dangki.class));
             }
         });
-
 
         NguoiDungDao nguoiDungDao = new NguoiDungDao(this);
         btndangnhap.setOnClickListener(new View.OnClickListener() {
@@ -46,16 +45,25 @@ public class dangnhap extends AppCompatActivity {
             public void onClick(View v) {
                 String taikhoan = edttaikhoan.getText().toString();
                 String matkhau = edtmatkhau.getText().toString();
-                if (nguoiDungDao.kiemtradangnhap(taikhoan,matkhau)){
+                if (nguoiDungDao.kiemtradangnhap(taikhoan, matkhau)) {
+                    SharedPreferences sharedPreferences = getSharedPreferences("THONGTIN", MODE_PRIVATE);
+                    int a = sharedPreferences.getInt("phanquyen", -1);
+                    if (a == 1) {
+                        startActivity(new Intent(dangnhap.this, MainAdmin.class));
 
-                    Intent intent = new Intent(dangnhap.this,MainKhach.class);
-//                    intent.putExtra("tk",taikhoan);
-                    startActivity(intent);
+                    } else {
+                        Intent intent = new Intent(dangnhap.this, MainKhach.class);
+                        startActivity(intent);
 
-                }else {
+                    }
+                } else {
                     Toast.makeText(dangnhap.this, "Bạn đã nhập sai Username hoặc PassWord", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
+
     }
+
+
 }
