@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.text.Editable;
@@ -19,6 +20,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.example.myapplication.R;
 import com.example.myapplication.adapter.SerchAdapter;
@@ -34,6 +36,7 @@ public class Serch extends AppCompatActivity {
       SerchDao serchDao;
       SerchAdapter serchAdapter;
       ArrayList<Product> list;
+      ImageView imgback;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +49,14 @@ public class Serch extends AppCompatActivity {
         serchDao = new SerchDao(this);
         getDSSerch();
         searchView = findViewById(R.id.Search);
+        imgback = findViewById(R.id.imgback);
+        imgback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity( new Intent(Serch.this,MainKhach.class));
+            }
+        });
 
         searchView.addTextChangedListener(new TextWatcher() {
             @Override

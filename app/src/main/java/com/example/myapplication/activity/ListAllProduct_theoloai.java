@@ -24,7 +24,8 @@ public class ListAllProduct_theoloai extends AppCompatActivity {
     GiayDAO dao;
     ArrayList<Product> list;
     GiayUserAdapter giayadapter;
-    TextView title;
+    TextView title, txtsearchne;
+
 
 
     @Override
@@ -32,7 +33,7 @@ public class ListAllProduct_theoloai extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_all_product_theoloai);
         recycleviewallgiay=findViewById(R.id.recycleview);
-
+        txtsearchne = findViewById(R.id.edtserch1);
 
         title= findViewById(R.id.title);
         Intent intent = getIntent();
@@ -42,7 +43,12 @@ public class ListAllProduct_theoloai extends AppCompatActivity {
         showList(maloaigiay);
 
 
-
+        txtsearchne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity( new Intent(ListAllProduct_theoloai.this,Serch.class));
+            }
+        });
 
     }
 

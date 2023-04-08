@@ -33,6 +33,7 @@ public class dangnhap extends AppCompatActivity {
         txtdangki.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity( new Intent(dangnhap.this,dangki.class));
             }
         });
