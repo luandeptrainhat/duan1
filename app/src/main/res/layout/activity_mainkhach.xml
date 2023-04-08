@@ -118,21 +118,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+
+        android:paddingLeft="15dp">
+
         <LinearLayout
-            android:id="@+id/lineartheothao"
+            android:id="@+id/linearthethao"
             android:layout_width="75dp"
             android:layout_height="37dp"
-            android:orientation="vertical"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="3dp"
             android:background="@drawable/shapemain3"
 
+            android:orientation="vertical"
 
             >
 
             <de.hdodenhof.circleimageview.CircleImageView
+
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_gravity="center"
@@ -147,10 +150,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Giày thể thao"
+                android:text="Giày thể thao"
                 android:textColor="@color/black"
                 android:textSize="7sp"
-                android:textStyle="bold"
 
                 />
 
@@ -161,7 +163,7 @@
             android:id="@+id/linearleonui"
             android:layout_width="75dp"
             android:layout_height="37dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="3dp"
             android:background="@drawable/shapemain3"
 
@@ -199,7 +201,7 @@
             android:layout_width="75dp"
             android:id="@+id/linearda"
             android:layout_height="37dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="3dp"
             android:background="@drawable/shapemain3"
             android:orientation="vertical"
@@ -223,7 +225,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Giày Da"
+                android:text="Giày da"
                 android:textColor="@color/black"
                 android:textSize="7sp"
 
@@ -233,10 +235,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearthoitrang"
             android:layout_width="75dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="20dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/linearthoitrang"
             android:layout_marginTop="3dp"
             android:background="@drawable/shapemain3"
             android:orientation="vertical"
@@ -260,7 +262,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Giày Thời Trang"
+                android:text="Giày thời trang"
                 android:textColor="@color/black"
                 android:textSize="7sp"
 
@@ -296,6 +298,7 @@
             />
 
     </LinearLayout>
+
 
 
     <LinearLayout

@@ -3,6 +3,7 @@ package com.example.myapplication.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -22,17 +23,13 @@ public class dangki extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dangki);
 
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         edttaikhoan = findViewById(R.id.edttaikhoan1);
         edtmatkhau1 = findViewById(R.id.edtmatkhau);
         edtmatkhau2 = findViewById(R.id.edtnhaplaimatkhau);
         btndangki = findViewById(R.id.btndangki);
         btndangnhap = findViewById(R.id.btndangnhap);
-        btndangnhap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(dangki.this,dangnhap.class));
-            }
-        });
         nguoiDungDao = new NguoiDungDao(this);
         btndangki.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +43,7 @@ public class dangki extends AppCompatActivity {
                         Intent intent = new Intent(dangki.this, com.example.myapplication.activity.dangnhap.class);
                         startActivity(intent);
                         Toast.makeText(dangki.this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
+
                     }else {
                         Toast.makeText(dangki.this, "Đăng kí thất bại", Toast.LENGTH_SHORT).show();
                     }
