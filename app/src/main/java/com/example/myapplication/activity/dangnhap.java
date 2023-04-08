@@ -47,7 +47,7 @@ public class dangnhap extends AppCompatActivity {
                 if (nguoiDungDao.kiemtradangnhap(taikhoan,matkhau)){
 
                     Intent intent = new Intent(dangnhap.this,MainKhach.class);
-              //      intent.putExtra("tk",taikhoan);
+//                    intent.putExtra("tk",taikhoan);
                     startActivity(intent);
 
                 }else {

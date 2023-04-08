@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -18,9 +17,9 @@ import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -41,12 +40,12 @@ import java.util.ArrayList;
 public class MainKhach extends AppCompatActivity {
     LinearLayout fragmentchung;
     private Context context;
-    TextView searchView;
+    EditText searchView;
     RecyclerView recyclerView;
     SerchDao serchDao;
     SerchAdapter serchAdapter;
     ArrayList<Product> list;
-// dung da o day roi1
+// dung da o day roi
 
 
 
@@ -55,6 +54,8 @@ public class MainKhach extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainkhach);
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         recyclerView = findViewById(R.id.recycleview1);
         recyclerView.setVisibility(View.GONE);
         list = new ArrayList<>();
@@ -62,34 +63,29 @@ public class MainKhach extends AppCompatActivity {
         getDSSerch();
         searchView = findViewById(R.id.edtserch);
 
-       searchView.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               startActivity(new Intent(MainKhach.this,Serch.class));
-           }
-       });
-
-//        searchView.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//                recyclerView.setVisibility(View.VISIBLE);
-//                MainKhach.this.serchAdapter.getFilter().filter(s);
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//
-//            }
-//
-//        });
 
 
-        LinearLayout lineartheothao = findViewById(R.id.linearthethao);
+        searchView.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                recyclerView.setVisibility(View.VISIBLE);
+                MainKhach.this.serchAdapter.getFilter().filter(s);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+
+        });
+
+
+        LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
         fragmentchung = findViewById(R.id.fragmentchung);
         Fragment fragment = new fragmentTheThao();
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -103,7 +99,7 @@ public class MainKhach extends AppCompatActivity {
     }
 
     private void hienfragment() {
-        LinearLayout lineartheothao = findViewById(R.id.linearthethao);
+        LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
         LinearLayout linearthoitrang = findViewById(R.id.linearthoitrang);
         LinearLayout linearda = findViewById(R.id.linearda);
         LinearLayout linearleonui = findViewById(R.id.linearleonui);
@@ -175,7 +171,7 @@ public class MainKhach extends AppCompatActivity {
     }
 
     private void Set() {
-        LinearLayout lineartheothao = findViewById(R.id.linearthethao);
+        LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
         LinearLayout linearthoitrang = findViewById(R.id.linearthoitrang);
         LinearLayout linearda = findViewById(R.id.linearda);
         LinearLayout linearleonui = findViewById(R.id.linearleonui);
