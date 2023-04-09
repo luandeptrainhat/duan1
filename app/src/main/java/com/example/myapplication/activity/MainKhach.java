@@ -90,7 +90,7 @@ public class MainKhach extends AppCompatActivity {
         Fragment fragment = new fragmentTheThao();
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.fragmentchung, fragment).commit();
-        lineartheothao.setBackground(getDrawable(R.drawable.shapemain2));
+        lineartheothao.setBackground(getDrawable(R.drawable.shape4));
 
 
         hienfragment();
@@ -153,7 +153,7 @@ public class MainKhach extends AppCompatActivity {
     }
 
     private void SetColer(LinearLayout linearLayout) {
-        linearLayout.setBackground(getDrawable(R.drawable.shapemain2));
+        linearLayout.setBackground(getDrawable(R.drawable.shape4));
         //  linearLayout.setLayoutParams(new LinearLayout.LayoutParams(130, 65));
         linearLayout.setOrientation(LinearLayout.HORIZONTAL);
         linearLayout.setGravity(CENTER);
@@ -162,8 +162,8 @@ public class MainKhach extends AppCompatActivity {
         for (int i = 0; i < linearLayout.getChildCount(); i++) {
             View v = linearLayout.getChildAt(i);
             if (v instanceof TextView) {
-                ((TextView) v).setTextColor(Color.WHITE);
-                ((TextView) v).setTextSize(10);
+                ((TextView) v).setTextColor(Color.BLACK);
+                ((TextView) v).setTextSize(7);
 
             }
 
