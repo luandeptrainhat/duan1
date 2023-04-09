@@ -61,6 +61,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/imggiohang"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="20dp"
@@ -85,7 +86,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <EditText
+        <TextView
             android:id="@+id/edtserch"
             android:layout_width="300dp"
             android:layout_height="35dp"

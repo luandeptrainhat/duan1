@@ -51,7 +51,7 @@
         >
 
         <EditText
-
+ android:id="@+id/edtmatkhaucu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Tên đăng nhập"
@@ -98,7 +98,7 @@
         >
 
         <EditText
-
+ android:id="@+id/edtmatkhaumoine"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="************"
@@ -146,7 +146,7 @@
         >
 
         <EditText
-
+        android:id="@+id/edtmatkhaumoine1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="************"
@@ -165,7 +165,7 @@
 
 
     <Button
-
+android:id="@+id/btndoimatkhaune"
         android:layout_width="match_parent"
         android:layout_height="50dp"
 
