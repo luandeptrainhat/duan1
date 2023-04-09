@@ -88,7 +88,7 @@ public class GiayDAO {
         }
         return  list;
     }
-    public boolean themVaoGH(int magiay, int soluong,String tk){
+    public boolean themVaoGH(int magiay, int soluong, String tk){
         SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("magiay",magiay);

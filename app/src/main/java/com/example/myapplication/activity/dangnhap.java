@@ -1,6 +1,7 @@
 package com.example.myapplication.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -46,11 +47,14 @@ public class dangnhap extends AppCompatActivity {
                 String taikhoan = edttaikhoan.getText().toString();
                 String matkhau = edtmatkhau.getText().toString();
                 if (nguoiDungDao.kiemtradangnhap(taikhoan,matkhau)){
+                    SharedPreferences sharedPreferences = getSharedPreferences("THONGTIN", MODE_PRIVATE);
+                    int a = sharedPreferences.getInt("phanquyen", -1);
+                    if(a == 1){
+                        startActivity(new Intent(dangnhap.this, MainAdmin.class));
 
-                    Intent intent = new Intent(dangnhap.this,MainKhach.class);
-//                    intent.putExtra("tk",taikhoan);
-                    startActivity(intent);
-
+                    }else {
+                        startActivity(new Intent(dangnhap.this, MainKhach.class));
+                    }
                 }else {
                     Toast.makeText(dangnhap.this, "Bạn đã nhập sai Username hoặc PassWord", Toast.LENGTH_SHORT).show();
                 }
