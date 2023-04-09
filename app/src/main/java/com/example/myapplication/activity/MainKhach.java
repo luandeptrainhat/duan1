@@ -3,12 +3,14 @@ package com.example.myapplication.activity;
 import static android.view.Gravity.CENTER;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -20,6 +22,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -33,6 +36,7 @@ import com.example.myapplication.fragment.fragmentLeoNui;
 import com.example.myapplication.fragment.fragmentTheThao;
 import com.example.myapplication.fragment.fragmentThoiTrang;
 import com.example.myapplication.model.Product;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -46,7 +50,9 @@ public class MainKhach extends AppCompatActivity {
     SerchAdapter serchAdapter;
     ArrayList<Product> list;
 // dung da o day roi
-
+    ImageView imageViewHoiDap;
+private DrawerLayout drawerLayout;
+    BottomNavigationView bottomNavigationView;
 
 
     //
@@ -54,8 +60,13 @@ public class MainKhach extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainkhach);
-
+        imageViewHoiDap = findViewById(R.id.imageHoiDap);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setBackground(null);
+        drawerLayout = findViewById(R.id.drawerLayout);
+
+
         recyclerView = findViewById(R.id.recycleview1);
         recyclerView.setVisibility(View.GONE);
         list = new ArrayList<>();
@@ -64,7 +75,13 @@ public class MainKhach extends AppCompatActivity {
         searchView = findViewById(R.id.edtserch);
 
 
-
+        imageViewHoiDap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainKhach.this,chat_box.class);
+                startActivity(intent);
+            }
+        });
         searchView.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
