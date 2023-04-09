@@ -35,8 +35,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="kichco"/>
-    <EditText
-        android:id="@+id/maloaigiay"
+    <Spinner
+        android:id="@+id/spnMaloaigiay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="maloaigiay"/>

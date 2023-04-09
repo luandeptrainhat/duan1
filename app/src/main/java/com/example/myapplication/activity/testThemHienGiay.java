@@ -15,6 +15,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
@@ -32,7 +33,7 @@ public class testThemHienGiay extends AppCompatActivity {
     int REQUEST_CODE_FOLD = 456;
     Button chupAnh, layAnh, themGiay;
     GiayDAO giayDAO;
-
+Spinner spnMaloaigiay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +45,7 @@ public class testThemHienGiay extends AppCompatActivity {
 //        soluong = findViewById(R.id.soluong);
         mausac = findViewById(R.id.mausac);
         kichco = findViewById(R.id.kichco);
-        maloaigiay = findViewById(R.id.maloaigiay);
+        spnMaloaigiay = findViewById(R.id.spnMaloaigiay);
         anh = findViewById(R.id.anh);
         chupAnh = findViewById(R.id.chupAnh);
         layAnh = findViewById(R.id.layAnh);
