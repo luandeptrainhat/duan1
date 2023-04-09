@@ -44,7 +44,7 @@ import java.util.ArrayList;
 public class MainKhach extends AppCompatActivity {
     LinearLayout fragmentchung;
     private Context context;
-    EditText searchView;
+    TextView searchView;
     RecyclerView recyclerView;
     SerchDao serchDao;
     SerchAdapter serchAdapter;
