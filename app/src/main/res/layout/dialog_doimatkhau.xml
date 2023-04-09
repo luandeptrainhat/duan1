@@ -13,8 +13,13 @@
         android:layout_width="190dp"
         android:layout_height="190dp"
         android:layout_gravity="center"
+<<<<<<< HEAD
         android:layout_marginTop="20dp"
         android:src="@drawable/img" />
+=======
+        android:layout_marginTop="40dp"/>
+
+>>>>>>> parent of 602c79b (Merge branch 'duy' into luan)
 
 
     <LinearLayout
@@ -50,10 +55,18 @@
         android:layout_marginRight="45dp">
 
         <EditText
+<<<<<<< HEAD
 
             android:id="@+id/edtmatkhaucu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+=======
+            android:id="@+id/edtmatkhaucu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Mật khẩu cũ"
+            android:textSize="15sp"
+>>>>>>> parent of 602c79b (Merge branch 'duy' into luan)
             android:background="@drawable/gradient_edittext"
             android:hint="Tên đăng nhập"
             android:paddingLeft="10dp"
@@ -98,7 +111,7 @@
         android:layout_marginRight="45dp">
 
         <EditText
-
+android:id="@+id/edtmatkhaumoine"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/gradient_edittext"
@@ -147,7 +160,7 @@
         android:layout_marginRight="45dp">
 
         <EditText
-
+android:id="@+id/edtmatkhaumoine1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/gradient_edittext"
@@ -163,7 +176,7 @@
 
 
     <Button
-
+       android:id="@+id/btndoimatkhaune"
         android:layout_width="match_parent"
         android:layout_height="50dp"
 

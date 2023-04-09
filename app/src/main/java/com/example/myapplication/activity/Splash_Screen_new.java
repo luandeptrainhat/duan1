@@ -22,7 +22,7 @@ public class Splash_Screen_new extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(Splash_Screen_new.this,test_quangcao.class));
+                startActivity(new Intent(Splash_Screen_new.this,dangnhap.class));
                 finish();
             }
         },4500);

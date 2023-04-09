@@ -28,7 +28,7 @@ public class fragmentDa extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ListAllProduct_theoloai.class);
                 intent.putExtra("loaigiay",3);
-                intent.putExtra("title", "Giày Da");
+                intent.putExtra("title", "Giày Da ");
                 startActivity(intent);
             }
         });
