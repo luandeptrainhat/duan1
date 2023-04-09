@@ -42,11 +42,11 @@ public class MainKhach extends AppCompatActivity {
     LinearLayout fragmentchung;
     private Context context;
     TextView searchView;
-<<<<<<< HEAD
-    RecyclerView recyclerView;
-=======
 
->>>>>>> parent of 602c79b (Merge branch 'duy' into luan)
+    RecyclerView recyclerView;
+
+
+
     SerchDao serchDao;
     SerchAdapter serchAdapter;
     ArrayList<Product> list;
