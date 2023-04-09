@@ -3,7 +3,6 @@ package com.example.myapplication.activity;
 import static android.view.Gravity.CENTER;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -22,7 +21,6 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -36,7 +34,6 @@ import com.example.myapplication.fragment.fragmentLeoNui;
 import com.example.myapplication.fragment.fragmentTheThao;
 import com.example.myapplication.fragment.fragmentThoiTrang;
 import com.example.myapplication.model.Product;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -45,14 +42,12 @@ public class MainKhach extends AppCompatActivity {
     LinearLayout fragmentchung;
     private Context context;
     TextView searchView;
-    RecyclerView recyclerView;
+
     SerchDao serchDao;
     SerchAdapter serchAdapter;
     ArrayList<Product> list;
 // dung da o day roi
-    ImageView imageViewHoiDap, imggiohang;
-private DrawerLayout drawerLayout;
-    BottomNavigationView bottomNavigationView;
+
 
 
     //
@@ -60,26 +55,12 @@ private DrawerLayout drawerLayout;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainkhach);
-        imageViewHoiDap = findViewById(R.id.imageHoiDap);
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setBackground(null);
-        drawerLayout = findViewById(R.id.drawerLayout);
-
-
-        recyclerView = findViewById(R.id.recycleview1);
-        recyclerView.setVisibility(View.GONE);
         list = new ArrayList<>();
         serchDao = new SerchDao(this);
-        getDSSerch();
+
         searchView = findViewById(R.id.edtserch);
-        imggiohang = findViewById(R.id.imggiohang);
-        imggiohang.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainKhach.this, GioHangActivity.class));
-            }
-        });
         searchView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,13 +68,8 @@ private DrawerLayout drawerLayout;
             }
         });
 
-        imageViewHoiDap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainKhach.this,chat_box.class);
-                startActivity(intent);
-            }
-        });
+
+
 //        searchView.addTextChangedListener(new TextWatcher() {
 //            @Override
 //            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -119,7 +95,7 @@ private DrawerLayout drawerLayout;
         Fragment fragment = new fragmentTheThao();
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.fragmentchung, fragment).commit();
-        lineartheothao.setBackground(getDrawable(R.drawable.shape4));
+        lineartheothao.setBackground(getDrawable(R.drawable.shapemain2));
 
 
         hienfragment();
@@ -182,7 +158,7 @@ private DrawerLayout drawerLayout;
     }
 
     private void SetColer(LinearLayout linearLayout) {
-        linearLayout.setBackground(getDrawable(R.drawable.shape4));
+        linearLayout.setBackground(getDrawable(R.drawable.shapemain2));
         //  linearLayout.setLayoutParams(new LinearLayout.LayoutParams(130, 65));
         linearLayout.setOrientation(LinearLayout.HORIZONTAL);
         linearLayout.setGravity(CENTER);
@@ -191,8 +167,8 @@ private DrawerLayout drawerLayout;
         for (int i = 0; i < linearLayout.getChildCount(); i++) {
             View v = linearLayout.getChildAt(i);
             if (v instanceof TextView) {
-                ((TextView) v).setTextColor(Color.BLACK);
-                ((TextView) v).setTextSize(7);
+                ((TextView) v).setTextColor(Color.WHITE);
+                ((TextView) v).setTextSize(10);
 
             }
 
@@ -249,13 +225,6 @@ private DrawerLayout drawerLayout;
         linearleonui.setOrientation(LinearLayout.VERTICAL);
 
     }
-    private void getDSSerch(){
-        list = serchDao.getDS();
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainKhach.this);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        serchAdapter = new SerchAdapter(this,list,serchDao);
-        recyclerView.setAdapter(serchAdapter);
 
-    }
 
 }

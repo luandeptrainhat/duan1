@@ -1,33 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawerLayout"
-
+    android:background="#E11F1F1F"
+    android:orientation="vertical"
     tools:context=".activity.MainKhach">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/gradient"
-    android:orientation="vertical">
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="100dp"
         android:orientation="horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginTop="5dp"
-            android:src="@drawable/img"
-            app:civ_circle_background_color="#BEFEE686"
-            app:civ_border_color="#FEE686"
-            app:civ_border_width="1dp" />
+            android:src="@drawable/man"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="0dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -39,13 +34,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chào buổi sáng"
-                android:textColor="#9d6855" />
+                android:textColor="@color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ông chủ"
-                android:textColor="#9d6855"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
 
@@ -61,14 +56,12 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imggiohang"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="20dp"
                 android:src="@drawable/baseline_shopping_basket_24" />
 
             <ImageView
-                android:id="@+id/imageHoiDap"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
@@ -88,25 +81,25 @@
 
         <TextView
             android:id="@+id/edtserch"
-            android:layout_width="300dp"
-            android:layout_height="35dp"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/gradient_edittext"
+            android:background="#ABBFBFBF"
             android:iconifiedByDefault="false"
             android:drawableLeft="@drawable/baseline_search_24"
             android:padding="10dp"
             android:hint="Tìm kiếm loại giày,..."
-            android:textColor="#9d6855"
+            android:textColor="#F7F1EEEE"
             android:textFontWeight="@integer/material_motion_duration_medium_2"
-            android:textSize="13sp"
+            android:textSize="16sp"
 
             />
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="35dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="15dp"
-            android:background="@drawable/gradient_edittext"
+            android:background="#ABBFBFBF"
             android:src="@drawable/baseline_sort_24" />
 
 
@@ -121,18 +114,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:orientation="vertical">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycleview1"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"/>
+
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:orientation="horizontal">
         <LinearLayout
@@ -164,7 +153,7 @@
                 android:layout_gravity="center"
                 android:text="Giày thể thao"
                 android:textColor="@color/black"
-                android:textSize="6sp"
+                android:textSize="7sp"
                 android:textStyle="bold"
 
                 />
@@ -202,7 +191,7 @@
                 android:layout_gravity="center"
                 android:text="Giày leo núi"
                 android:textColor="@color/black"
-                android:textSize="6sp"
+                android:textSize="7sp"
 
 
                 />
@@ -240,7 +229,7 @@
                 android:layout_gravity="center"
                 android:text="Giày Da"
                 android:textColor="@color/black"
-                android:textSize="6sp"
+                android:textSize="7sp"
 
 
                 />
@@ -277,7 +266,7 @@
                 android:layout_gravity="center"
                 android:text="Giày Thời Trang"
                 android:textColor="@color/black"
-                android:textSize="6sp"
+                android:textSize="7sp"
 
 
                 />
@@ -290,13 +279,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="15dp">
+        android:padding="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sản phẩm đặc biệt"
-            android:textColor="#9d6855"
+            android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold" />
 
@@ -305,7 +294,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="140dp"
             android:text="Xem tất cả"
-            android:textColor="#9d6855"
+            android:textColor="@color/white"
             android:textSize="14sp"
 
             />
@@ -313,52 +302,13 @@
     </LinearLayout>
 
 
-        <LinearLayout
-            android:id="@+id/fragmentchung"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" />
+    <LinearLayout
+        android:id="@+id/fragmentchung"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
 
     </LinearLayout>
 
+
 </LinearLayout>
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-
-        android:layout_height="match_parent">
-
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottomAppBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#B7F4E08C"
-            app:fabCradleMargin="15dp"
-            app:fabCradleVerticalOffset="10dp"
-            app:fabCradleRoundedCornerRadius="20dp"
-            android:layout_gravity="bottom">
-
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottomNavigationView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/transparent"
-                app:menu="@menu/bottom_nav_menu"/>
-
-        </com.google.android.material.bottomappbar.BottomAppBar>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/iconmain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_trangchu"
-            android:backgroundTint="#D3FEE686"
-            app:layout_anchor="@id/bottomAppBar"/>
-
-
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-</androidx.drawerlayout.widget.DrawerLayout>
