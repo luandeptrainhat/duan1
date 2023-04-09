@@ -43,10 +43,6 @@ public class MainKhach extends AppCompatActivity {
     private Context context;
     TextView searchView;
 
-    RecyclerView recyclerView;
-
-
-
     SerchDao serchDao;
     SerchAdapter serchAdapter;
     ArrayList<Product> list;

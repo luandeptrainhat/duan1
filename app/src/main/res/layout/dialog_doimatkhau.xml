@@ -13,13 +13,9 @@
         android:layout_width="190dp"
         android:layout_height="190dp"
         android:layout_gravity="center"
-<<<<<<< HEAD
         android:layout_marginTop="20dp"
         android:src="@drawable/img" />
-=======
-        android:layout_marginTop="40dp"/>
 
->>>>>>> parent of 602c79b (Merge branch 'duy' into luan)
 
 
     <LinearLayout
@@ -55,23 +51,17 @@
         android:layout_marginRight="45dp">
 
         <EditText
-<<<<<<< HEAD
+
+
+
 
             android:id="@+id/edtmatkhaucu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-=======
-            android:id="@+id/edtmatkhaucu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+
             android:hint="Mật khẩu cũ"
             android:textSize="15sp"
->>>>>>> parent of 602c79b (Merge branch 'duy' into luan)
-            android:background="@drawable/gradient_edittext"
-            android:hint="Tên đăng nhập"
-            android:paddingLeft="10dp"
-            android:textSize="15sp"
-            android:textStyle="italic" />
+/>
 
 
     </androidx.cardview.widget.CardView>
@@ -111,13 +101,11 @@
         android:layout_marginRight="45dp">
 
         <EditText
-android:id="@+id/edtmatkhaumoine"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/gradient_edittext"
             android:hint="************"
             android:inputType="textPassword"
-            android:id="@+id/edtmatkhaumoine"
             android:paddingLeft="10dp"
             android:textSize="15sp"
             android:textStyle="italic" />
@@ -160,14 +148,14 @@ android:id="@+id/edtmatkhaumoine"
         android:layout_marginRight="45dp">
 
         <EditText
-android:id="@+id/edtmatkhaumoine1"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/gradient_edittext"
             android:hint="************"
             android:inputType="textPassword"
             android:paddingLeft="10dp"
-            android:id="@+id/edtmatkhaumoine1"
+
             android:textSize="15sp"
             android:textStyle="italic" />
 
@@ -186,7 +174,7 @@ android:id="@+id/edtmatkhaumoine1"
         android:backgroundTint="@color/white"
         android:paddingLeft="10dp"
         android:text="Đổi mật khẩu"
-        android:id="@+id/btndoimatkhaune"
+
         android:textColor="#FD5F44"
         android:textSize="15sp"
         android:textStyle="bold" />
