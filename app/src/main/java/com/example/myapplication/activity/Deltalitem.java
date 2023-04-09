@@ -28,18 +28,19 @@ import java.util.ArrayList;
 public class Deltalitem extends AppCompatActivity {
     RecyclerView recycleviewGioHang;
     GiayDAO dao;
-      ArrayList<ItemGioHang> list1;
-      GiayUserAdapter adapter;
+    ArrayList<ItemGioHang> list1;
+    GiayUserAdapter adapter;
 
-       ArrayList<Product> list;
-       Button btndathang;
+    ArrayList<Product> list;
+    Button btndathang;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_motasanpham);
         LinearLayout linearLayout = findViewById(R.id.linnia);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+        dao = new GiayDAO(this);
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
@@ -49,18 +50,19 @@ public class Deltalitem extends AppCompatActivity {
         txtdelta.setText(product.getTengiay());
         TextView txtgia = findViewById(R.id.txtgia);
         txtgia.setText(String.valueOf(product.getGia()));
-        adapter = new GiayUserAdapter(this,list, dao);
-         btndathang = findViewById(R.id.btndathang);
-         btndathang.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
+        adapter = new GiayUserAdapter(this, list, dao);
+        btndathang = findViewById(R.id.btndathang);
+        btndathang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-                 item();
-             }
-         });
+                item();
+            }
+        });
 
     }
-        public  void item(){
+
+    public void item() {
 
 
 //        GiayDAO dao = new GiayDAO(this);
@@ -74,7 +76,7 @@ public class Deltalitem extends AppCompatActivity {
 //            Toast.makeText(this, "thất bại", Toast.LENGTH_SHORT).show();
 //
 //    }
-}
+    }
 }
 
 
