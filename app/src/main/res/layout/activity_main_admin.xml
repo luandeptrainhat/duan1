@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
-    android:background="@android:color/transparent"
-    tools:openDrawer="start"
+    android:background="@drawable/gradient"
+
 
     tools:context=".activity.MainKhach">
     <LinearLayout
@@ -18,7 +18,7 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:background="#AAA8A8"
+            android:background="#BFAEE3"
             android:layout_width="match_parent"
 
             android:layout_height="50dp"/>
@@ -73,7 +73,7 @@
             android:layout_width="290dp"
             android:layout_height="40dp"
             android:layout_marginLeft="20dp"
-            android:background="#ABBFBFBF"
+            android:background="#FEC5E6"
             android:iconifiedByDefault="false"
             android:drawableLeft="@drawable/baseline_search_24"
             android:padding="10dp"
@@ -88,7 +88,7 @@
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
-            android:background="#ABBFBFBF"
+            android:background="#FEC5E6"
             android:src="@drawable/baseline_sort_24" />
 
 
@@ -105,11 +105,11 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:orientation="vertical">
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycleview1"
+                android:background="@android:color/transparent"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
         <LinearLayout
@@ -300,6 +300,7 @@
             android:id="@+id/fragmentchung"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@android:color/transparent"
             android:orientation="vertical" />
 
     </LinearLayout>
@@ -313,7 +314,7 @@
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#E1DCDC"
+        android:backgroundTint="#FEE686"
         app:fabCradleMargin="15dp"
         app:fabCradleVerticalOffset="10dp"
         app:fabCradleRoundedCornerRadius="20dp"
@@ -334,6 +335,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/icon_trangchu"
+        android:backgroundTint="#FEE686"
         app:layout_anchor="@id/bottomAppBar"/>
 
 
@@ -347,6 +349,7 @@
         app:headerLayout="@layout/header_layout"
         app:menu="@menu/menu_navigation"
         android:layout_gravity="start"
+        android:backgroundTint="#FEC5E6"
         android:padding="10dp"
         android:fitsSystemWindows="true"/>
 </androidx.drawerlayout.widget.DrawerLayout>

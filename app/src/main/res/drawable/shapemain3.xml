@@ -12,13 +12,13 @@
     <gradient
         android:type="linear"
         android:angle="0"
-        android:startColor="#D9D9D9"
-        android:endColor="#D9D9D9" />
+        android:startColor="#F0C2E8"
+        android:endColor="#FAB5DD"/>
     <corners
-        android:bottomLeftRadius="40dp"
-        android:bottomRightRadius="40dp"
-        android:topLeftRadius="40dp"
-        android:topRightRadius="40dp">
+        android:bottomLeftRadius="30dp"
+        android:bottomRightRadius="30dp"
+        android:topLeftRadius="30dp"
+        android:topRightRadius="30dp">
     </corners>
 
 </shape>
