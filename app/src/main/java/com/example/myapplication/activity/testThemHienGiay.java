@@ -42,7 +42,11 @@ Spinner spnMaloaigiay;
 
         tengiay = findViewById(R.id.tengiay);
         gia = findViewById(R.id.gia);
+<<<<<<< HEAD
 //        soluong = findViewById(R.id.soluong);
+=======
+        soluong = findViewById(R.id.soluong);
+>>>>>>> parent of 0843df4 (toi 4/6/2023)
         mausac = findViewById(R.id.mausac);
         kichco = findViewById(R.id.kichco);
         spnMaloaigiay = findViewById(R.id.spnMaloaigiay);

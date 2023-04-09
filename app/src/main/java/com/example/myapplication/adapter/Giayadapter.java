@@ -42,7 +42,7 @@ public class Giayadapter extends RecyclerView.Adapter<Giayadapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-        View view = inflater.inflate(R.layout.item_giay_admin, parent, false);
+        View view = inflater.inflate(R.layout.item_giay, parent, false);
 
         return new ViewHolder(view);
     }
@@ -134,4 +134,8 @@ public class Giayadapter extends RecyclerView.Adapter<Giayadapter.ViewHolder> {
         notifyDataSetChanged();
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> parent of 0843df4 (toi 4/6/2023)

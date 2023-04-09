@@ -6,13 +6,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.myapplication.database.Dbhelper;
-import com.example.myapplication.model.ItemGioHang;
 import com.example.myapplication.model.Product;
 
 import java.util.ArrayList;
 
 public class GiayDAO {
-    Dbhelper dbhelper;
+     Dbhelper dbhelper;
 
     public GiayDAO(Context context) {
         dbhelper = new Dbhelper(context);
@@ -33,6 +32,7 @@ public class GiayDAO {
                         cursor.getInt(4),
                         cursor.getBlob(5),
                         cursor.getInt(6)
+<<<<<<< HEAD
                 ));
             }while (cursor.moveToNext());
         }
@@ -115,8 +115,42 @@ public class GiayDAO {
                         cursor.getString(3),
                         cursor.getBlob(4)
                 ));
+=======
+                        ));
+>>>>>>> parent of 0843df4 (toi 4/6/2023)
             }while (cursor.moveToNext());
         }
-        return list;
+        return  list;
+    }
+
+// magiay integer primary key autoincrement , tengiay text, giagiay integer, soluong integer, mausac text, kichco integer, anh blob, maloaigiay integer
+    public boolean themGiay (Product product){
+        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("tengiay",product.getTengiay());
+        contentValues.put("giagiay",product.getGia());
+        contentValues.put("mausac",product.getMausac());
+        contentValues.put("kichco",product.getKichco());
+        contentValues.put("anh",product.getAnh());
+        contentValues.put("maloaigiay",product.getMaloaigiay());
+        long check  = sqLiteDatabase.insert("GIAY",null,contentValues);
+        return check > 0;
+    }
+    public boolean suaGiay (Product product){
+        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("tengiay",product.getTengiay());
+        contentValues.put("giagiay",product.getGia());
+        contentValues.put("mausac",product.getMausac());
+        contentValues.put("kichco",product.getKichco());
+        contentValues.put("anh",product.getAnh());
+        contentValues.put("maloaigiay",product.getMaloaigiay());
+        long check = sqLiteDatabase.update("GIAY",contentValues,"magiay = ?", new String[]{String.valueOf(product.getMagiay())});
+        return check>0;
+    }
+    public boolean xoaGiay (int maGiay){
+        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
+        long check = sqLiteDatabase.delete("Giay","magiay=?",new String[]{String.valueOf(maGiay)});
+        return check>0;
     }
 }

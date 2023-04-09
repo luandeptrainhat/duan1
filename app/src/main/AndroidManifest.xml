@@ -11,6 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+<<<<<<< HEAD
+=======
+        <activity
+
+            android:name=".activity.testSL"
+            android:exported="false" />
+>>>>>>> parent of 0843df4 (toi 4/6/2023)
         <activity
             android:name=".activity.Splash_Screen_new"
             android:exported="true" >
@@ -19,6 +26,7 @@
         <activity
             android:name=".activity.GioHang"
             android:exported="true">
+<<<<<<< HEAD
         </activity>
         <activity
             android:name=".activity.MainAdmin"
@@ -41,9 +49,9 @@
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+=======
+>>>>>>> parent of 0843df4 (toi 4/6/2023)
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".activity.motasanpham"
@@ -53,7 +61,22 @@
             android:exported="true" />
         <activity
             android:name=".activity.MainKhach"
+<<<<<<< HEAD
             android:exported="true" />
+=======
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+
+
+>>>>>>> parent of 0843df4 (toi 4/6/2023)
         <activity
             android:name=".activity.quangcao"
             android:exported="true" />
@@ -65,7 +88,17 @@
             android:exported="true" />
         <activity
             android:name=".activity.SplashScreen"
+<<<<<<< HEAD
             android:exported="true" />
+=======
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+>>>>>>> parent of 0843df4 (toi 4/6/2023)
         <activity
             android:name=".activity.testlist"
             android:exported="true" />

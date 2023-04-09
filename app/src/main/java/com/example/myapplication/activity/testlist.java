@@ -13,6 +13,10 @@ public class testlist extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testlist);
+<<<<<<< HEAD
 //        luan dac cau//
+=======
+//        luan dac cau
+>>>>>>> parent of 0843df4 (toi 4/6/2023)
     }
 }
