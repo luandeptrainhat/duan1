@@ -102,6 +102,7 @@
 
             android:id="@+id/edtmatkhaumoine"
 
+            android:id="@+id/edtmatkhaumoine"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/gradient_edittext"
@@ -149,7 +150,8 @@
         android:layout_marginRight="45dp">
 
         <EditText
-            android:id="@+id/edtmatkhaumoine1"
+
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/gradient_edittext"
@@ -165,7 +167,7 @@
 
 
     <Button
-        android:id="@+id/btndoimatkhaune"
+
         android:layout_width="match_parent"
         android:layout_height="50dp"
 
