@@ -3,6 +3,7 @@ package com.example.myapplication.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
@@ -56,8 +57,9 @@ public class GiayUserAdapter extends RecyclerView.Adapter<GiayUserAdapter.ViewHo
             @Override
             public void onClick(View v) {
                 GiayDAO dao = new GiayDAO(v.getContext());
-                Intent  intent = new Intent();
-                String tk = intent.getStringExtra("tk");
+                SharedPreferences sharedPreferences = context.getSharedPreferences("THONGTIN",Context.MODE_PRIVATE);
+                String tk = sharedPreferences.getString("taikhoan",null);
+
                 if(dao.themVaoGH(list.get(position).getMagiay(),1,String.valueOf(tk))){
                     Toast.makeText(v.getContext(), "thêm thành công", Toast.LENGTH_SHORT).show();
                     context.startActivity(new Intent(context, GioHangActivity.class));
