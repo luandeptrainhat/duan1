@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class Dbhelper extends SQLiteOpenHelper {
     public Dbhelper(Context context) {
-        super(context, "FIVESOLE", null, 3);
+        super(context, "FIVESOLE", null, 1);
 
     }
 
@@ -29,8 +29,6 @@ public class Dbhelper extends SQLiteOpenHelper {
 
         String dbGioHang = "CREATE TABLE GIOHANG(magiohang integer primary key autoincrement, magiay integer references GIAY(magiay),soluong integer ,taikhoan text references NGUOIDUNG(taikhoan))";
         db.execSQL(dbGioHang);
-
-
 
 
         db.execSQL( "INSERT INTO LOAIGIAY VALUES (1,'giày thể thao'), (2, 'giày lười'),(3, 'giày leo núi')");
