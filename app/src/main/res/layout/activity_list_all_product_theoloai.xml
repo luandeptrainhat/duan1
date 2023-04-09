@@ -19,7 +19,20 @@
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
+    <TextView
+        android:id="@+id/edtserch1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ABBFBFBF"
+        android:iconifiedByDefault="false"
+        android:drawableLeft="@drawable/baseline_search_24"
+        android:padding="10dp"
+        android:hint="Tìm kiếm loại giày,..."
+        android:textColor="#F7F1EEEE"
+        android:textFontWeight="@integer/material_motion_duration_medium_2"
+        android:textSize="16sp"
 
+        />
     <androidx.recyclerview.widget.RecyclerView
         android:layout_margin="5dp"
         android:id="@+id/recycleview"

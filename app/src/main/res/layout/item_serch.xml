@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_marginLeft="30dp"
     android:id="@+id/bamvone"
-    android:layout_width="350dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
    <de.hdodenhof.circleimageview.CircleImageView
-      android:id="@+id/imgserch"
+       android:id="@+id/imgserch"
        android:layout_width="50dp"
        android:layout_height="50dp"
        android:src="@drawable/img_1"/>

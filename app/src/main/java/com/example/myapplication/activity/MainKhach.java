@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -40,8 +41,8 @@ import java.util.ArrayList;
 public class MainKhach extends AppCompatActivity {
     LinearLayout fragmentchung;
     private Context context;
-    EditText searchView;
-    RecyclerView recyclerView;
+    TextView searchView;
+
     SerchDao serchDao;
     SerchAdapter serchAdapter;
     ArrayList<Product> list;
@@ -56,33 +57,37 @@ public class MainKhach extends AppCompatActivity {
         setContentView(R.layout.activity_mainkhach);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        recyclerView = findViewById(R.id.recycleview1);
-        recyclerView.setVisibility(View.GONE);
         list = new ArrayList<>();
         serchDao = new SerchDao(this);
-        getDSSerch();
+
         searchView = findViewById(R.id.edtserch);
-
-
-
-        searchView.addTextChangedListener(new TextWatcher() {
+        searchView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+            public void onClick(View v) {
+                startActivity(new Intent(MainKhach.this,Serch.class));
             }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                recyclerView.setVisibility(View.VISIBLE);
-                MainKhach.this.serchAdapter.getFilter().filter(s);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-
         });
+
+
+
+//        searchView.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                recyclerView.setVisibility(View.VISIBLE);
+//                MainKhach.this.serchAdapter.getFilter().filter(s);
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//
+//            }
+//
+//        });
 
 
         LinearLayout lineartheothao = findViewById(R.id.lineartheothao);
@@ -220,13 +225,6 @@ public class MainKhach extends AppCompatActivity {
         linearleonui.setOrientation(LinearLayout.VERTICAL);
 
     }
-    private void getDSSerch(){
-        list = serchDao.getDS();
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainKhach.this);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        serchAdapter = new SerchAdapter(this,list,serchDao);
-        recyclerView.setAdapter(serchAdapter);
 
-    }
 
 }
