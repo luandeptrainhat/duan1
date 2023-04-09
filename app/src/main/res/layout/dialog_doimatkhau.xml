@@ -61,6 +61,7 @@
             />
 
 
+
     </androidx.cardview.widget.CardView>
 
 
@@ -100,7 +101,6 @@
         <EditText
 
 
-            android:id="@+id/edtmatkhaumoine"
 
             android:id="@+id/edtmatkhaumoine"
             android:layout_width="match_parent"
