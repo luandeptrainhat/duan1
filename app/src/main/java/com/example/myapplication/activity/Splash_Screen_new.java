@@ -25,6 +25,6 @@ public class Splash_Screen_new extends AppCompatActivity {
                 startActivity(new Intent(Splash_Screen_new.this,dangnhap.class));
                 finish();
             }
-        },6000);
+        },4500);
     }
     }

@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.myapplication.database.Dbhelper;
+import com.example.myapplication.model.ItemGioHang;
 import com.example.myapplication.model.Product;
 
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ public class SerchDao {
         }
         return  list;
     }
+
 
 
 

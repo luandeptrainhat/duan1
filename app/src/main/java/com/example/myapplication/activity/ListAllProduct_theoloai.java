@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
@@ -22,20 +24,34 @@ public class ListAllProduct_theoloai extends AppCompatActivity {
     GiayDAO dao;
     ArrayList<Product> list;
     GiayUserAdapter giayadapter;
-    TextView title;
+    TextView title, txtsearchne;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_all_product_theoloai);
         recycleviewallgiay=findViewById(R.id.recycleview);
+        txtsearchne = findViewById(R.id.edtserch1);
+
         title= findViewById(R.id.title);
         Intent intent = getIntent();
         int maloaigiay = intent.getIntExtra("loaigiay", 0);
         String title1 = intent.getStringExtra("title");
         title.setText(title1);
         showList(maloaigiay);
+
+
+        txtsearchne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity( new Intent(ListAllProduct_theoloai.this,Serch.class));
+            }
+        });
+
     }
+
 
     private void showList(int maloaigiay) {
         list = new ArrayList<>();
@@ -46,5 +62,6 @@ public class ListAllProduct_theoloai extends AppCompatActivity {
         giayadapter = new GiayUserAdapter(this, list, dao);
         recycleviewallgiay.setAdapter(giayadapter);
     }
+
 
 }
