@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#E11F1F1F">
+    android:background="@android:color/transparent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -90,7 +90,7 @@
             android:text="Đề xuất"
             android:textSize="17sp"
             android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:textColor="#9d6855"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -99,7 +99,7 @@
             android:id="@+id/xemgiay_theoloai"
             android:textSize="14sp"
             android:layout_marginLeft="220dp"
-            android:textColor="@color/white"
+            android:textColor="#9d6855"
 
             />
 
@@ -120,7 +120,7 @@
 
             android:layout_marginLeft="25dp"
 
-            android:background="@drawable/shape4"
+            android:background="@drawable/shapemain"
 
             android:orientation="vertical"
 
@@ -140,7 +140,7 @@
                 android:textStyle="bold"
                 android:textSize="12sp"
                 android:layout_gravity="center"
-                android:textColor="#FD5F44"
+                android:textColor="#9d6855"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -177,21 +177,20 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="3dp"
                     android:layout_gravity="end"
-                    android:background="@drawable/shapemain"
+                    android:background="@drawable/shape4"
 
                     android:orientation="vertical"
 
                     >
 
 
-
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="11dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="+"
                         android:textColor="@color/black"
-                        android:textSize="27sp"
+                        android:textSize="23sp"
 
 
                         />
@@ -213,7 +212,7 @@
             android:layout_height="match_parent"
 
 
-            android:background="@drawable/shape4"
+            android:background="@drawable/shapemain"
             android:layout_marginLeft="30dp"
             android:orientation="vertical"
 
@@ -232,7 +231,7 @@
                 android:textStyle="bold"
                 android:textSize="12sp"
                 android:layout_gravity="center"
-                android:textColor="#FD5F44"
+                android:textColor="#9d6855"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -269,7 +268,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="3dp"
                     android:layout_gravity="end"
-                    android:background="@drawable/shapemain"
+                    android:background="@drawable/shape4"
 
                     android:orientation="vertical"
 
@@ -283,7 +282,7 @@
                         android:layout_gravity="center"
                         android:text="+"
                         android:textColor="@color/black"
-                        android:textSize="27sp"
+                        android:textSize="23sp"
 
 
                         />
