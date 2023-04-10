@@ -7,6 +7,8 @@ import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -57,12 +59,16 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tengiay,gia;
+        Button btnXoaGioHang;
+        CheckBox chkItemGH;
         ImageView anh;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tengiay = itemView.findViewById(R.id.tengiay);
             gia = itemView.findViewById(R.id.gia);
             anh = itemView.findViewById(R.id.anh);
+            btnXoaGioHang = itemView.findViewById(R.id.btnXoaGioHang);
+            chkItemGH = itemView.findViewById(R.id.chkItemGH);
         }
     }
 }
