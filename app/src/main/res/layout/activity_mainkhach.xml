@@ -103,6 +103,7 @@
             />
 
         <ImageView
+            android:id="@+id/chayLSDH"
             android:layout_width="50dp"
             android:layout_height="35dp"
             android:layout_marginLeft="15dp"

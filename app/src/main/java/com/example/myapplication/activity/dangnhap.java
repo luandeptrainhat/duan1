@@ -71,10 +71,10 @@ public class dangnhap extends AppCompatActivity {
                     SharedPreferences sharedPreferences = getSharedPreferences("THONGTIN", MODE_PRIVATE);
                     int a = sharedPreferences.getInt("phanquyen", -1);
                     if(a == 1){
-                        startActivity(new Intent(dangnhap.this, MainAdmin.class));
+                        startActivity(new Intent(dangnhap.this, MainKhach.class));
 
                     }else {
-                        startActivity(new Intent(dangnhap.this, MainKhach.class));
+                        startActivity(new Intent(dangnhap.this, MainAdmin.class));
                     }
                 }else {
                     Toast.makeText(dangnhap.this, "Bạn đã nhập sai Username hoặc PassWord", Toast.LENGTH_SHORT).show();

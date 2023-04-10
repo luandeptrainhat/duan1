@@ -76,7 +76,8 @@ public class MainAdmin extends AppCompatActivity {
                         startActivity(intentloaigiay);
                         break;
                     case R.id.menuXuLiDon:
-
+                        Intent intent1 = new Intent(MainAdmin.this,DonHangActivity.class);
+                        startActivity(intent1);
                         break;
                     case R.id.menuDoanhThu:
 
