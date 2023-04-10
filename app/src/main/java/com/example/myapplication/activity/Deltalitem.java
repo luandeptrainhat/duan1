@@ -26,31 +26,26 @@ import com.example.myapplication.model.Product;
 import java.util.ArrayList;
 
 public class Deltalitem extends AppCompatActivity {
-    RecyclerView recycleviewGioHang;
-    GiayDAO dao;
-      ArrayList<ItemGioHang> list1;
-      GiayUserAdapter adapter;
+      GiayDAO dao;
 
-       ArrayList<Product> list;
+      ArrayList<Product> list;
        Button btndathang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_motasanpham);
-        LinearLayout linearLayout = findViewById(R.id.linnia);
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
         Product product = (Product) bundle.getSerializable("truyenne");
-        int check = product.getMagiay();
         TextView txtdelta = findViewById(R.id.txtten);
         txtdelta.setText(product.getTengiay());
         TextView txtgia = findViewById(R.id.txtgia);
         txtgia.setText(String.valueOf(product.getGia()));
 
-      //  adapter = new GiayUserAdapter(this,list, dao);
         dao = new GiayDAO(Deltalitem.this);
          btndathang = findViewById(R.id.btndathang);
          btndathang.setOnClickListener(new View.OnClickListener() {

@@ -26,8 +26,6 @@ public class dangnhap extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dangnhap);
         btnShow = findViewById(R.id.btnShow);
-
-        //show pass
         btnShow.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -69,7 +67,6 @@ public class dangnhap extends AppCompatActivity {
                 if (nguoiDungDao.kiemtradangnhap(taikhoan,matkhau)){
 
                     Intent intent = new Intent(dangnhap.this,MainKhach.class);
-//                    intent.putExtra("tk",taikhoan);
                     startActivity(intent);
 
                 }else {

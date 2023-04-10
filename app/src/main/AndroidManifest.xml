@@ -29,9 +29,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.GioHang"
-            android:exported="true" />
-        <activity
             android:name=".activity.MainAdmin"
             android:exported="true" >
 
@@ -49,26 +46,17 @@
             android:name=".activity.TestHienGiay"
             android:exported="true" />
         <activity
-            android:name=".activity.motasanpham"
-            android:exported="true" />
-        <activity
             android:name=".activity.doimatkhau"
             android:exported="true" />
         <activity
             android:name=".activity.MainKhach"
             android:exported="true" />
         <activity
-            android:name=".activity.quangcao"
-            android:exported="false" />
-        <activity
             android:name=".activity.dangki"
             android:exported="true" />
         <activity
             android:name=".activity.dangnhap"
             android:exported="true" />
-        <activity
-            android:name=".activity.SplashScreen"
-            android:exported="false" />
         <activity
             android:name=".activity.testlist"
             android:exported="true" />

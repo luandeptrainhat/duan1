@@ -37,8 +37,7 @@ public class TestHienGiay extends AppCompatActivity {
     }
     private void getDS (){
         list = giayDAO.getDSPRO();
-//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(TestHienGiay.this);
-//        recyclerView.setLayoutManager(linearLayoutManager);
+
         GridLayoutManager gridLayoutManager = new GridLayoutManager(TestHienGiay.this,2);
         recyclerView.setLayoutManager(gridLayoutManager);
         giayadapter = new Giayadapter(this,list,giayDAO);
