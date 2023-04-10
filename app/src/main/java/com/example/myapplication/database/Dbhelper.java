@@ -21,7 +21,7 @@ public class Dbhelper extends SQLiteOpenHelper {
         String dbNguoiDung = "CREATE TABLE NGUOIDUNG (taikhoan text primary key, matkhau text, phanquyen integer)";
         db.execSQL(dbNguoiDung);
 
-        String Donhang = "CREATE TABLE DONHANG (madon integer primary key autoincrement, tien integer, taikhoan references NGUOIDUNG(taikhoan))";
+        String Donhang = "CREATE TABLE DONHANG (madon integer primary key autoincrement, trangthai integer, taikhoan references NGUOIDUNG(taikhoan),magiay integer references GIAY(magiay) )";
         db.execSQL(Donhang);
 
         String dbdChitietdonhang = "CREATE TABLE CTDH (machitiet_donhang integer primary key autoincrement , magiay integer references GIAY(magiay) , madon integer references DONHANG(madon))";
