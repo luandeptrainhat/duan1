@@ -3,11 +3,13 @@ package com.example.myapplication.model;
 import java.util.Arrays;
 
 public class ItemGioHang {
+    int magiohang;
     String ten;
     int gia;
     int soLuong;
     String mauSac;
     byte [] anh ;
+    int magiay;
 
     public ItemGioHang(String ten, int gia, int soLuong, String mauSac, byte[] anh) {
         this.ten = ten;
@@ -15,6 +17,34 @@ public class ItemGioHang {
         this.soLuong = soLuong;
         this.mauSac = mauSac;
         this.anh = anh;
+    }
+// dùng cho hàm getall
+    public ItemGioHang(int magiohang, String ten, int gia, int soLuong, String mauSac, byte[] anh) {
+        this.magiohang = magiohang;
+        this.ten = ten;
+        this.gia = gia;
+        this.soLuong = soLuong;
+        this.mauSac = mauSac;
+        this.anh = anh;
+    }
+//    dùng cho chuyển thanh toán nhiều đơn hàng trong giỏ hàng
+
+    public ItemGioHang(int magiohang, String ten, int gia, int soLuong, String mauSac, byte[] anh, int magiay) {
+        this.magiohang = magiohang;
+        this.ten = ten;
+        this.gia = gia;
+        this.soLuong = soLuong;
+        this.mauSac = mauSac;
+        this.anh = anh;
+        this.magiay = magiay;
+    }
+
+    public int getMagiohang() {
+        return magiohang;
+    }
+
+    public void setMagiohang(int magiohang) {
+        this.magiohang = magiohang;
     }
 
     public String getTen() {
@@ -55,6 +85,14 @@ public class ItemGioHang {
 
     public void setAnh(byte[] anh) {
         this.anh = anh;
+    }
+
+    public int getMagiay() {
+        return magiay;
+    }
+
+    public void setMagiay(int magiay) {
+        this.magiay = magiay;
     }
 
     @Override
