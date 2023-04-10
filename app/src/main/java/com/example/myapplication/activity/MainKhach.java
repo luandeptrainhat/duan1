@@ -50,7 +50,7 @@ public class MainKhach extends AppCompatActivity {
     SerchAdapter serchAdapter;
     ArrayList<Product> list;
 // dung da o day roi
-    ImageView imageViewHoiDap, imggiohang;
+    ImageView imageViewHoiDap, imggiohang,chayLSDH;
 private DrawerLayout drawerLayout;
     BottomNavigationView bottomNavigationView;
 
@@ -65,7 +65,16 @@ private DrawerLayout drawerLayout;
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setBackground(null);
         drawerLayout = findViewById(R.id.drawerLayout);
-
+//        test code lsdh
+        chayLSDH = findViewById(R.id.chayLSDH);
+        chayLSDH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainKhach.this,LichSuDonHang.class);
+                startActivity(intent);
+            }
+        });
+//        ----------------------------
 
         recyclerView = findViewById(R.id.recycleview1);
         recyclerView.setVisibility(View.GONE);
@@ -257,5 +266,6 @@ private DrawerLayout drawerLayout;
         recyclerView.setAdapter(serchAdapter);
 
     }
+
 
 }

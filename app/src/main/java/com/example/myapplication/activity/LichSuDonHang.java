@@ -9,22 +9,20 @@ import android.os.Bundle;
 
 import com.example.myapplication.R;
 import com.example.myapplication.adapter.DonHangAdapter;
-import com.example.myapplication.adapter.Giayadapter;
 import com.example.myapplication.dao.GiayDAO;
 import com.example.myapplication.model.ItemDonHang;
 
 import java.util.ArrayList;
 
-public class DonHangActivity extends AppCompatActivity {
+public class LichSuDonHang extends AppCompatActivity {
     GiayDAO giayDAO;
     RecyclerView recycleviewdonhang;
     DonHangAdapter adapter;
     ArrayList<ItemDonHang> list;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_don_hang);
+        setContentView(R.layout.activity_lich_su_don_hang);
         recycleviewdonhang = findViewById(R.id.recycleviewdonhang);
 
         SharedPreferences sharedPreferences = getSharedPreferences("THONGTIN", MODE_PRIVATE);
@@ -33,11 +31,9 @@ public class DonHangActivity extends AppCompatActivity {
         recycleviewdonhang.setLayoutManager(linearLayoutManager);
         list = new ArrayList<>();
         giayDAO = new GiayDAO(this);
-        list = giayDAO.layItemDonHang();
+        list = giayDAO.LichSuDonHang(tk);
         adapter = new DonHangAdapter(this,list,giayDAO);
 
         recycleviewdonhang.setAdapter(adapter);
-
     }
-
 }
