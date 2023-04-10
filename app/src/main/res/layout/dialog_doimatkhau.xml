@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:background="@drawable/shapemain3"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    tools:context=".activity.dangki"
+    android:layout_margin="10dp"
     android:padding="10dp"
-    tools:context=".activity.dangki">
+    android:background="@drawable/shapemain3">
 
     <ImageView
         android:layout_width="190dp"
         android:layout_height="190dp"
+        android:src="@drawable/img"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/img" />
+        android:layout_marginTop="20dp"/>
+
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:orientation="horizontal"
-        android:paddingLeft="45dp">
+        android:paddingLeft="45dp"
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,14 +31,13 @@
             android:text="Mật khẩu cũ"
             android:textColor="#8F000000"
             android:textStyle="bold" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="*"
-            android:textColor="#FCFF0303"
             android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textColor="#FCFF0303"
+            android:textStyle="bold"/>
 
 
     </LinearLayout>
@@ -45,20 +45,20 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginLeft="45dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="45dp">
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        >
 
         <EditText
-
-            android:id="@+id/edtmatkhaucu"
+ android:id="@+id/edtmatkhaucu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_edittext"
             android:hint="Tên đăng nhập"
-            android:paddingLeft="10dp"
             android:textSize="15sp"
-            android:textStyle="italic" />
+            android:background="@drawable/gradient_edittext"
+            android:paddingLeft="10dp"
+            android:textStyle="italic"/>
 
 
     </androidx.cardview.widget.CardView>
@@ -67,9 +67,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:orientation="horizontal"
-        android:paddingLeft="45dp">
+        android:paddingLeft="45dp"
+        android:layout_marginTop="10dp">
 
         <TextView
 
@@ -77,15 +77,14 @@
             android:layout_height="wrap_content"
             android:text="Mật khẩu mới"
             android:textColor="#8F000000"
-            android:textStyle="bold" />
-
+            android:textStyle="bold"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="*"
-            android:textColor="#FCFF0303"
             android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textColor="#FCFF0303"
+            android:textStyle="bold"/>
 
 
     </LinearLayout>
@@ -93,21 +92,21 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginLeft="45dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="45dp">
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        >
 
         <EditText
-
+ android:id="@+id/edtmatkhaumoine"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_edittext"
             android:hint="************"
-            android:inputType="textPassword"
-            android:id="@+id/edtmatkhaumoine"
-            android:paddingLeft="10dp"
             android:textSize="15sp"
-            android:textStyle="italic" />
+            android:inputType="textPassword"
+            android:background="@drawable/gradient_edittext"
+            android:paddingLeft="10dp"
+            android:textStyle="italic"/>
 
 
     </androidx.cardview.widget.CardView>
@@ -116,9 +115,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:orientation="horizontal"
-        android:paddingLeft="45dp">
+        android:paddingLeft="45dp"
+        android:layout_marginTop="10dp">
 
         <TextView
 
@@ -126,15 +125,14 @@
             android:layout_height="wrap_content"
             android:text="Xác nhận mật khẩu"
             android:textColor="#8F000000"
-            android:textStyle="bold" />
-
+            android:textStyle="bold"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="*"
-            android:textColor="#FCFF0303"
             android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textColor="#FCFF0303"
+            android:textStyle="bold"/>
 
 
     </LinearLayout>
@@ -142,50 +140,57 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginLeft="45dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="45dp">
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        >
 
         <EditText
-
+        android:id="@+id/edtmatkhaumoine1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_edittext"
             android:hint="************"
-            android:inputType="textPassword"
-            android:paddingLeft="10dp"
-            android:id="@+id/edtmatkhaumoine1"
             android:textSize="15sp"
-            android:textStyle="italic" />
+            android:inputType="textPassword"
+            android:background="@drawable/gradient_edittext"
+            android:paddingLeft="10dp"
+            android:textStyle="italic"/>
 
 
     </androidx.cardview.widget.CardView>
 
 
-    <Button
 
+
+
+
+    <Button
+android:id="@+id/btndoimatkhaune"
         android:layout_width="match_parent"
         android:layout_height="50dp"
 
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="45dp"
+        android:textSize="15sp"
+        android:text="Đổi mật khẩu"
+        android:textColor="#FD5F44"
         android:backgroundTint="@color/white"
         android:paddingLeft="10dp"
-        android:text="Đổi mật khẩu"
-        android:id="@+id/btndoimatkhaune"
-        android:textColor="#FD5F44"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Quên mật khẩu"
         android:textAlignment="center"
-        android:textColor="#70070707"
         android:textSize="13sp"
-        android:textStyle="bold" />
+        android:textColor="#70070707"
+        android:textStyle="bold"/>
+
+
+
+
 
 
 </LinearLayout>
