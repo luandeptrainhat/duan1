@@ -102,6 +102,19 @@ public class TestHienGiay extends AppCompatActivity {
         layAnh();
         chupAnh();
         layDSSpinner(maloaigiay);
+        maloaigiay_ = 1;
+        maloaigiay.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                HashMap<String, Object> hashMap = (HashMap<String, Object>) maloaigiay.getSelectedItem();
+                maloaigiay_ = (int) hashMap.get("maLoaiGiay");
+                Toast.makeText(TestHienGiay.this, "" + maloaigiay_, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
         themGiay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,19 +122,8 @@ public class TestHienGiay extends AppCompatActivity {
                 int gia_ = Integer.parseInt(gia.getText().toString());
                 String mausac_ = mausac.getText().toString();
                 int kichco_ = Integer.parseInt(kichco.getText().toString());
-                maloaigiay.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        HashMap<String, Object> hashMap = (HashMap<String, Object>) maloaigiay.getSelectedItem();
-                        maloaigiay_ = (int) hashMap.get("maLoaiGiay");
-                        Toast.makeText(TestHienGiay.this, "" + maloaigiay, Toast.LENGTH_SHORT).show();
-                    }
 
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
 
-                    }
-                });
 //              chuyển bitmap thành byte []
                 BitmapDrawable bitmapDrawable = (BitmapDrawable) anh.getDrawable();
                 Bitmap bitmap = bitmapDrawable.getBitmap();

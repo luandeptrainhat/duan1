@@ -94,7 +94,7 @@ public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.ViewHold
         list.clear();
         SharedPreferences sharedPreferences =  context.getSharedPreferences("THONGTIN", context.MODE_PRIVATE);
         String tk = sharedPreferences.getString("taikhoan", null);
-        list = giayDAO.layItemDonHang(tk);
+        list = giayDAO.layItemDonHang();
         notifyDataSetChanged();
     }
 }

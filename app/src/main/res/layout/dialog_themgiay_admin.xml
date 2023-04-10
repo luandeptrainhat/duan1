@@ -27,11 +27,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="kichco"/>
+
     <Spinner
         android:id="@+id/spnMaloaigiay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="maloaigiay"/>
+        android:hint="maloaigiay" />
 
     <ImageView
         android:id="@+id/anh"

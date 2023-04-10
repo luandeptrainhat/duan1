@@ -140,7 +140,7 @@ public class GiayDAO {
         return check > 0;
     }
 
-    public ArrayList<ItemDonHang> layItemDonHang(String tk) {
+    public ArrayList<ItemDonHang> layItemDonHang() {
 
         ArrayList<ItemDonHang> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = dbhelper.getReadableDatabase();
@@ -149,7 +149,7 @@ public class GiayDAO {
                 "FROM GIAY " +
                 "INNER JOIN DONHANG " +
                 "ON GIAY.magiay = DONHANG.magiay " +
-                "WHERE DONHANG.taikhoan= ? AND DONHANG.trangthai= 0", new String[]{String.valueOf(tk)});
+                "WHERE   DONHANG.trangthai= 0", null);
         if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             do {
@@ -197,5 +197,32 @@ public class GiayDAO {
         contentValues.put("trangthai", 0);
         long check = sqLiteDatabase.update("GIOHANG", contentValues, "magiohang = ?", new String[]{String.valueOf(magiohang)});
         return check > 0;
+    }
+
+    public ArrayList<ItemDonHang> LichSuDonHang(String tk) {
+
+        ArrayList<ItemDonHang> list = new ArrayList<>();
+        SQLiteDatabase sqLiteDatabase = dbhelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT  GIAY.tengiay,GIAY.giagiay,DONHANG.soluong,GIAY.mausac,GIAY.anh," +
+                "DONHANG.trangthai,DONHANG.taikhoan,GIAY.kichco ,DONHANG.madon " +
+                "FROM GIAY " +
+                "INNER JOIN DONHANG " +
+                "ON GIAY.magiay = DONHANG.magiay " +
+                "WHERE DONHANG.taikhoan= ? AND DONHANG.trangthai= 1", new String[]{String.valueOf(tk)});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            do {
+                list.add(new ItemDonHang(cursor.getInt(8), cursor.getString(0),
+                        cursor.getInt(1),
+                        cursor.getInt(2),
+                        cursor.getString(3),
+                        cursor.getBlob(4),
+                        cursor.getInt(5),
+                        cursor.getString(6),
+                        cursor.getInt(7)
+                ));
+            } while (cursor.moveToNext());
+        }
+        return list;
     }
 }
