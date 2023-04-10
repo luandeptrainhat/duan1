@@ -5,13 +5,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/sheet"
-    android:background="#F8FAFA">
+    android:background="@drawable/gradient_edittext">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#F8FAFA"
+        android:background="@android:color/transparent"
         android:orientation="horizontal"
 
         >
@@ -70,7 +70,7 @@
             android:id="@+id/imgexit"
             android:layout_width="30dp"
             android:layout_height="30dp"
-
+            android:layout_marginLeft="55dp"
 
             android:background="@drawable/icon_dong" />
 
@@ -100,7 +100,7 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="55dp"
+            android:layout_height="50dp"
             android:orientation="horizontal"
             android:background="#D2BFBBBB"
             >
@@ -114,12 +114,12 @@
 
             <TextView
                 android:id="@+id/txtMausac"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
 
-                android:layout_marginBottom="5dp"
+
                 android:gravity="center"
-                android:padding="10dp"
+
                 android:text="Đen và trắng"
 
                 android:textColor="#B7050505"
@@ -139,11 +139,11 @@
 
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="60dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="80dp"
+
             android:gravity="center"
-            android:padding="10dp"
-            android:text="Size"
+
+            android:text="Size:"
 
             android:textColor="#B7050505"
             android:textSize="20sp"
@@ -155,12 +155,12 @@
             android:id="@+id/txtsize1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginBottom="5dp"
+
             android:gravity="center"
-            android:padding="10dp"
+
             android:text="32"
-            android:textColor="#B7050505"
-            android:textSize="15sp"
+            android:textColor="#B7F60A0A"
+            android:textSize="17sp"
             android:textStyle="bold"
 
             />

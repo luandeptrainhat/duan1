@@ -14,7 +14,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
 
             android:background="@drawable/gradient">
 
@@ -52,7 +52,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:id="@+id/recycleviewGioHang"
-        android:layout_height="610dp"/>
+        android:layout_height="615dp"/>
 
 
     <LinearLayout

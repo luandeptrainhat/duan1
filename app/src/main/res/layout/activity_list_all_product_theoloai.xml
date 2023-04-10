@@ -17,7 +17,7 @@
         android:text="Giày thể thao"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="@color/white"
+        android:textColor="#884502"
         android:textSize="20sp"
         android:textStyle="bold" />
     <TextView
@@ -37,12 +37,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        >
         <androidx.recyclerview.widget.RecyclerView
             android:layout_margin="5dp"
             android:id="@+id/recycleview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 
