@@ -65,6 +65,7 @@ public class Deltalitem extends AppCompatActivity {
     public void item() {
 
 
+
 //        GiayDAO dao = new GiayDAO(this);
 //        SharedPreferences sharedPreferences = getSharedPreferences("THONGTIN",Context.MODE_PRIVATE);
 //        String tk = sharedPreferences.getString("taikhoan",null);
@@ -78,3 +79,6 @@ public class Deltalitem extends AppCompatActivity {
 //    }
     }
 }
+
+
+
