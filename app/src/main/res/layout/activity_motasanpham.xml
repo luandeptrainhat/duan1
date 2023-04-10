@@ -296,6 +296,7 @@
             android:textSize="14sp"/>
 
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
 
@@ -328,26 +329,28 @@
         android:layout_marginTop="50dp"
 
         >
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/MuaNgay"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            app:cardCornerRadius="20dp"
             android:layout_marginLeft="55dp"
+            android:backgroundTint="#FD5F44"
 
-
-            android:backgroundTint="#FD5F44">
+            app:cardCornerRadius="20dp">
 
             <TextView
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Mua ngay"
-                android:textColor="@color/white"
-                android:textSize="15sp"
+                android:gravity="center"
                 android:padding="10dp"
-                android:textStyle="bold"
-
+                android:text="Mua ngay"
                 android:textAlignment="center"
-                android:gravity="center"/>
+                android:textColor="@color/white"
+
+                android:textSize="15sp"
+                android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
         <Button
