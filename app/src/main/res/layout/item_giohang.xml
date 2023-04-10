@@ -62,10 +62,21 @@ android:id="@+id/tengiay"
                 />
 
             <TextView
+                android:id="@+id/txtSize"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="Size : 42 "
+                android:textAlignment="textStart"
+                android:textColor="#FD979696"
+
+                />
+            <TextView
+                android:id="@+id/txtSoluong"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Số lượng: 2"
                 android:textAlignment="textStart"
                 android:textColor="#FD979696"
 

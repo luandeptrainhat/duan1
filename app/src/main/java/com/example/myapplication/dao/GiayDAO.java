@@ -26,7 +26,7 @@ public class GiayDAO {
         if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             do {
-                list.add( new Product(
+                list.add(new Product(
                         cursor.getInt(0),
                         cursor.getString(1),
                         cursor.getInt(2),
@@ -35,40 +35,44 @@ public class GiayDAO {
                         cursor.getBlob(5),
                         cursor.getInt(6)
                 ));
-            }while (cursor.moveToNext());
+            } while (cursor.moveToNext());
         }
-        return  list;
+        return list;
     }
+
     // magiay integer primary key autoincrement , tengiay text, giagiay integer, soluong integer, mausac text, kichco integer, anh blob, maloaigiay integer
-    public boolean themGiay (Product product){
+    public boolean themGiay(Product product) {
         SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("tengiay",product.getTengiay());
-        contentValues.put("giagiay",product.getGia());
-        contentValues.put("mausac",product.getMausac());
-        contentValues.put("kichco",product.getKichco());
-        contentValues.put("anh",product.getAnh());
-        contentValues.put("maloaigiay",product.getMaloaigiay());
-        long check  = sqLiteDatabase.insert("GIAY",null,contentValues);
+        contentValues.put("tengiay", product.getTengiay());
+        contentValues.put("giagiay", product.getGia());
+        contentValues.put("mausac", product.getMausac());
+        contentValues.put("kichco", product.getKichco());
+        contentValues.put("anh", product.getAnh());
+        contentValues.put("maloaigiay", product.getMaloaigiay());
+        long check = sqLiteDatabase.insert("GIAY", null, contentValues);
         return check > 0;
     }
-    public boolean suaGiay (Product product){
+
+    public boolean suaGiay(Product product) {
         SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("tengiay",product.getTengiay());
-        contentValues.put("giagiay",product.getGia());
-        contentValues.put("mausac",product.getMausac());
-        contentValues.put("kichco",product.getKichco());
-        contentValues.put("anh",product.getAnh());
-        contentValues.put("maloaigiay",product.getMaloaigiay());
-        long check = sqLiteDatabase.update("GIAY",contentValues,"magiay = ?", new String[]{String.valueOf(product.getMagiay())});
-        return check>0;
+        contentValues.put("tengiay", product.getTengiay());
+        contentValues.put("giagiay", product.getGia());
+        contentValues.put("mausac", product.getMausac());
+        contentValues.put("kichco", product.getKichco());
+        contentValues.put("anh", product.getAnh());
+        contentValues.put("maloaigiay", product.getMaloaigiay());
+        long check = sqLiteDatabase.update("GIAY", contentValues, "magiay = ?", new String[]{String.valueOf(product.getMagiay())});
+        return check > 0;
     }
-    public boolean xoaGiay (int maGiay){
+
+    public boolean xoaGiay(int maGiay) {
         SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
-        long check = sqLiteDatabase.delete("Giay","magiay=?",new String[]{String.valueOf(maGiay)});
-        return check>0;
+        long check = sqLiteDatabase.delete("Giay", "magiay=?", new String[]{String.valueOf(maGiay)});
+        return check > 0;
     }
+
     public ArrayList<Product> getDSPROLoai(int maloaigiay) {
         ArrayList<Product> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = dbhelper.getReadableDatabase();
@@ -76,7 +80,7 @@ public class GiayDAO {
         if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             do {
-                list.add( new Product(
+                list.add(new Product(
                         cursor.getInt(0),
                         cursor.getString(1),
                         cursor.getInt(2),
@@ -85,53 +89,58 @@ public class GiayDAO {
                         cursor.getBlob(5),
                         cursor.getInt(6)
                 ));
-            }while (cursor.moveToNext());
+            } while (cursor.moveToNext());
         }
-        return  list;
+        return list;
     }
-    public boolean themVaoGH(int magiay, int soluong,String tk){
+
+    public boolean themVaoGH(int magiay, int soluong, String tk) {
         SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("magiay",magiay);
-        contentValues.put("soluong",soluong);
-        contentValues.put("taikhoan",tk);
-        long check = sqLiteDatabase.insert("GIOHANG",null,contentValues);
+        contentValues.put("magiay", magiay);
+        contentValues.put("soluong", soluong);
+        contentValues.put("taikhoan", tk);
+        contentValues.put("trangthai", 0);
+        long check = sqLiteDatabase.insert("GIOHANG", null, contentValues);
         return check > 0;
     }
-    public ArrayList<ItemGioHang> layItemGioHang (String tk) {
+
+    public ArrayList<ItemGioHang> layItemGioHang(String tk) {
 
         ArrayList<ItemGioHang> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = dbhelper.getReadableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT GIAY.tengiay,GIAY.giagiay,GIOHANG.soluong,GIAY.mausac,GIAY.anh " +
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT GIAY.tengiay,GIAY.giagiay,GIOHANG.soluong,GIAY.mausac,GIAY.anh, GIOHANG.magiohang " +
                 "FROM GIAY " +
                 "INNER JOIN GIOHANG " +
                 "ON GIAY.magiay = GIOHANG.magiay " +
                 "WHERE GIOHANG.taikhoan= ? ", new String[]{String.valueOf(tk)});
-        if (cursor.getCount()>0){
+        if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             do {
-                list.add(new ItemGioHang(cursor.getString(0),
+                list.add(new ItemGioHang(cursor.getInt(5), cursor.getString(0),
                         cursor.getInt(1),
                         cursor.getInt(2),
                         cursor.getString(3),
                         cursor.getBlob(4)
                 ));
-            }while (cursor.moveToNext());
+            } while (cursor.moveToNext());
         }
         return list;
     }
-//    taikhoan references NGUOIDUNG(taikhoan),magiay integer references GIAY(magiay), soluong integer
-    public boolean themVaoDH(int trangthai,String tk,int magiay, int soluong ){
+
+    //    taikhoan references NGUOIDUNG(taikhoan),magiay integer references GIAY(magiay), soluong integer
+    public boolean themVaoDH(int trangthai, String tk, int magiay, int soluong) {
         SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("trangthai",trangthai);
-        contentValues.put("taikhoan",tk);
-        contentValues.put("magiay",magiay);
-        contentValues.put("soluong",soluong);
-        long check = sqLiteDatabase.insert("DONHANG",null,contentValues);
+        contentValues.put("trangthai", trangthai);
+        contentValues.put("taikhoan", tk);
+        contentValues.put("magiay", magiay);
+        contentValues.put("soluong", soluong);
+        long check = sqLiteDatabase.insert("DONHANG", null, contentValues);
         return check > 0;
     }
-    public ArrayList<ItemDonHang> layItemDonHang (String tk) {
+
+    public ArrayList<ItemDonHang> layItemDonHang(String tk) {
 
         ArrayList<ItemDonHang> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = dbhelper.getReadableDatabase();
@@ -141,10 +150,10 @@ public class GiayDAO {
                 "INNER JOIN DONHANG " +
                 "ON GIAY.magiay = DONHANG.magiay " +
                 "WHERE DONHANG.taikhoan= ? AND DONHANG.trangthai= 0", new String[]{String.valueOf(tk)});
-        if (cursor.getCount()>0){
+        if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             do {
-                list.add(new ItemDonHang(cursor.getInt(8),cursor.getString(0),
+                list.add(new ItemDonHang(cursor.getInt(8), cursor.getString(0),
                         cursor.getInt(1),
                         cursor.getInt(2),
                         cursor.getString(3),
@@ -152,16 +161,41 @@ public class GiayDAO {
                         cursor.getInt(5),
                         cursor.getString(6),
                         cursor.getInt(7)
-                        ));
-            }while (cursor.moveToNext());
+                ));
+            } while (cursor.moveToNext());
         }
         return list;
     }
-    public boolean chuyentrangtrangthai(int madonhang ){
+
+    public boolean chuyentrangtrangthai(int madonhang) {
         SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("trangthai",1);
-        long check = sqLiteDatabase.update("DONHANG",contentValues,"madon = ?",new  String[]{String.valueOf(madonhang)});
+        contentValues.put("trangthai", 1);
+        long check = sqLiteDatabase.update("DONHANG", contentValues, "madon = ?", new String[]{String.valueOf(madonhang)});
+        return check > 0;
+    }
+
+    public boolean xoaItemGH(int magiohang) {
+        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
+        long check = sqLiteDatabase.delete("GIOHANG", "magiohang=?", new String[]{String.valueOf(magiohang)});
+        return check > 0;
+    }
+
+    //    1 là tick
+    public boolean doiTrangThaiGH1(int magiohang) {
+        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("trangthai", 1);
+        long check = sqLiteDatabase.update("GIOHANG", contentValues, "magiohang = ?", new String[]{String.valueOf(magiohang)});
+        return check > 0;
+    }
+
+    //    0 là không tick
+    public boolean doiTrangThaiGH0(int magiohang) {
+        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("trangthai", 0);
+        long check = sqLiteDatabase.update("GIOHANG", contentValues, "magiohang = ?", new String[]{String.valueOf(magiohang)});
         return check > 0;
     }
 }
