@@ -30,9 +30,8 @@ import com.example.myapplication.model.Product;
 import java.util.ArrayList;
 
 public class Serch extends AppCompatActivity {
-    private  Context context;
-    EditText searchView;
-    RecyclerView recyclerView;
+      EditText searchView;
+      RecyclerView recyclerView;
       SerchDao serchDao;
       SerchAdapter serchAdapter;
       ArrayList<Product> list;

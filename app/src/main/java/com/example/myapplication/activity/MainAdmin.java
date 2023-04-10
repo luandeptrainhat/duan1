@@ -43,9 +43,9 @@ public class MainAdmin extends AppCompatActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setBackground(null);
-//        bottomNavigationView.getMenu().getItem(2).isEnabled(savedInstanceState)=false;
 
-        //navi
+
+
         drawerLayout = findViewById(R.id.drawerLayout);
 
 
@@ -95,13 +95,7 @@ public class MainAdmin extends AppCompatActivity {
                         break;
 
                 }
-//                if (fragment != null) {
-//                    FragmentManager fragmentManager = getSupportFragmentManager();
-//                    fragmentManager.beginTransaction()
-//                            .replace(R.id.frameLayout, fragment)
-//                            .commit();
-//                    toolbar.setTitle(item.getTitle());
-//                }
+
 
                 drawerLayout.closeDrawer(GravityCompat.START);
 
@@ -134,7 +128,6 @@ public class MainAdmin extends AppCompatActivity {
         builder.setView(view);
 
         AlertDialog alertDialog = builder.create();
-      //  alertDialog.setCancelable(false);
         alertDialog.show();
         btndoiamtkhau.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -153,9 +146,6 @@ public class MainAdmin extends AppCompatActivity {
                         int check = nguoiDungDao.doimatkhau(taikhoan, matkhau, matkhaumoi);
                         if (check == 1) {
                             Toast.makeText(MainAdmin.this, "Cập nhập mật khẩu thành công", Toast.LENGTH_SHORT).show();
-                       //     Intent intent = new Intent(MainAdmin.this, com.example.myapplication.activity.dangnhap.class);
-                            //  intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                         //   startActivity(intent);
                         } else if (check == 0) {
                             Toast.makeText(MainAdmin.this, "Mật khẩu cũ không đúng", Toast.LENGTH_SHORT).show();
                         } else {

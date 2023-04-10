@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -14,30 +14,20 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".activity.ThanhToan"
-            android:exported="true" />
-        <activity
             android:name=".activity.chat_box"
             android:exported="true" />
         <activity
             android:name=".activity.test_quangcao"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".activity.Splash_Screen_new"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".activity.GioHang"
-            android:exported="true" />
-        <activity
             android:name=".activity.MainAdmin"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true" >
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".activity.Deltalitem"
@@ -47,13 +37,14 @@
             android:exported="true" />
         <activity
             android:name=".activity.testThemHienGiay"
-            android:exported="true"></activity>
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".activity.TestHienGiay"
-            android:exported="true"></activity>
-        <activity
-            android:name=".activity.motasanpham"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".activity.doimatkhau"
             android:exported="true" />
@@ -61,17 +52,17 @@
             android:name=".activity.MainKhach"
             android:exported="true" />
         <activity
-            android:name=".activity.quangcao"
-            android:exported="false" />
-        <activity
             android:name=".activity.dangki"
             android:exported="true" />
         <activity
             android:name=".activity.dangnhap"
-            android:exported="true"></activity>
-        <activity
-            android:name=".activity.SplashScreen"
-            android:exported="false" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activity.testlist"
             android:exported="true" />
