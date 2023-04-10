@@ -72,8 +72,8 @@ public class Deltalitem extends AppCompatActivity {
           dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
 
     }
- public  void showdialog(){
-View view = getLayoutInflater().inflate(R.layout.layoutmotasanpham, null, false);
+            public  void showdialog(){
+        View view = getLayoutInflater().inflate(R.layout.layoutmotasanpham, null, false);
 
      CardView btnthemvaogiohang = view.findViewById(R.id.layaothemvaogiohang);
      ImageButton imgexit = view.findViewById(R.id.imgexit);
