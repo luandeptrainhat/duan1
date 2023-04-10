@@ -104,7 +104,7 @@ public class Deltalitem extends AppCompatActivity {
                     Toast.makeText(Deltalitem.this, "thêm vào giỏ hàng thành công", Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(Deltalitem.this, "thất bại", Toast.LENGTH_SHORT).show();
-                }
+                }//11
             }
         });
         imgexit.setOnClickListener(new View.OnClickListener() {
