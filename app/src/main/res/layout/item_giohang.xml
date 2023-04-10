@@ -3,12 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_margin="5dp"
+
     android:background="@android:color/transparent"
     android:padding="5dp"
 
     >
     <CheckBox
+        android:id="@+id/chkItemGH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -84,13 +85,14 @@ android:id="@+id/gia"
         </LinearLayout>
 
         <Button
-            android:id="@+id/xoaGioHang"
+
+            android:id="@+id/btnXoaGioHang"
             android:layout_width="40dp"
             android:layout_height="40dp"
 
             android:backgroundTint="@android:color/transparent"
             android:drawableBottom="@drawable/xoa"
-            android:layout_marginLeft="10dp"
+
             />
 
 
