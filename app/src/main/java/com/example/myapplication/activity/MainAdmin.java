@@ -68,8 +68,7 @@ public class MainAdmin extends AppCompatActivity {
                 int id = item.getItemId();
                 switch (id){
                     case R.id.menuThemGiay:
-                        Toast.makeText(MainAdmin.this, "vi cho", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainAdmin.this,testThemHienGiay.class);
+                        Intent intent = new Intent(MainAdmin.this,TestHienGiay.class);
                         startActivity(intent);
                         break;
                     case R.id.menuThemLoai:

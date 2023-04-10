@@ -129,45 +129,6 @@
         android:textStyle="italic"/>
 
 
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-
-        android:layout_marginTop="5dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Số lượng"
-            android:textColor="#8FEFEBEB"
-            android:textSize="12sp"
-            android:textStyle="bold"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*"
-            android:textSize="12sp"
-            android:textColor="#FCFF0303"
-            android:textStyle="bold"/>
-
-
-    </LinearLayout>
-
-    <EditText
-        android:id="@+id/soLuong"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:hint="Vd:100"
-        android:textSize="20sp"
-        android:background="@drawable/gradient_edittext"
-        android:paddingLeft="10dp"
-        android:textStyle="italic"/>
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -292,6 +253,7 @@
 
 
         <Button
+            android:id="@+id/btnHuy"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Huỷ"
@@ -308,6 +270,7 @@
 
 
         <Button
+            android:id="@+id/btnSua"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Sửa"
