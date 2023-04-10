@@ -5,16 +5,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     tools:context=".activity.dangki"
-    android:layout_margin="10dp"
-    android:padding="10dp"
-    android:background="@drawable/shapemain3">
+
+    android:background="@android:color/transparent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/shapemain3">
+
 
     <ImageView
         android:layout_width="190dp"
         android:layout_height="190dp"
         android:src="@drawable/img"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="20dp"/>
 
 
 
@@ -51,10 +62,10 @@
         >
 
         <EditText
-            android:id="@+id/edtmatkhaucu"
+ android:id="@+id/edtmatkhaucu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Mật khẩu cũ"
+            android:hint="Tên đăng nhập"
             android:textSize="15sp"
             android:background="@drawable/gradient_edittext"
             android:paddingLeft="10dp"
@@ -98,7 +109,7 @@
         >
 
         <EditText
-android:id="@+id/edtmatkhaumoine"
+ android:id="@+id/edtmatkhaumoine"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="************"
@@ -146,7 +157,7 @@ android:id="@+id/edtmatkhaumoine"
         >
 
         <EditText
-android:id="@+id/edtmatkhaumoine1"
+        android:id="@+id/edtmatkhaumoine1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="************"
@@ -165,7 +176,7 @@ android:id="@+id/edtmatkhaumoine1"
 
 
     <Button
-       android:id="@+id/btndoimatkhaune"
+android:id="@+id/btndoimatkhaune"
         android:layout_width="match_parent"
         android:layout_height="50dp"
 
@@ -194,4 +205,4 @@ android:id="@+id/edtmatkhaumoine1"
 
 
 </LinearLayout>
-
+</LinearLayout>
