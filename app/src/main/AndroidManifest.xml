@@ -16,6 +16,8 @@
         <activity
             android:name=".activity.ThanhToan"
             android:exported="true" />
+        <activity android:name=".activity.LichSuDonHang"
+            android:exported="true"/>
         <activity
             android:name=".activity.chat_box"
             android:exported="true" />
