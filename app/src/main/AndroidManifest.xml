@@ -30,7 +30,13 @@
             android:exported="true" />
         <activity
             android:name=".activity.Splash_Screen_new"
-            android:exported="true"></activity>
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activity.GioHang"
             android:exported="true" />
@@ -67,11 +73,7 @@
         <activity
             android:name=".activity.dangnhap"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".activity.SplashScreen"
