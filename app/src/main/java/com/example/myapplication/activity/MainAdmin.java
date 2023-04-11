@@ -95,7 +95,7 @@ public class MainAdmin extends AppCompatActivity {
                         startActivity(intentt);
                         break;
 
-                }//1
+                }//2
 
 
                 drawerLayout.closeDrawer(GravityCompat.START);
