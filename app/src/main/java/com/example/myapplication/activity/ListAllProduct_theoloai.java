@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -33,6 +34,7 @@ public class ListAllProduct_theoloai extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_all_product_theoloai);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         recycleviewallgiay=findViewById(R.id.recycleview);
         txtsearchne = findViewById(R.id.edtserch1);
 

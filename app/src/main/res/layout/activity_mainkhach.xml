@@ -11,7 +11,8 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+
+    style="@style/SCREEN"
     android:orientation="vertical">
 
     <LinearLayout
@@ -39,13 +40,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chào buổi sáng"
-                android:textColor="#9d6855" />
+                style="@style/TEXT"
+               />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ông chủ"
-                android:textColor="#9d6855"
+                style="@style/TEXT"
                 android:textStyle="bold" />
 
 
@@ -55,16 +57,22 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="90dp"
             android:layout_marginTop="25dp"
 
             android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/switchh"
+                android:layout_width="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="40dp"/>
 
             <ImageView
                 android:id="@+id/imggiohang"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:src="@drawable/baseline_shopping_basket_24" />
 
             <ImageView
@@ -91,7 +99,7 @@
             android:layout_width="300dp"
             android:layout_height="35dp"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/gradient_edittext"
+            style="@style/EditText"
             android:iconifiedByDefault="false"
             android:drawableLeft="@drawable/baseline_search_24"
             android:padding="10dp"
@@ -107,7 +115,7 @@
             android:layout_width="50dp"
             android:layout_height="35dp"
             android:layout_marginLeft="15dp"
-            android:background="@drawable/gradient_edittext"
+            style="@style/EditText"
             android:src="@drawable/baseline_sort_24" />
 
 
@@ -144,6 +152,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="3dp"
             android:background="@drawable/shapemain3"
+
 
 
             >
@@ -296,18 +305,59 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sản phẩm đặc biệt"
-            android:textColor="#9d6855"
-            android:textSize="17sp"
+            android:text="Săn sale:"
+            style="@style/TEXT"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtPhutt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60"
+            style="@style/TEXT"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="m"
+            style="@style/TEXT"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            style="@style/TEXT"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtGiayy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            style="@style/TEXT"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="s"
+            style="@style/TEXT"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="140dp"
-            android:text="Xem tất cả"
-            android:textColor="#9d6855"
+            android:layout_marginLeft="125dp"
+            android:text="Mẫu mới nhất"
+            style="@style/TEXT"
             android:textSize="14sp"
+
 
             />
 
@@ -333,7 +383,7 @@
             android:id="@+id/bottomAppBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#B7F4E08C"
+            style="@style/BottomNavi"
             app:fabCradleMargin="15dp"
             app:fabCradleVerticalOffset="10dp"
             app:fabCradleRoundedCornerRadius="20dp"
@@ -354,7 +404,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/icon_trangchu"
-            android:backgroundTint="#D3FEE686"
+            style="@style/BottomNavi"
+
             app:layout_anchor="@id/bottomAppBar"/>
 
 

@@ -70,6 +70,7 @@ public class Deltalitem extends AppCompatActivity {
                 }
             }
         });
+        //  adapter = new GiayUserAdapter(this,list, dao);
         dao = new GiayDAO(Deltalitem.this);
         btndathang = findViewById(R.id.btndathang);
         btndathang.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +83,7 @@ public class Deltalitem extends AppCompatActivity {
 
     }
     public  void showdialog(){
-        View view = getLayoutInflater().inflate(R.layout.layoutmotasanpham, null, false);
+        View view = getLayoutInflater().inflate(R.layout.activity_deltalitem, null, false);
 
         CardView btnthemvaogiohang = view.findViewById(R.id.layaothemvaogiohang);
         ImageButton imgexit = view.findViewById(R.id.imgexit);
@@ -91,7 +92,7 @@ public class Deltalitem extends AppCompatActivity {
         Bundle bundle = intent.getExtras();
         Product product = (Product) bundle.getSerializable("truyenne");
         TextView txtmausac = view.findViewById(R.id.txtMausac);
-        txtmausac.setText(product.getMausac());
+        txtmausac.setText("Đen và trắng");
         TextView txtsize1 = view.findViewById(R.id.txtsize1);
         txtsize1.setText(String.valueOf(product.getKichco()));
         btnthemvaogiohang.setOnClickListener(new View.OnClickListener() {
