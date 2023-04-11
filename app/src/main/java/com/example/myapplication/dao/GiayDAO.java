@@ -225,4 +225,30 @@ public class GiayDAO {
         }
         return list;
     }
+    public ArrayList<ItemDonHang> layItemLichSuDH() {
+
+        ArrayList<ItemDonHang> list = new ArrayList<>();
+        SQLiteDatabase sqLiteDatabase = dbhelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT  GIAY.tengiay,GIAY.giagiay,DONHANG.soluong,GIAY.mausac,GIAY.anh," +
+                "DONHANG.trangthai,DONHANG.taikhoan,GIAY.kichco ,DONHANG.madon " +
+                "FROM GIAY " +
+                "INNER JOIN DONHANG " +
+                "ON GIAY.magiay = DONHANG.magiay " +
+                "WHERE   DONHANG.trangthai= 1", null);
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            do {
+                list.add(new ItemDonHang(cursor.getInt(8), cursor.getString(0),
+                        cursor.getInt(1),
+                        cursor.getInt(2),
+                        cursor.getString(3),
+                        cursor.getBlob(4),
+                        cursor.getInt(5),
+                        cursor.getString(6),
+                        cursor.getInt(7)
+                ));
+            } while (cursor.moveToNext());
+        }
+        return list;
+    }
 }
