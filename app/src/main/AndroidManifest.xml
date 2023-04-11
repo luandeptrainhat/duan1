@@ -16,6 +16,9 @@
         <activity
             android:name=".activity.ThanhToan"
             android:exported="true" />
+        <activity
+            android:name=".activity.DonHangActivity"
+            android:exported="true"/>
         <activity android:name=".activity.LichSuDonHang"
             android:exported="true"/>
         <activity

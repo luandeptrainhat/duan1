@@ -1,6 +1,7 @@
 package com.example.myapplication.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,6 +33,8 @@ public class LichSuDonHang extends AppCompatActivity {
         String tk = sharedPreferences.getString("taikhoan", null);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recycleviewdonhang.setLayoutManager(linearLayoutManager);
+        recycleviewdonhang.setItemAnimator(new DefaultItemAnimator());
+
         list = new ArrayList<>();
         giayDAO = new GiayDAO(this);
         list = giayDAO.LichSuDonHang(tk);
