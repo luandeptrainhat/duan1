@@ -16,6 +16,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
@@ -54,6 +55,8 @@ public class MainKhach extends AppCompatActivity {
     LinearLayout fragmentchung;
     private Context context;
     TextView searchView;
+   private TextView txtPhut, txtGiay;
+   private int timeRemaining = 60;
     RecyclerView recyclerView;
     SerchDao serchDao;
     SerchAdapter serchAdapter;
@@ -71,6 +74,11 @@ private DrawerLayout drawerLayout;
         setContentView(R.layout.activity_mainkhach);
         imageViewHoiDap = findViewById(R.id.imageHoiDap);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        txtPhut = findViewById(R.id.txtPhutt);
+        txtGiay = findViewById(R.id.txtGiayy);
+        startTimer();
+
+
         //dark mode
 
         switcher =findViewById(R.id.switchh);
@@ -96,6 +104,7 @@ private DrawerLayout drawerLayout;
                 editor.apply();
             }
         });
+
 
 
 
@@ -171,6 +180,27 @@ private DrawerLayout drawerLayout;
         hienfragment();
 
 
+    }
+
+    private void startTimer() {
+        new CountDownTimer(60000,1000){
+
+            @Override
+            public void onTick(long l) {
+               txtGiay.setText(""+l/1000);
+            }
+
+            @Override
+            public void onFinish() {
+            if(timeRemaining == 0){
+                timeRemaining = 60;
+            }
+            startTimer();
+            timeRemaining = timeRemaining -1;
+            txtPhut.setText(""+timeRemaining);
+
+            }
+        }.start();
     }
 
     private void hienfragment() {

@@ -305,18 +305,59 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sản phẩm đặc biệt"
+            android:text="Săn sale:"
             style="@style/TEXT"
-            android:textSize="17sp"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtPhutt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60"
+            style="@style/TEXT"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="m"
+            style="@style/TEXT"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            style="@style/TEXT"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtGiayy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            style="@style/TEXT"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="s"
+            style="@style/TEXT"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="140dp"
-            android:text="Xem tất cả"
+            android:layout_marginLeft="125dp"
+            android:text="Mẫu mới nhất"
             style="@style/TEXT"
             android:textSize="14sp"
+
 
             />
 
