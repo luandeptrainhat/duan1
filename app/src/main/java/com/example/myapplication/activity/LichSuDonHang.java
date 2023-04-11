@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import com.example.myapplication.R;
 import com.example.myapplication.adapter.DonHangAdapter;
+import com.example.myapplication.adapter.LichSuAdapter;
 import com.example.myapplication.dao.GiayDAO;
 import com.example.myapplication.model.ItemDonHang;
 
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 public class LichSuDonHang extends AppCompatActivity {
     GiayDAO giayDAO;
     RecyclerView recycleviewdonhang;
-    DonHangAdapter adapter;
+    LichSuAdapter adapter;
     ArrayList<ItemDonHang> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class LichSuDonHang extends AppCompatActivity {
         list = new ArrayList<>();
         giayDAO = new GiayDAO(this);
         list = giayDAO.LichSuDonHang(tk);
-        adapter = new DonHangAdapter(this,list,giayDAO);
+        adapter = new LichSuAdapter(this,list,giayDAO);
 
         recycleviewdonhang.setAdapter(adapter);
     }
