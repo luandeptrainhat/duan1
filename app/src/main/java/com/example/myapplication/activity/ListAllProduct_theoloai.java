@@ -59,7 +59,8 @@ public class ListAllProduct_theoloai extends AppCompatActivity {
     private void showList(int maloaigiay) {
         list = new ArrayList<>();
         dao = new GiayDAO(getApplicationContext());
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+     //   LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        GridLayoutManager linearLayoutManager = new GridLayoutManager(this,2);
         recycleviewallgiay.setLayoutManager(linearLayoutManager);
 
         list = dao.getDSPROLoai(maloaigiay);

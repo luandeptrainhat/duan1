@@ -8,12 +8,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.icu.text.Transliterator;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,8 +60,13 @@ public class Deltalitem extends AppCompatActivity {
         txtdelta.setText(product.getTengiay());
         TextView txtgia = findViewById(R.id.txtgia);
         txtgia.setText(String.valueOf(product.getGia()));
+        ImageView imganh  = findViewById(R.id.imganhne);
         dialog = new BottomSheetDialog(this);
         showdialog();
+        byte [] hinh =  product.getAnh();
+        Bitmap bitmap = BitmapFactory.decodeByteArray(hinh,0,hinh.length);
+       // imganh.setImageBitmap(bitmap);
+
         MuaNgay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
