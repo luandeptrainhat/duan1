@@ -2,6 +2,7 @@ package com.example.myapplication.activity;
 
 import static android.view.Gravity.CENTER;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -20,6 +21,7 @@ import android.os.CountDownTimer;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -41,6 +43,7 @@ import com.example.myapplication.fragment.fragmentTheThao;
 import com.example.myapplication.fragment.fragmentThoiTrang;
 import com.example.myapplication.model.Product;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
@@ -121,7 +124,7 @@ private DrawerLayout drawerLayout;
             }
         });
 //        ----------------------------
-
+        chayNavi();
         recyclerView = findViewById(R.id.recycleview1);
         recyclerView.setVisibility(View.GONE);
         list = new ArrayList<>();
@@ -331,6 +334,20 @@ private DrawerLayout drawerLayout;
         recyclerView.setLayoutManager(linearLayoutManager);
         serchAdapter = new SerchAdapter(this,list,serchDao);
         recyclerView.setAdapter(serchAdapter);
+
+    }
+    private void chayNavi(){
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.miLichSuMuaHang :
+                        startActivity(new Intent(MainKhach.this,LichSuDonHang.class));
+                        break;
+                }
+                return false;
+            }
+        });
 
     }
 
