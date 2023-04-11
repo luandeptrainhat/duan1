@@ -145,7 +145,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Nike Air Fly"
+                android:text="Jordan Air 1"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -231,7 +231,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Nike Air Zoom 95"
+                android:text="Da Regal"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold" />

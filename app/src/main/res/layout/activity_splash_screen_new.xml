@@ -10,8 +10,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/backgroundLayout"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
         android:background="@drawable/bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,8 +20,8 @@
 
     <ImageView
         android:id="@+id/normallogo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:src="@drawable/img"
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,8 +31,8 @@
 
     <ImageView
         android:id="@+id/whitelogo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:src="@drawable/img"
         android:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"

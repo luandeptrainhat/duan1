@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import com.example.myapplication.R;
 import com.example.myapplication.adapter.DonHangAdapter;
@@ -25,6 +26,7 @@ public class LichSuDonHang extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lich_su_don_hang);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         recycleviewdonhang = findViewById(R.id.recycleviewdonhang);
 
         SharedPreferences sharedPreferences = getSharedPreferences("THONGTIN", MODE_PRIVATE);

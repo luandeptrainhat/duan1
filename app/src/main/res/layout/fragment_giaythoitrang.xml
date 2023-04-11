@@ -158,7 +158,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nike Air Fly"
+                android:text="Fashion 23"
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:textSize="15sp"
@@ -251,7 +251,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Nike Air Zoom 95"
+                android:text="Models Air 4"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -269,7 +269,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="5dp"
-                    android:text="2.344.999 VNĐ"
+                    android:text="7.344.999 VNĐ"
                     android:textColor="@color/white"
                     android:textSize="13sp"
 
