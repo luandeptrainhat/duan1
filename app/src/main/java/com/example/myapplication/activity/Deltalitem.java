@@ -92,7 +92,7 @@ public class Deltalitem extends AppCompatActivity {
         Bundle bundle = intent.getExtras();
         Product product = (Product) bundle.getSerializable("truyenne");
         TextView txtmausac = view.findViewById(R.id.txtMausac);
-        txtmausac.setText("Đen và trắng");
+        txtmausac.setText(product.getMausac());
         TextView txtsize1 = view.findViewById(R.id.txtsize1);
         txtsize1.setText(String.valueOf(product.getKichco()));
         btnthemvaogiohang.setOnClickListener(new View.OnClickListener() {
