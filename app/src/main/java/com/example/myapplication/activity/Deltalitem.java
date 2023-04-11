@@ -70,7 +70,6 @@ public class Deltalitem extends AppCompatActivity {
                 }
             }
         });
-        //  adapter = new GiayUserAdapter(this,list, dao);
         dao = new GiayDAO(Deltalitem.this);
         btndathang = findViewById(R.id.btndathang);
         btndathang.setOnClickListener(new View.OnClickListener() {
