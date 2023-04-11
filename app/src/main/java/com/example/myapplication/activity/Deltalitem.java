@@ -31,12 +31,12 @@ import java.util.ArrayList;
 public class Deltalitem extends AppCompatActivity {
     RecyclerView recycleviewGioHang;
     GiayDAO dao;
-      ArrayList<ItemGioHang> list1;
-      GiayUserAdapter adapter;
+    ArrayList<ItemGioHang> list1;
+    GiayUserAdapter adapter;
 
-       ArrayList<Product> list;
-       Button btndathang;
-       CardView MuaNgay;
+    ArrayList<Product> list;
+    Button btndathang;
+    CardView MuaNgay;
     Product product;
     String tk;
     BottomSheetDialog dialog;
@@ -50,8 +50,8 @@ public class Deltalitem extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         SharedPreferences sharedPreferences = getSharedPreferences("THONGTIN",MODE_PRIVATE);
-         tk = sharedPreferences.getString("taikhoan",null);
-         product = (Product) bundle.getSerializable("truyenne");
+        tk = sharedPreferences.getString("taikhoan",null);
+        product = (Product) bundle.getSerializable("truyenne");
 
         TextView txtdelta = findViewById(R.id.txtten);
         txtdelta.setText(product.getTengiay());
@@ -70,15 +70,15 @@ public class Deltalitem extends AppCompatActivity {
                 }
             }
         });
-      //  adapter = new GiayUserAdapter(this,list, dao);
+        //  adapter = new GiayUserAdapter(this,list, dao);
         dao = new GiayDAO(Deltalitem.this);
-         btndathang = findViewById(R.id.btndathang);
-         btndathang.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 dialog.show();
-             }
-         });
+        btndathang = findViewById(R.id.btndathang);
+        btndathang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.show();
+            }
+        });
         dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
 
     }
@@ -104,7 +104,7 @@ public class Deltalitem extends AppCompatActivity {
                     Toast.makeText(Deltalitem.this, "thêm vào giỏ hàng thành công", Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(Deltalitem.this, "thất bại", Toast.LENGTH_SHORT).show();
-                }//11
+                }
             }
         });
         imgexit.setOnClickListener(new View.OnClickListener() {
@@ -123,5 +123,3 @@ public class Deltalitem extends AppCompatActivity {
 
 
 }
-
-
