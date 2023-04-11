@@ -361,8 +361,6 @@
             android:text="Thêm vào giỏ hàng"
             android:layout_marginLeft="80dp"
             android:backgroundTint="#FD5F44">
-
-
         </Button>
 
     </LinearLayout>

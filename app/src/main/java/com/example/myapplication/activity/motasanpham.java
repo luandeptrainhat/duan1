@@ -22,7 +22,7 @@ public class motasanpham extends AppCompatActivity {
         btndathang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(motasanpham.this, "Motasanphamne", Toast.LENGTH_SHORT).show();
+
             }
         });
     }

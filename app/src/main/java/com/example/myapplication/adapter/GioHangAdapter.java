@@ -20,7 +20,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.R;
 import com.example.myapplication.dao.GiayDAO;
 import com.example.myapplication.model.ItemGioHang;
-import com.example.myapplication.model.Product;
 
 import java.util.ArrayList;
 
