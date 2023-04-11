@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -51,6 +52,7 @@ public class chat_box extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_box);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         messageList = new ArrayList<>();
 
 

@@ -3,6 +3,7 @@ package com.example.myapplication.activity;
 import static android.view.Gravity.CENTER;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -25,6 +27,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +45,12 @@ import java.util.ArrayList;
 
 
 public class MainKhach extends AppCompatActivity {
+
+    Switch switcher;
+    boolean nightMODE;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+
     LinearLayout fragmentchung;
     private Context context;
     TextView searchView;
@@ -62,6 +71,34 @@ private DrawerLayout drawerLayout;
         setContentView(R.layout.activity_mainkhach);
         imageViewHoiDap = findViewById(R.id.imageHoiDap);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //dark mode
+
+        switcher =findViewById(R.id.switchh);
+        sharedPreferences = getSharedPreferences("MODE",Context.MODE_PRIVATE);
+        nightMODE = sharedPreferences.getBoolean("night",false);
+        if(nightMODE){
+            switcher.setChecked(true);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+        switcher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(nightMODE){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("night",false);
+
+                }else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("night",true);
+                }
+                editor.apply();
+            }
+        });
+
+
+
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setBackground(null);
         drawerLayout = findViewById(R.id.drawerLayout);
