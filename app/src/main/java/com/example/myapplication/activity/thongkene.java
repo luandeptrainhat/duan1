@@ -66,19 +66,20 @@ public class thongkene extends AppCompatActivity implements OnChartValueSelected
         ArrayList<PieEntry> entrys = new ArrayList<>();
         ThongKeDao thongKeDao = new ThongKeDao(thongkene.this);
         float[] yData = thongKeDao.getThongTinThuChi();
-        String[] xData = {"Mua giay", " ban giay"};
+        String[] xData = { "Giay The Thao","Giay Luoi", "Giay Leo Nui"};
 
         for (int i = 0; i < yData.length;i++){
             entrys.add(new PieEntry(yData[i], xData[i]));
         }
 
         PieDataSet pieDataSet=new PieDataSet(entrys," ");
-        pieDataSet.setSliceSpace(2);
-        pieDataSet.setValueTextSize(12);
+        pieDataSet.setSliceSpace(4);
+        pieDataSet.setValueTextSize(10);
 
         ArrayList<Integer> colors=new ArrayList<>();
         colors.add(Color.BLUE);
         colors.add(Color.RED);
+        colors.add(Color.GREEN);
 
         pieDataSet.setColors(colors);
 
@@ -88,5 +89,5 @@ public class thongkene extends AppCompatActivity implements OnChartValueSelected
         PieData pieData=new PieData(pieDataSet);
         pieChart.setData(pieData);
         pieChart.invalidate();
-    }
+        pieChart.animateXY(2000,1250);    }
 }
