@@ -69,6 +69,9 @@
             android:name=".activity.dangnhap"
             android:exported="true"></activity>
         <activity
+            android:name=".activity.DonHangActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity.testlist"
             android:exported="true" />
         <activity
