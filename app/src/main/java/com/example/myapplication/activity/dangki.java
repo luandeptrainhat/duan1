@@ -2,8 +2,6 @@ package com.example.myapplication.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.InputType;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -18,49 +16,13 @@ import com.example.myapplication.dao.NguoiDungDao;
 
 public class dangki extends AppCompatActivity {
     EditText edttaikhoan, edtmatkhau1, edtmatkhau2;
-    Button btndangki, btndangnhap,btnShow,btnShowMk2;
+    Button btndangki, btndangnhap;
     NguoiDungDao nguoiDungDao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dangki);
-        btnShow = findViewById(R.id.btnShow);
-        btnShowMk2 = findViewById(R.id.btnShowMk2);
-        btnShow.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch ( motionEvent.getAction() ) {
 
-                    case MotionEvent.ACTION_UP:
-                        edtmatkhau1.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                        break;
-
-                    case MotionEvent.ACTION_DOWN:
-                        edtmatkhau1.setInputType(InputType.TYPE_CLASS_TEXT);
-                        break;
-
-                }
-                return true;
-            }
-        });
-
-        btnShowMk2.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch ( motionEvent.getAction() ) {
-
-                    case MotionEvent.ACTION_UP:
-                        edtmatkhau2.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                        break;
-
-                    case MotionEvent.ACTION_DOWN:
-                        edtmatkhau2.setInputType(InputType.TYPE_CLASS_TEXT);
-                        break;
-
-                }
-                return true;
-            }
-        });
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         edttaikhoan = findViewById(R.id.edttaikhoan1);

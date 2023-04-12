@@ -1,7 +1,6 @@
 package com.example.myapplication.activity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.MotionEvent;
@@ -19,7 +18,7 @@ import com.example.myapplication.dao.NguoiDungDao;
 
 public class dangnhap extends AppCompatActivity {
     //
-    Button btndangnhap,btnShow, btndangki;
+    Button btndangnhap,btnShow;
     EditText edttaikhoan, edtmatkhau;
     TextView txtdangki;
     @Override
@@ -27,13 +26,6 @@ public class dangnhap extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dangnhap);
         btnShow = findViewById(R.id.btnShow);
-        btndangki = findViewById(R.id.btndangki);
-        btndangki.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity( new Intent(dangnhap.this,dangki.class));
-            }
-        });
         btnShow.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -73,14 +65,10 @@ public class dangnhap extends AppCompatActivity {
                 String taikhoan = edttaikhoan.getText().toString();
                 String matkhau = edtmatkhau.getText().toString();
                 if (nguoiDungDao.kiemtradangnhap(taikhoan,matkhau)){
-                    SharedPreferences sharedPreferences = getSharedPreferences("THONGTIN", MODE_PRIVATE);
-                    int a = sharedPreferences.getInt("phanquyen", -1);
-                    if(a == 1){
-                        startActivity(new Intent(dangnhap.this, MainKhach.class));
 
-                    }else {
-                        startActivity(new Intent(dangnhap.this, MainAdmin.class));
-                    }
+                    Intent intent = new Intent(dangnhap.this,MainKhach.class);
+                    startActivity(intent);
+
                 }else {
                     Toast.makeText(dangnhap.this, "Bạn đã nhập sai Username hoặc PassWord", Toast.LENGTH_SHORT).show();
                 }

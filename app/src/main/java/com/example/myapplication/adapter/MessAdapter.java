@@ -25,9 +25,9 @@ public class MessAdapter extends RecyclerView.Adapter<MessAdapter.MyViewHolder> 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-       View chatView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recycle_chat,null);
-       MyViewHolder myViewHolder = new MyViewHolder(chatView);
-       return myViewHolder;
+        View chatView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recycle_chat,null);
+        MyViewHolder myViewHolder = new MyViewHolder(chatView);
+        return myViewHolder;
     }
 
     @Override

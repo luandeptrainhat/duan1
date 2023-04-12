@@ -5,26 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/gradient"
     tools:context=".activity.ListAllProduct_theoloai">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/gradient"
+        android:background="#00B8D4"
         android:padding="5dp"
         android:text="Giày thể thao"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="#884502"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="25sp"
         android:textStyle="bold" />
     <TextView
         android:id="@+id/edtserch1"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="@drawable/gradient_edittext"
+        android:background="#ABBFBFBF"
         android:iconifiedByDefault="false"
         android:drawableLeft="@drawable/baseline_search_24"
         android:padding="10dp"
@@ -34,18 +33,11 @@
         android:textSize="16sp"
 
         />
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="5dp"
+        android:id="@+id/recycleview"
+        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
-        >
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_margin="5dp"
-            android:id="@+id/recycleview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

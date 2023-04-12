@@ -133,56 +133,27 @@ android:layout_marginTop="20dp"
 
     </LinearLayout>
 
-
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+       >
 
-      >
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="45dp"
-
-            >
-
-            <EditText
-                android:id="@+id/edtmatkhau"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="************"
-                android:textSize="15sp"
-                android:inputType="textPassword"
-                android:background="@drawable/gradient_edittext"
-                android:paddingLeft="10dp"
-                android:textStyle="italic"/>
+        <EditText
+            android:id="@+id/edtmatkhau"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="************"
+            android:textSize="15sp"
+            android:inputType="textPassword"
+            android:background="@drawable/gradient_edittext"
+            android:paddingLeft="10dp"
+            android:textStyle="italic"/>
 
 
-        </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/btnShow"
-            android:layout_width="38dp"
-            android:layout_height="wrap_content"
-           android:layout_marginTop="5dp"
-
-            android:backgroundTint="@android:color/transparent"
-            android:background="@android:color/transparent"
-            android:drawableLeft="@drawable/icpn_hienmk"
-
-
-            android:textColor="@color/black"
-
-
-            />
-        />
-
-
-    </LinearLayout>
-
+    </androidx.cardview.widget.CardView>
 
 
 

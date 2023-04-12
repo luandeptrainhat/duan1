@@ -17,11 +17,11 @@ import com.example.myapplication.R;
 import com.example.myapplication.adapter.QuangCaoSliderAdapter;
 
 public class test_quangcao extends AppCompatActivity {
-CardView nextCard;
-LinearLayout dotsLayout;
-ViewPager viewPager;
-TextView[] dots;
-int currentPosition;
+    CardView nextCard;
+    LinearLayout dotsLayout;
+    ViewPager viewPager;
+    TextView[] dots;
+    int currentPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
