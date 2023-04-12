@@ -25,6 +25,7 @@ import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.myapplication.R;
+import com.example.myapplication.XuLiDonHangActivity;
 import com.example.myapplication.dao.NguoiDungDao;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -72,10 +73,12 @@ public class MainAdmin extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case R.id.menuThemLoai:
-
+                        Intent intentloaigiay = new Intent(MainAdmin.this,LoaiGiayActivity.class);
+                        startActivity(intentloaigiay);
+//                        
                         break;
                     case R.id.menuXuLiDon:
-                        Intent intent1 = new Intent(MainAdmin.this,DonHangActivity.class);
+                        Intent intent1 = new Intent(MainAdmin.this, XuLiDonHangActivity.class);
                         startActivity(intent1);
                         break;
                     case R.id.menuDoanhThu:

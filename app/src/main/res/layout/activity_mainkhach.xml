@@ -94,7 +94,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
+        <EditText
             android:id="@+id/edtserch"
             android:layout_width="300dp"
             android:layout_height="35dp"
@@ -353,10 +353,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="125dp"
+            android:layout_marginLeft="105dp"
             android:text="Mẫu mới nhất"
             style="@style/TEXT"
-            android:textSize="14sp"
+            android:textSize="12sp"
 
 
             />
