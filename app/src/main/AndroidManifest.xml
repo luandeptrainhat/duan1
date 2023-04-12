@@ -13,9 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+
+
         <activity
             android:name=".XuLiDonHangActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.LoaiGiayActivity"
             android:exported="true" />
@@ -33,15 +35,10 @@
             android:exported="true" />
         <activity
             android:name=".activity.Splash_Screen_new"
-            android:exported="true">
-
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".activity.MainAdmin"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activity.Deltalitem"
             android:exported="true" />
@@ -53,28 +50,16 @@
             android:exported="true" />
         <activity
             android:name=".activity.TestHienGiay"
-<<<<<<< HEAD
-            android:exported="true"></activity>
-
-=======
             android:exported="true" />
         <activity
             android:name=".activity.motasanpham"
             android:exported="true" />
->>>>>>> viom
         <activity
             android:name=".activity.doimatkhau"
             android:exported="true" />
         <activity
             android:name=".activity.MainKhach"
             android:exported="true" />
-<<<<<<< HEAD
-
-=======
-        <activity
-            android:name=".activity.quangcao"
-            android:exported="true" />
->>>>>>> viom
         <activity
             android:name=".activity.dangki"
             android:exported="true" />
@@ -88,13 +73,6 @@
             </intent-filter>
         </activity>
         <activity
-<<<<<<< HEAD
-            android:name=".activity.DonHangActivity"
-=======
-            android:name=".activity.SplashScreen"
->>>>>>> viom
-            android:exported="true" />
-        <activity
             android:name=".activity.testlist"
             android:exported="true" />
         <activity
@@ -106,10 +84,17 @@
         <activity
             android:name=".activity.GioHangActivity"
             android:exported="true" />
+        <activity android:name ="com.example.myapplication.activity.thongkene"
+            android:exported="true"
+
+            />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
 
+
 </manifest>
+
+

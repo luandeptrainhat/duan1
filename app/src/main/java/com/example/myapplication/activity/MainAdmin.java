@@ -6,8 +6,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,7 +17,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
@@ -82,7 +79,8 @@ public class MainAdmin extends AppCompatActivity {
                         startActivity(intent1);
                         break;
                     case R.id.menuDoanhThu:
-
+                        Intent intenttt = new Intent(MainAdmin.this, thongkene.class);
+                        startActivity(intenttt);
 
                         break;
                     case R.id.menuDangXuat:

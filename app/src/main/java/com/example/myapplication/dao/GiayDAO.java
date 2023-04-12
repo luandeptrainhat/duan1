@@ -2,9 +2,12 @@ package com.example.myapplication.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 
+import com.example.myapplication.activity.Deltalitem;
 import com.example.myapplication.database.Dbhelper;
 import com.example.myapplication.model.ItemDonHang;
 import com.example.myapplication.model.ItemGioHang;
@@ -251,6 +254,7 @@ public class GiayDAO {
         }
         return list;
     }
+
     public ArrayList<ItemGioHang> layItemGHDaXacNhan(String tk) {
 
         ArrayList<ItemGioHang> list = new ArrayList<>();

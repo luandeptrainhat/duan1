@@ -1,6 +1,5 @@
 package com.example.myapplication.fragment;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,4 +40,12 @@ public class FragmentLichSuDonHangAdmin extends Fragment {
         recycleviewdonhang.setAdapter(adapter);
         return view;
     }
+//    public  void  truyengia(){
+//        Intent intent  = new Intent(, Deltalitem.class);
+//        Bundle bundle = new Bundle();
+//        bundle.putSerializable("truyenne",list);
+//        intent.putExtras(bundle);
+//        startActivity(intent);
+//    }
+
 }
