@@ -40,6 +40,9 @@
             android:name=".activity.chat_box"
             android:exported="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of b27e4a2 (xong)
+=======
 >>>>>>> parent of b27e4a2 (xong)
 =======
 >>>>>>> parent of b27e4a2 (xong)
@@ -48,6 +51,7 @@
             android:exported="true"></activity>
         <activity
             android:name=".activity.Splash_Screen_new"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             android:exported="true">
@@ -65,9 +69,19 @@
             android:exported="true"></activity>
 >>>>>>> parent of b27e4a2 (xong)
 
+=======
+            android:exported="true"></activity>
+>>>>>>> parent of b27e4a2 (xong)
 
 
 
+<!--        <activity-->
+<!--            android:name=".activity.MainAdmin"-->
+<!--            android:exported="true" />-->
+
+<<<<<<< HEAD
+>>>>>>> parent of b27e4a2 (xong)
+=======
 <!--        <activity-->
 <!--            android:name=".activity.MainAdmin"-->
 <!--            android:exported="true" />-->
@@ -99,6 +113,7 @@
         <activity
             android:name=".activity.doimatkhau"
             android:exported="true" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <activity
@@ -175,6 +190,39 @@
                 <action android:name="android.intent.action.MAIN" />
 
 >>>>>>> parent of b27e4a2 (xong)
+=======
+
+        <activity
+            android:name=".activity.dangki"
+            android:exported="true" />
+        <activity
+
+
+            android:name=".activity.dangnhap"/>
+
+
+
+
+
+
+
+
+
+
+
+
+        </application>
+
+
+
+
+        <activity
+            android:name=".activity.SplashScreen"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+>>>>>>> parent of b27e4a2 (xong)
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -196,8 +244,11 @@
             android:resource="@array/preloaded_fonts" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </application>
 =======
+=======
+>>>>>>> parent of b27e4a2 (xong)
 =======
 >>>>>>> parent of b27e4a2 (xong)
     </manifest>
