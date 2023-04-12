@@ -30,24 +30,33 @@
             android:name=".activity.DonHangActivity"
             android:exported="true" />
 
-
+        <activity
+            android:name=".activity.LoaiGiayActivity"
+            android:exported="true" />
         <activity
             android:name=".activity.chat_box"
+            android:exported="true" />
+        <activity
+            android:name=".activity.dangnhap"
             android:exported="true" />
         <activity
             android:name=".activity.test_quangcao"
             android:exported="true" />
         <activity
             android:name=".activity.Splash_Screen_new"
-            android:exported="true"></activity>
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
 
 
 
 
-<!--        <activity-->
-<!--            android:name=".activity.MainAdmin"-->
-<!--            android:exported="true" />-->
+
 
         <activity
             android:name=".activity.Deltalitem"
@@ -71,36 +80,20 @@
         <activity
             android:name=".activity.dangki"
             android:exported="true" />
-        <activity
-
-
-            android:name=".activity.dangnhap"/>
-
-
-
-
-
-
-
-
-
-
-
-
-        </application>
-
-
 
 
         <activity
-            android:name=".activity.SplashScreen"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name=".activity.MainKhach"
+            android:exported="true" />
+        <activity
+            android:name=".activity.MainAdmin"
+            android:exported="true" />
+        <activity
+            android:name=".activity.LichSuDonHang"
+            android:exported="true" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
+
         <activity
             android:name=".activity.testlist"
             android:exported="true" />
@@ -118,5 +111,6 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+    </application>
     </manifest>
 
