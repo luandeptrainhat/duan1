@@ -13,11 +13,11 @@
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:layout_marginTop="15dp"
-        android:src="@drawable/img"
+        android:src="@drawable/login"
         android:layout_gravity="center"
 
 
-        app:civ_border_color="#CD1403"
+        app:civ_border_color="#24AE82"
 
         app:civ_border_width="3dp" >
 
