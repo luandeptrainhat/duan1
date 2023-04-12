@@ -32,7 +32,7 @@ public class ThongKeDao {
         if (cursorgiayleonui.getCount() != 0) {
             cursorgiayleonui.moveToFirst();
             giayleonui = cursorgiayleonui.getInt(0);
-        }//1
+        }
 
 
 
