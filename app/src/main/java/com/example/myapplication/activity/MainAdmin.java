@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -72,6 +73,14 @@ public class MainAdmin extends AppCompatActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setBackground(null);
+        TextView all = findViewById(R.id.all);
+
+        all.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getDS();
+            }
+        });
 //        bottomNavigationView.getMenu().getItem(2).isEnabled(savedInstanceState)=false;
 
         //navi
@@ -87,14 +96,14 @@ public class MainAdmin extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.baseline_menu_24);
-
+        getDS();
         showLoaiGiay();
 
         fragmentchung = findViewById(R.id.fragmentchung);
         fragmentchung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getDS();
+
             }
         });
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -210,7 +219,14 @@ public class MainAdmin extends AppCompatActivity {
     }
 
     public void getDS() {
-
+        recycleview1= findViewById(R.id.recycleview1);
+        list = new ArrayList<>();
+        dao = new GiayDAO(getApplicationContext());
+        GridLayoutManager linearLayoutManager = new GridLayoutManager(MainAdmin.this,2);
+        recycleview1.setLayoutManager(linearLayoutManager);
+        list = dao.getDSPRO();
+        giayadapter = new Giayadapter(this, list, dao);
+        recycleview1.setAdapter(giayadapter);
 
     }
 
