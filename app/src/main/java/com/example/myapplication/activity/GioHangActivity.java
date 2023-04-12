@@ -8,11 +8,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-<<<<<<< HEAD
+
 import android.view.View;
 import android.view.WindowManager;
-=======
->>>>>>> parent of 0751150 (homnay)
+
 import android.widget.TextView;
 
 import com.example.myapplication.R;
@@ -30,24 +29,24 @@ public class GioHangActivity extends AppCompatActivity {
     GiayDAO dao;
     ArrayList<ItemGioHang> list,listDXN;
     GioHangAdapter adapter;
-<<<<<<< HEAD
+
     TextView title,txtTongTien;
     TextView btnThanhToan;
     int tongTien;
-=======
+
     TextView title;
->>>>>>> parent of 0751150 (homnay)
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gio_hang);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         recycleviewGioHang = findViewById(R.id.recycleviewGioHang);
-<<<<<<< HEAD
+
+
         txtTongTien = findViewById(R.id.txtTongTien);
         btnThanhToan = findViewById(R.id.btnThanhToan);
-=======
->>>>>>> parent of 0751150 (homnay)
+
         showList();
        btnThanhToan.setOnClickListener(new View.OnClickListener() {
            @Override

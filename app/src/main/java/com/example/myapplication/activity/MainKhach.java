@@ -334,7 +334,7 @@ private DrawerLayout drawerLayout;
         recyclerView.setAdapter(serchAdapter);
 
     }
-<<<<<<< HEAD
+
     private void chayNavi(){
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -352,8 +352,7 @@ private DrawerLayout drawerLayout;
         });
 
     }
-=======
->>>>>>> parent of 5382720 (Merge branch 'viom' into thanh)
+
 
 
 }
