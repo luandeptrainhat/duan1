@@ -138,6 +138,7 @@ private DrawerLayout drawerLayout;
                 startActivity(new Intent(MainKhach.this, GioHangActivity.class));
             }
         });
+
         searchView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -343,6 +344,9 @@ private DrawerLayout drawerLayout;
                 switch (item.getItemId()){
                     case R.id.miLichSuMuaHang :
                         startActivity(new Intent(MainKhach.this,LichSuDonHang.class));
+                        break;
+                    case R.id.miTrangCaNhan:
+                        startActivity(new Intent(MainKhach.this,TrangCaNhanKhach.class));
                         break;
                 }
                 return false;
