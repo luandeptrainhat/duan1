@@ -86,9 +86,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:id="@+id/txtTongTien"
                 android:layout_gravity="left"
-                android:text="2.499.000VNĐ"
+                android:text="0 VNĐ"
                 android:textColor="#F5FB0303"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -108,7 +108,7 @@
             app:cardCornerRadius="15dp">
 
             <TextView
-
+                android:id="@+id/btnThanhToan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
