@@ -17,9 +17,42 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:text="Mã loại giày"
+            android:textColor="#8F000000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="#FCFF0303"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
 
+    </LinearLayout>
 
+    <EditText
+        android:id="@+id/edtmaloaigiay"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/gradient_edittext"
+        android:hint="Nhập mã loại giày"
+        android:paddingLeft="10dp"
+        android:textSize="20sp"
+        android:textStyle="italic" />
 
 
     <LinearLayout

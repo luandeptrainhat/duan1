@@ -8,8 +8,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
@@ -28,20 +26,11 @@ public class GioHangActivity extends AppCompatActivity {
     ArrayList<ItemGioHang> list;
     GioHangAdapter adapter;
     TextView title;
-    Button btnback;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gio_hang);
         recycleviewGioHang = findViewById(R.id.recycleviewGioHang);
-        btnback = findViewById(R.id.btnback);
-
-        btnback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(GioHangActivity.this,MainKhach.class));
-            }
-        });
         showList();
 
     }
