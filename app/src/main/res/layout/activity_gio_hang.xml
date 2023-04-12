@@ -19,6 +19,7 @@
             android:background="#0A152E">
 
             <Button
+                android:id="@+id/btnback"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"

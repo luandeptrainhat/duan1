@@ -6,6 +6,7 @@
     android:padding="10dp"
     android:background="@drawable/shape4"
     android:orientation="vertical"
+    android:layout_marginTop="20dp"
     >
 
     <Button
@@ -30,11 +31,21 @@
 
 
     <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Nike Air Fly"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+    <TextView
         android:id="@+id/txtTenLoaiGiay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Nike Air Fly"
+        android:visibility="gone"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold" />

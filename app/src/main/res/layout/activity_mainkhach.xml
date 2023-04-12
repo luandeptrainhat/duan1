@@ -314,6 +314,7 @@
     </LinearLayout>
 
 
+
         <LinearLayout
             android:id="@+id/fragmentchung"
             android:layout_width="match_parent"
