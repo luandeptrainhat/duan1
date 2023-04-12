@@ -110,7 +110,6 @@ public class MainAdmin extends AppCompatActivity {
                     case R.id.menuThemLoai:
                         Intent intentloaigiay = new Intent(MainAdmin.this, LoaiGiayActivity.class);
                         startActivity(intentloaigiay);
-//                        
                         break;
                     case R.id.menuXuLiDon:
                         Intent intent1 = new Intent(MainAdmin.this, DonHangActivity.class);
