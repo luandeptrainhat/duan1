@@ -41,8 +41,14 @@
             android:name=".activity.Splash_Screen_new"
             android:exported="true"></activity>
         <activity
+
             android:name=".activity."
             android:exported="true" />
+
+
+<!--        <activity-->
+<!--            android:name=".activity.MainAdmin"-->
+<!--            android:exported="true" />-->
 
         <activity
             android:name=".activity.Deltalitem"
@@ -67,6 +73,7 @@
             android:name=".activity.dangki"
             android:exported="true" />
         <activity
+
             android:name=".activity.dangnhap"/>
 
 
@@ -82,22 +89,17 @@
 
 
 
-        <activity
-            android:name=".activity.testlist"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".activity.ListAllProduct_theoloai"
-            android:exported="true" />
-        <activity
-            android:name=".XuLiDonHangActivity"
-            android:exported="true" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </application>
+
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-    </application>
+    </manifest>
 
-</manifest>
