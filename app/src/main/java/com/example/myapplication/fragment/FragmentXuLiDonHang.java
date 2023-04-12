@@ -30,15 +30,12 @@ public class FragmentXuLiDonHang extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_xu_li_don_hang,container,false);
         recycleviewdonhang = view.findViewById(R.id.recycleviewdonhang);
-        SharedPreferences sharedPreferences = getContext().getSharedPreferences("THONGTIN", getContext().MODE_PRIVATE);
-        String tk = sharedPreferences.getString("taikhoan", null);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recycleviewdonhang.setLayoutManager(linearLayoutManager);
         list = new ArrayList<>();
         giayDAO = new GiayDAO(getContext());
         list = giayDAO.layItemDonHang();
         adapter = new DonHangAdapter(getContext(),list,giayDAO);
-
         recycleviewdonhang.setAdapter(adapter);
         return view;
     }

@@ -73,6 +73,7 @@ public class GiayUserAdapter extends RecyclerView.Adapter<GiayUserAdapter.ViewHo
                 String tk = sharedPreferences.getString("taikhoan",null);
 
                 if(dao.themVaoGH(list.get(position).getMagiay(),1,String.valueOf(tk))){
+                    int ma = list.get(position).getMagiay();
                     Toast.makeText(v.getContext(), "thêm thành công", Toast.LENGTH_SHORT).show();
                     context.startActivity(new Intent(context, GioHangActivity.class));
                 }else {
