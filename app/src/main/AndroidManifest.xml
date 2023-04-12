@@ -88,6 +88,9 @@
         <activity
             android:name=".activity.ListAllProduct_theoloai"
             android:exported="true" />
+        <activity
+            android:name=".XuLiDonHangActivity"
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
