@@ -8,7 +8,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
@@ -25,26 +24,17 @@ import java.util.ArrayList;
 public class GioHangActivity extends AppCompatActivity {
     RecyclerView recycleviewGioHang;
     GiayDAO dao;
-    ArrayList<ItemGioHang> list,listDXN;
+    ArrayList<ItemGioHang> list;
     GioHangAdapter adapter;
-    TextView title,txtTongTien;
-    TextView btnThanhToan;
-    int tongTien;
+    TextView title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gio_hang);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         recycleviewGioHang = findViewById(R.id.recycleviewGioHang);
-        txtTongTien = findViewById(R.id.txtTongTien);
-        btnThanhToan = findViewById(R.id.btnThanhToan);
         showList();
-       btnThanhToan.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               thanhToan();
-           }
-       });
+
     }
     private void showList() {
         list = new ArrayList<>();
@@ -55,20 +45,7 @@ public class GioHangActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recycleviewGioHang.setLayoutManager(linearLayoutManager);
         list = dao.layItemGioHang(tk);
-        adapter = new GioHangAdapter(this, list, dao,txtTongTien);
+        adapter = new GioHangAdapter(this, list, dao);
         recycleviewGioHang.setAdapter(adapter);
-    }
-    private void thanhToan(){
-        listDXN = new ArrayList<>();
-        dao = new GiayDAO(getApplicationContext());
-        SharedPreferences sharedPreferences = getSharedPreferences("THONGTIN",MODE_PRIVATE);
-        String tk = sharedPreferences.getString("taikhoan",null);
-        listDXN = dao.layItemGHDaXacNhan(tk);
-        for (ItemGioHang item : listDXN){
-            String ten = item.getTen();
-            dao.themVaoDH(0,tk,item.getMagiay(),item.getSoLuong());
-        }
-        dao.xoaItemGHDXN();
-        showList();
     }
 }

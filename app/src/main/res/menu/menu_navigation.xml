@@ -13,13 +13,13 @@
     </item>
 
     <item android:id="@+id/menuXuLiDon"
-        android:title="Xử lí đơn hàng"
+        android:title="Xu Li Don hang"
         android:icon="@drawable/icon_trangchu">
 
     </item>
 
     <item android:id="@+id/menu4"
-        android:title="Thống kê"
+        android:title="Thong ke"
         android:icon="@drawable/icon_trangchu">
         <menu>
             <item android:id="@+id/menuDoanhThu"
@@ -33,15 +33,15 @@
     </item>
 
     <item android:id="@+id/menu5"
-        android:title="Tài khoản"
+        android:title="Tai Khoan"
         android:icon="@drawable/icon_trangchu">
 
         <menu>
             <item android:id="@+id/menuDangXuat"
-                android:title="Đăng xuất "
+                android:title="Dang xuat "
                 android:icon="@drawable/icon_trangchu"/>
             <item android:id="@+id/menuDoiMatKhau"
-                android:title="Đổi mật khẩu"
+                android:title="Doi mat khau"
                 android:icon="@drawable/icon_trangchu"/>
         </menu>
 
