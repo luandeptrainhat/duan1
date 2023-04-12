@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.example.myapplication.activity;
 
 import static android.view.Gravity.CENTER;
@@ -240,3 +241,5 @@ public class MainKhach extends AppCompatActivity {
     }
 
 }
+=======
+>>>>>>> parent of b27e4a2 (xong)
