@@ -1,7 +1,6 @@
 package com.example.myapplication.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,7 +10,6 @@ import android.view.WindowManager;
 
 import com.example.myapplication.R;
 import com.example.myapplication.adapter.DonHangAdapter;
-import com.example.myapplication.adapter.LichSuAdapter;
 import com.example.myapplication.dao.GiayDAO;
 import com.example.myapplication.model.ItemDonHang;
 
@@ -20,7 +18,7 @@ import java.util.ArrayList;
 public class LichSuDonHang extends AppCompatActivity {
     GiayDAO giayDAO;
     RecyclerView recycleviewdonhang;
-    LichSuAdapter adapter;
+    DonHangAdapter adapter;
     ArrayList<ItemDonHang> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +31,10 @@ public class LichSuDonHang extends AppCompatActivity {
         String tk = sharedPreferences.getString("taikhoan", null);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recycleviewdonhang.setLayoutManager(linearLayoutManager);
-        recycleviewdonhang.setItemAnimator(new DefaultItemAnimator());
-
         list = new ArrayList<>();
         giayDAO = new GiayDAO(this);
         list = giayDAO.LichSuDonHang(tk);
-        adapter = new LichSuAdapter(this,list,giayDAO);
+        adapter = new DonHangAdapter(this,list,giayDAO);
 
         recycleviewdonhang.setAdapter(adapter);
     }
