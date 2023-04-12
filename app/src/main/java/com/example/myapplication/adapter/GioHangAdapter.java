@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,11 +28,13 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.ViewHold
     private Context context;
     private ArrayList<ItemGioHang> list;
     private GiayDAO giayDAO;
+    private TextView textView;
 
-    public GioHangAdapter(Context context, ArrayList<ItemGioHang> list, GiayDAO giayDAO) {
+    public GioHangAdapter(Context context, ArrayList<ItemGioHang> list, GiayDAO giayDAO, TextView textView) {
         this.context = context;
         this.list = list;
         this.giayDAO = giayDAO;
+        this.textView = textView;
     }
 
     @NonNull
@@ -63,20 +66,26 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.ViewHold
                 }
             }
         });
-        if (holder.chkItemGH.isSelected()) {
-            if (giayDAO.doiTrangThaiGH1(list.get(holder.getAdapterPosition()).getMagiohang())) {
-                Toast.makeText(context, "thành công", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(context, "thất bại", Toast.LENGTH_SHORT).show();
+        holder.chkItemGH.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    if (giayDAO.doiTrangThaiGH1(list.get(holder.getAdapterPosition()).getMagiohang())) {
+                        congTongTienGH();
+//                        Toast.makeText(context, "gh1 thành công", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(context, "thất bại", Toast.LENGTH_SHORT).show();
+                    }
+                }else {
+                    if (giayDAO.doiTrangThaiGH0(list.get(holder.getAdapterPosition()).getMagiohang())) {
+                        congTongTienGH();
+//                        Toast.makeText(context, "gh0 thành công", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(context, "thất bại", Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
-        } else {
-            if (giayDAO.doiTrangThaiGH0(list.get(holder.getAdapterPosition()).getMagiohang())) {
-                Toast.makeText(context, "thành công", Toast.LENGTH_SHORT).show();
-
-            } else {
-                Toast.makeText(context, "thất bại", Toast.LENGTH_SHORT).show();
-            }
-        }
+        });
     }
 
     @Override
@@ -108,5 +117,17 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.ViewHold
         String tk = sharedPreferences.getString("taikhoan", null);
         list = giayDAO.layItemGioHang(tk);
         notifyDataSetChanged();
+    }
+    private void congTongTienGH(){
+        ArrayList<ItemGioHang> listDXN = new ArrayList<>();
+        giayDAO = new GiayDAO(context);
+        SharedPreferences sharedPreferences = context.getSharedPreferences("THONGTIN",context.MODE_PRIVATE);
+        String tk = sharedPreferences.getString("taikhoan",null);
+        listDXN = giayDAO.layItemGHDaXacNhan(tk);
+        int tongTien =0;
+        for (ItemGioHang item : listDXN){
+            tongTien+= item.getGia();
+        }
+        textView.setText(String.valueOf(tongTien)+"VNĐ");
     }
 }
