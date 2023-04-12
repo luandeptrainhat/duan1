@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
+
             android:name=".activity.Webview"
             android:exported="false" />
         <activity
@@ -29,11 +29,8 @@
         <activity
             android:name=".activity.DonHangActivity"
             android:exported="true" />
-        <activity
-=======
->>>>>>> parent of 5382720 (Merge branch 'viom' into thanh)
-            android:name=".activity.LichSuDonHang"
-            android:exported="true" />
+
+
         <activity
             android:name=".activity.chat_box"
             android:exported="true" />
@@ -75,9 +72,7 @@
             android:exported="true" />
         <activity
             android:name=".activity.dangnhap"
-<<<<<<< HEAD
-=======
-            android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -85,12 +80,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.SplashScreen"
-<<<<<<< HEAD
->>>>>>> parent of 0751150 (homnay)
-=======
->>>>>>> parent of 0751150 (homnay)
-            android:exported="true" />
+            android:name=".activity.SplashScreen"></activity>
+
+
         <activity
             android:name=".activity.testlist"
             android:exported="true" />
