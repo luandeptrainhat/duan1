@@ -26,17 +26,8 @@
         </activity>
         <activity
             android:name=".activity.MainAdmin"
-<<<<<<< Updated upstream
             android:exported="true" >
 
-=======
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
->>>>>>> Stashed changes
         </activity>
         <activity
             android:name=".activity.Deltalitem"
@@ -65,14 +56,12 @@
             android:exported="true" />
         <activity
             android:name=".activity.dangnhap"
-<<<<<<< Updated upstream
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-=======
-            android:exported="true">
->>>>>>> Stashed changes
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activity.testlist"
