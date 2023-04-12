@@ -36,14 +36,10 @@ import com.example.myapplication.R;
 import com.example.myapplication.adapter.GiayUserAdapter;
 import com.example.myapplication.adapter.Giayadapter;
 import com.example.myapplication.adapter.LoaiGiayAdapter;
-import com.example.myapplication.adapter.LoaiGiayMainAdapter;
+
 import com.example.myapplication.dao.GiayDAO;
 import com.example.myapplication.dao.LoaiGiayDAO;
 import com.example.myapplication.dao.NguoiDungDao;
-import com.example.myapplication.fragment.fragmentDa;
-import com.example.myapplication.fragment.fragmentLeoNui;
-import com.example.myapplication.fragment.fragmentTheThao;
-import com.example.myapplication.fragment.fragmentThoiTrang;
 import com.example.myapplication.model.LoaiGiay;
 import com.example.myapplication.model.Product;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
