@@ -13,12 +13,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
-import com.example.myapplication.adapter.Giayadapter;
 import com.example.myapplication.adapter.LoaiGiayAdapter;
-import com.example.myapplication.dao.GiayDAO;
 import com.example.myapplication.dao.LoaiGiayDAO;
 import com.example.myapplication.model.LoaiGiay;
-import com.example.myapplication.model.Product;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -32,6 +29,7 @@ public class LoaiGiayActivity extends AppCompatActivity {
     View view;
     EditText edtmaloaigiay,edttenloaigiay;
     Button btnThem,btnHuy;
+    int maloai;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,29 +41,28 @@ public class LoaiGiayActivity extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialogThem();
+                showDialogThem(list.get(maloai));
             }
         });
 
         getDS();
     }
 
-    private void showDialogThem() {
+    private void showDialogThem(LoaiGiay loaiGiay) {
         AlertDialog.Builder builder = new AlertDialog.Builder(LoaiGiayActivity.this);
         inflater = getLayoutInflater();
         view = inflater.inflate(R.layout.dialog_themloaigiay, null);
         builder.setView(view);
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
-        edtmaloaigiay = view.findViewById(R.id.edtmaloaigiay);
         edttenloaigiay = view.findViewById(R.id.edttenloaigiay);
         btnThem = view.findViewById(R.id.btnThem);
         btnHuy = view.findViewById(R.id.btnHuy);
-
+        maloai = loaiGiay.getMaloai();
         btnThem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int maloai = Integer.parseInt(edtmaloaigiay.getText().toString());
+
                 String tenloai = edttenloaigiay.getText().toString();
 
                 LoaiGiay loaiGiay = new LoaiGiay(maloai,tenloai);
