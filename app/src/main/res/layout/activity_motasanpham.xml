@@ -6,21 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".activity.motasanpham"
     android:id="@+id/linnia"
-    android:background="#1F1F1F"
+    android:background="@drawable/gradient"
 
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/gioithieushape"
+        android:background="@drawable/gradient_edittext"
         android:orientation="vertical"
         >
 
 
         <ImageView
             android:id="@+id/imganhne"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_gravity="center"
             android:layout_marginTop="-50dp"
@@ -29,69 +29,11 @@
         <ImageView
 
             android:layout_width="450dp"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:paddingRight="50dp"
             android:src="@drawable/motasp" />
 
-        <LinearLayout
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginBottom="20dp"
-
-
-        >
-
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-
-
-               >
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="20dp"
-                    android:layout_height="7dp"
-                    app:cardCornerRadius="7dp"
-                    android:layout_marginRight="10dp"
-                    android:backgroundTint="#BDBDBD"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="20dp"
-                    android:layout_height="7dp"
-                    app:cardCornerRadius="7dp"
-                    android:backgroundTint="#BDBDBD"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="20dp"
-                    android:layout_height="7dp"
-                    app:cardCornerRadius="7dp"
-                    android:layout_marginLeft="10dp"
-                    android:backgroundTint="#BDBDBD"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="57dp"
-                    android:layout_height="7dp"
-                    app:cardCornerRadius="7dp"
-                    android:layout_marginLeft="10dp"
-                    android:backgroundTint="#FD5F44"/>
-
-
-
-
-
-
-
-            </LinearLayout>
-
-
-
-        </LinearLayout>
 
     </LinearLayout>
 
@@ -105,7 +47,7 @@
         android:layout_margin="5dp"
         android:padding="5dp"
         android:layout_gravity="start"
-        android:textColor="#F4F3F3"
+        android:textColor="#884502"
         />
 
     <TextView
@@ -115,7 +57,7 @@
         android:layout_gravity="start"
         android:layout_margin="5dp"
         android:text="Nike React Infinity Run"
-        android:textColor="#F4F3F3"
+        android:textColor="#884502"
         android:textSize="22sp"
         android:padding="5dp"
         android:textStyle="bold" />
@@ -125,7 +67,7 @@
         android:layout_gravity="start"
         android:layout_margin="5dp"
         android:text="Mô tả"
-        android:textColor="#F4F3F3"
+        android:textColor="#884502"
         android:textSize="15sp"
         android:padding="5dp"
         />
@@ -134,9 +76,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_margin="5dp"
+        android:layout_margin="10dp"
         android:text="Nike React  Infinity React Run là một ngôi sao lớn và có hiệu suất bán chạy rất cao.Lớp đệm bổ sung và nút xoay mang đến cho người mang trải nghiệm rất mới lạ và thoải mái .... Xem thêm"
-        android:textColor="#BCF4F3F3"
+        android:textColor="#884502"
         android:textAlignment="textStart"
         android:textSize="14sp"
         />
@@ -155,7 +97,7 @@
             android:textSize="17sp"
             android:textStyle="bold"
             android:layout_marginLeft="30dp"
-            android:textColor="@color/white"/>
+            android:textColor="#884502"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -164,7 +106,7 @@
             android:textSize="17sp"
            android:layout_marginLeft="250dp"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:textColor="#884502"
 
             />
 
@@ -261,7 +203,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="150dp"
 
-            android:backgroundTint="@color/white"/>
+            android:backgroundTint="#884502"/>
 
 
     </LinearLayout>
@@ -280,7 +222,7 @@
             android:layout_gravity="start"
 
             android:text="Số lượng:"
-            android:textColor="#F4F3F3"
+            android:textColor="#884502"
             android:textSize="18sp"
             android:padding="5dp"
             android:textStyle="bold"
@@ -303,7 +245,7 @@
             android:layout_marginLeft="10dp"
             android:gravity="center"
             android:text="1"
-            android:textColor="#F4F3F3"
+            android:textColor="#884502"
             android:textSize="18sp"
 
             android:textStyle="bold" />
@@ -324,32 +266,38 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="52dp"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="65dp"
+        android:gravity="center"
+
 
         >
 
         <androidx.cardview.widget.CardView
             android:id="@+id/MuaNgay"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="55dp"
-            android:backgroundTint="#FD5F44"
+          android:layout_margin="5dp"
 
-            app:cardCornerRadius="20dp">
+            android:backgroundTint="@color/white"
+
+            >
 
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:padding="10dp"
-                android:text="Mua ngay"
-                android:textAlignment="center"
-                android:textColor="@color/white"
 
-                android:textSize="15sp"
+                android:text="Mua ngay"
+                android:drawableLeft="@drawable/icon_dongy"
+                android:drawablePadding="5dp"
+                android:textAlignment="center"
+                android:textColor="#FD5F44"
+
+                android:textSize="13sp"
+
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
@@ -357,10 +305,19 @@
             android:id="@+id/btndathang"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            app:cardCornerRadius="20dp"
+            android:backgroundTint="@color/white"
             android:text="Thêm vào giỏ hàng"
-            android:layout_marginLeft="80dp"
-            android:backgroundTint="#FD5F44">
+            android:textSize="10sp"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@drawable/icon_giohang"
+
+            android:textColor="#FD5F44"
+
+
+
+            android:textStyle="bold">
+
+
         </Button>
 
     </LinearLayout>

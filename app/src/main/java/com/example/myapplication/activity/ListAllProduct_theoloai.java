@@ -1,6 +1,7 @@
 package com.example.myapplication.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -8,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -32,6 +34,7 @@ public class ListAllProduct_theoloai extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_all_product_theoloai);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         recycleviewallgiay=findViewById(R.id.recycleview);
         txtsearchne = findViewById(R.id.edtserch1);
 
@@ -56,8 +59,9 @@ public class ListAllProduct_theoloai extends AppCompatActivity {
     private void showList(int maloaigiay) {
         list = new ArrayList<>();
         dao = new GiayDAO(getApplicationContext());
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        GridLayoutManager linearLayoutManager = new GridLayoutManager(this,2);
         recycleviewallgiay.setLayoutManager(linearLayoutManager);
+
         list = dao.getDSPROLoai(maloaigiay);
         giayadapter = new GiayUserAdapter(this, list, dao);
         recycleviewallgiay.setAdapter(giayadapter);

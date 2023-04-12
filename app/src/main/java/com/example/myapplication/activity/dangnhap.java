@@ -19,7 +19,7 @@ import com.example.myapplication.dao.NguoiDungDao;
 
 public class dangnhap extends AppCompatActivity {
     //
-    Button btndangnhap,btnShow;
+    Button btndangnhap,btnShow, btndangki;
     EditText edttaikhoan, edtmatkhau;
     TextView txtdangki;
     @Override
@@ -27,8 +27,13 @@ public class dangnhap extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dangnhap);
         btnShow = findViewById(R.id.btnShow);
-
-        //show pass
+        btndangki = findViewById(R.id.btndangki);
+        btndangki.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity( new Intent(dangnhap.this,dangki.class));
+            }
+        });
         btnShow.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {

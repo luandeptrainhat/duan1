@@ -2,16 +2,17 @@ package com.example.myapplication.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,14 +20,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.R;
 import com.example.myapplication.dao.GiayDAO;
 import com.example.myapplication.model.ItemDonHang;
-import com.example.myapplication.model.ItemGioHang;
-import com.example.myapplication.model.Product;
 
 import java.util.ArrayList;
 
 public class LichSuAdapter extends RecyclerView.Adapter<LichSuAdapter.ViewHolder> {
     private Context context;
-    private ArrayList<ItemDonHang> list;
+    public ArrayList<ItemDonHang> list;
     private GiayDAO giayDAO;
 
     public LichSuAdapter(Context context, ArrayList<ItemDonHang> list, GiayDAO giayDAO) {
@@ -40,7 +39,6 @@ public class LichSuAdapter extends RecyclerView.Adapter<LichSuAdapter.ViewHolder
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = ((Activity) context).getLayoutInflater();
         View view = inflater.inflate(R.layout.item_lich_su, parent, false);
-
         return new ViewHolder(view);
     }
 
@@ -79,6 +77,7 @@ public class LichSuAdapter extends RecyclerView.Adapter<LichSuAdapter.ViewHolder
             xacNhan = itemView.findViewById(R.id.xacNhan);
         }
     }
+
     private void getDS(){
         list.clear();
         SharedPreferences sharedPreferences =  context.getSharedPreferences("THONGTIN", context.MODE_PRIVATE);
@@ -86,4 +85,5 @@ public class LichSuAdapter extends RecyclerView.Adapter<LichSuAdapter.ViewHolder
         list = giayDAO.layItemDonHang();
         notifyDataSetChanged();
     }
+
 }
