@@ -30,7 +30,7 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.ViewHold
     private GiayDAO giayDAO;
     private TextView textView;
 
-    public GioHangAdapter(Context context, ArrayList<ItemGioHang> list, GiayDAO giayDAO,TextView textView) {
+    public GioHangAdapter(Context context, ArrayList<ItemGioHang> list, GiayDAO giayDAO, TextView textView) {
         this.context = context;
         this.list = list;
         this.giayDAO = giayDAO;
