@@ -23,6 +23,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.myapplication.R;
 
+
 import com.example.myapplication.adapter.GiayUserAdapter;
 import com.example.myapplication.adapter.Giayadapter;
 import com.example.myapplication.adapter.LoaiGiayAdapter;
@@ -32,6 +33,10 @@ import com.example.myapplication.dao.LoaiGiayDAO;
 import com.example.myapplication.dao.NguoiDungDao;
 import com.example.myapplication.model.LoaiGiay;
 import com.example.myapplication.model.Product;
+
+import com.example.myapplication.XuLiDonHangActivity;
+import com.example.myapplication.dao.NguoiDungDao;
+
 
 import com.example.myapplication.XuLiDonHangActivity;
 import com.example.myapplication.dao.NguoiDungDao;
@@ -82,8 +87,12 @@ public class MainAdmin extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case R.id.menuThemLoai:
+
 //                        Intent intentloaigiay = new Intent(MainAdmin.this,LoaiGiayActivity.class);
 //                        startActivity(intentloaigiay);
+
+                        Intent intentloaigiay = new Intent(MainAdmin.this,LoaiGiayActivity.class);
+                        startActivity(intentloaigiay);
 //                        
                         break;
                     case R.id.menuXuLiDon:

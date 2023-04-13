@@ -3,7 +3,7 @@
     android:layout_width="160dp"
     android:layout_height="wrap_content"
     android:layout_marginLeft="25dp"
-    android:padding="10dp"
+
     android:background="@drawable/shape4"
     android:orientation="vertical"
     >

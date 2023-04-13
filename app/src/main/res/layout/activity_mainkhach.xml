@@ -94,7 +94,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <EditText
+        <TextView
             android:id="@+id/edtserch"
             android:layout_width="300dp"
             android:layout_height="35dp"
