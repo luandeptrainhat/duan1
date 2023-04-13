@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.dao.LoaiGiayDAO;
 import com.example.myapplication.model.LoaiGiay;
 
 import java.util.ArrayList;
@@ -18,12 +19,15 @@ import java.util.ArrayList;
 public class LoaiGiayAdapter extends RecyclerView.Adapter<LoaiGiayAdapter.ViewHolder> {
     private Context context;
     private ArrayList<LoaiGiay> list;
+    private LoaiGiayDAO dao;
 
-    public LoaiGiayAdapter(Context context, ArrayList<LoaiGiay> list) {
+    public LoaiGiayAdapter(Context context, ArrayList<LoaiGiay> list, LoaiGiayDAO dao) {
         this.context = context;
         this.list = list;
+        this.dao = dao;
     }
-//
+
+    //
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -49,7 +53,7 @@ public class LoaiGiayAdapter extends RecyclerView.Adapter<LoaiGiayAdapter.ViewHo
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtTenloai = itemView.findViewById(R.id.tenloai);
+            txtTenloai = itemView.findViewById(R.id.txtTenLoaiGiay);
         }
     }
 }
