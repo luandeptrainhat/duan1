@@ -36,8 +36,8 @@ public class GioHangActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gio_hang);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         recycleviewGioHang = findViewById(R.id.recycleviewGioHang);
-        txtTongTien = findViewById(R.id.txtTongTien);
-        btnThanhToan = findViewById(R.id.btnThanhToan);
+        txtTongTien = findViewById(R.id.txtTongtien);
+        btnThanhToan = findViewById(R.id.btnThanhtoan);
         showList();
        btnThanhToan.setOnClickListener(new View.OnClickListener() {
            @Override
