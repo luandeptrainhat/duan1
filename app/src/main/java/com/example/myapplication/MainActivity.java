@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         listloai = loaiGiayDAO.getDSLOAI();
-        loaiGiayAdapter = new LoaiGiayAdapter(this, listloai);
+        loaiGiayAdapter = new LoaiGiayAdapter(this, listloai,loaiGiayDAO);
         recyclerViewLoai.setAdapter(loaiGiayAdapter);
     }
 }

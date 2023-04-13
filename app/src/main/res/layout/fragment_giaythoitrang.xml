@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#E11F1F1F">
+    android:background="@android:color/transparent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -103,7 +103,7 @@
             android:text="Đề xuất"
             android:textSize="17sp"
             android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:textColor="#9d6855"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -112,7 +112,7 @@
             android:id="@+id/xemgiay_theoloai"
             android:textSize="14sp"
             android:layout_marginLeft="220dp"
-            android:textColor="@color/white"
+            android:textColor="#9d6855"
 
             />
 
@@ -133,7 +133,7 @@
 
             android:layout_marginLeft="25dp"
 
-            android:background="@drawable/shape4"
+            android:background="@drawable/shapemain"
 
             android:orientation="vertical"
 
@@ -141,7 +141,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/giaythoitrang"
+                android:src="@drawable/air95"
                 android:layout_gravity="center"
 
                 />
@@ -153,12 +153,12 @@
                 android:textStyle="bold"
                 android:textSize="12sp"
                 android:layout_gravity="center"
-                android:textColor="#FD5F44"
+                android:textColor="#9d6855"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nike Air Fly"
+                android:text="Fashion 23"
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:textSize="15sp"
@@ -190,7 +190,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="3dp"
                     android:layout_gravity="end"
-                    android:background="@drawable/shapemain"
+                    android:background="@drawable/shape4"
 
                     android:orientation="vertical"
 
@@ -204,7 +204,7 @@
                         android:layout_gravity="center"
                         android:text="+"
                         android:textColor="@color/black"
-                        android:textSize="27sp"
+                        android:textSize="23sp"
 
 
                         />
@@ -226,68 +226,66 @@
             android:layout_height="match_parent"
 
 
-            android:background="@drawable/shape4"
             android:layout_marginLeft="30dp"
+            android:background="@drawable/shapemain"
             android:orientation="vertical"
 
             >
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/giaythoitrang"
                 android:layout_gravity="center"
-                />
+                android:src="@drawable/air" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bán chạy nhất"
-                android:textStyle="bold"
-                android:textSize="12sp"
                 android:layout_gravity="center"
-                android:textColor="#FD5F44"
-                />
+                android:text="Bán chạy nhất"
+                android:textColor="#9d6855"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nike Air Zoom 95"
-                android:textStyle="bold"
                 android:layout_gravity="center"
-                android:textSize="15sp"
+                android:text="Models Air 4"
                 android:textColor="@color/white"
-                />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_gravity="end"
                 android:layout_marginTop="25dp"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2.344.999 VNĐ"
-                    android:textStyle="bold"
                     android:layout_gravity="center"
-                    android:textSize="13sp"
                     android:layout_marginLeft="5dp"
+                    android:text="7.344.999 VNĐ"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
 
-                    android:textColor="@color/white"/>
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="45dp"
                     android:layout_height="37dp"
+                    android:layout_gravity="end"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="3dp"
-                    android:layout_gravity="end"
-                    android:background="@drawable/shapemain"
+                    android:background="@drawable/shape4"
 
                     android:orientation="vertical"
 
                     >
-
 
 
                     <TextView
@@ -296,7 +294,7 @@
                         android:layout_gravity="center"
                         android:text="+"
                         android:textColor="@color/black"
-                        android:textSize="27sp"
+                        android:textSize="23sp"
 
 
                         />
@@ -307,12 +305,7 @@
             </LinearLayout>
 
 
-
-
-
-
         </LinearLayout>
-
 
 
     </LinearLayout>

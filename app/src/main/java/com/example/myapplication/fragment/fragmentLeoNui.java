@@ -28,7 +28,7 @@ public class fragmentLeoNui extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ListAllProduct_theoloai.class);
                 intent.putExtra("loaigiay",2);
-                intent.putExtra("title", "Giày Leo Núi");
+                intent.putExtra("title", "Giày Phượt");
                 startActivity(intent);
             }
         });
