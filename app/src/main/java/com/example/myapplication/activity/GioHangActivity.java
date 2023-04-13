@@ -33,6 +33,7 @@ public class GioHangActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gio_hang);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         recycleviewGioHang = findViewById(R.id.recycleviewGioHang);
+        title = findViewById(R.id.txtTitle);
         showList();
 
     }
@@ -45,7 +46,7 @@ public class GioHangActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recycleviewGioHang.setLayoutManager(linearLayoutManager);
         list = dao.layItemGioHang(tk);
-        adapter = new GioHangAdapter(this, list, dao);
+        adapter = new GioHangAdapter(this, list, dao,title);
         recycleviewGioHang.setAdapter(adapter);
     }
 }

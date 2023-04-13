@@ -225,4 +225,33 @@ public class GiayDAO {
         }
         return list;
     }
+    public ArrayList<ItemGioHang> layItemGHDaXacNhan(String tk) {
+
+        ArrayList<ItemGioHang> list = new ArrayList<>();
+        SQLiteDatabase sqLiteDatabase = dbhelper.getReadableDatabase();
+//int magiohang, String ten, int gia, int soLuong, String mauSac, byte[] anh, int magiay
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT GIOHANG.magiohang,  GIAY.tengiay,GIAY.giagiay,GIOHANG.soluong,GIAY.mausac,GIAY.anh,GIOHANG.magiay " +
+                "FROM GIAY " +
+                "INNER JOIN GIOHANG " +
+                "ON GIAY.magiay = GIOHANG.magiay " +
+                "WHERE GIOHANG.taikhoan= ? AND GIOHANG.trangthai = 1 ", new String[]{String.valueOf(tk)});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            do {
+                list.add(new ItemGioHang(cursor.getInt(0), cursor.getString(1),
+                        cursor.getInt(2),
+                        cursor.getInt(3),
+                        cursor.getString(4),
+                        cursor.getBlob(5),
+                        cursor.getInt(6)
+                ));
+            } while (cursor.moveToNext());
+        }
+        return list;
+    }
+    public boolean xoaItemGHDXN() {
+        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
+        long check = sqLiteDatabase.delete("GIOHANG", "trangthai = 1", null);
+        return check > 0;
+    }
 }

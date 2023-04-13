@@ -34,7 +34,6 @@ public class LoaiGiayDAO {
     public boolean themLoaiGiay (LoaiGiay loaiGiay){
         SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("maloaigiay",loaiGiay.getMaloai());
         contentValues.put("tenloai",loaiGiay.getTenloai());
         long check  = sqLiteDatabase.insert("LOAIGIAY",null,contentValues);
         return check > 0;
