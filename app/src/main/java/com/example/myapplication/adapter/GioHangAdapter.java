@@ -66,6 +66,11 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.ViewHold
                 }
             }
         });
+        if(holder.chkItemGH.isSelected()){
+
+        }else {
+            giayDAO.doiTrangThaiGH0(list.get(holder.getAdapterPosition()).getMagiohang());
+        }
         holder.chkItemGH.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
