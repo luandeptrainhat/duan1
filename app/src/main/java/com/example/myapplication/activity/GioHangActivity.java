@@ -70,5 +70,6 @@ public class GioHangActivity extends AppCompatActivity {
         }
         dao.xoaItemGHDXN();
         showList();
+//        
     }
 }
