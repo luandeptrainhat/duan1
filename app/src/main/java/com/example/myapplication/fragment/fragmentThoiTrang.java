@@ -27,7 +27,7 @@ public class fragmentThoiTrang extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ListAllProduct_theoloai.class);
                 intent.putExtra("loaigiay",4);
-                intent.putExtra("title", "Giày Fashion");
+                intent.putExtra("title", "Giày Thời Trang");
                 startActivity(intent);
             }
         });

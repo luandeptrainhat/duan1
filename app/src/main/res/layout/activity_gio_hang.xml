@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/gradient"
+    android:background="#0A152E"
     tools:context=".activity.GioHang">
 
 
@@ -14,9 +14,9 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="50dp"
 
-            android:background="@drawable/gradient">
+            android:background="#0A152E">
 
             <Button
                 android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:text="Giỏ hàng"
-                android:textColor="#F44336"
+                android:textColor="#FD979696"
                 android:textSize="20sp"
                 android:textStyle="bold"
 
@@ -43,7 +43,7 @@
                 android:layout_marginRight="15dp"
                 android:text="Sửa"
 
-                android:textColor="#F44336"
+                android:textColor="#FD979696"
 
                 />
 
@@ -52,7 +52,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:id="@+id/recycleviewGioHang"
-        android:layout_height="615dp"/>
+        android:layout_height="610dp"/>
 
 
     <LinearLayout
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
 
                 android:text="Tổng cộng"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="19sp"
                 android:textStyle="bold"
 
@@ -86,9 +86,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtTongTien"
+
                 android:layout_gravity="left"
-                android:text="0 VNĐ"
+                android:text="2.499.000VNĐ"
                 android:textColor="#F5FB0303"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -108,7 +108,7 @@
             app:cardCornerRadius="15dp">
 
             <TextView
-                android:id="@+id/btnThanhToan"
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"

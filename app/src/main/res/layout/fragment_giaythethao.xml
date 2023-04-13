@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@android:color/transparent">
+    android:background="#E11F1F1F">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -90,7 +90,7 @@
             android:text="Đề xuất"
             android:textSize="17sp"
             android:textStyle="bold"
-            android:textColor="#9d6855"/>
+            android:textColor="@color/white"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -98,7 +98,7 @@
             android:text="Xem tất cả"
             android:textSize="14sp"
             android:layout_marginLeft="220dp"
-            android:textColor="#9d6855"
+            android:textColor="@color/white"
 
             />
 
@@ -119,7 +119,7 @@
 
             android:layout_marginLeft="25dp"
 
-            android:background="@drawable/shapemain"
+            android:background="@drawable/shape4"
 
             android:orientation="vertical"
 
@@ -139,12 +139,12 @@
                 android:textStyle="bold"
                 android:textSize="12sp"
                 android:layout_gravity="center"
-                android:textColor="#9d6855"
+                android:textColor="#FD5F44"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sports22 Air"
+                android:text="Nike Air Fly"
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:textSize="15sp"
@@ -162,7 +162,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5.344.999 VNĐ"
+                    android:text="2.344.999 VNĐ"
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     android:textSize="13sp"
@@ -176,20 +176,21 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="3dp"
                     android:layout_gravity="end"
-                    android:background="@drawable/shape4"
+                    android:background="@drawable/shapemain"
 
                     android:orientation="vertical"
 
                     >
 
 
+
                     <TextView
-                        android:layout_width="11dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="+"
                         android:textColor="@color/black"
-                        android:textSize="23sp"
+                        android:textSize="27sp"
 
 
                         />
@@ -211,7 +212,7 @@
             android:layout_height="match_parent"
 
 
-            android:background="@drawable/shapemain"
+            android:background="@drawable/shape4"
             android:layout_marginLeft="30dp"
             android:orientation="vertical"
 
@@ -230,12 +231,12 @@
                 android:textStyle="bold"
                 android:textSize="12sp"
                 android:layout_gravity="center"
-                android:textColor="#9d6855"
+                android:textColor="#FD5F44"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sky Uwaaa 23"
+                android:text="Nike Air Zoom 95"
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:textSize="15sp"
@@ -253,7 +254,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2.765.999 VNĐ"
+                    android:text="2.344.999 VNĐ"
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     android:textSize="13sp"
@@ -267,7 +268,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="3dp"
                     android:layout_gravity="end"
-                    android:background="@drawable/shape4"
+                    android:background="@drawable/shapemain"
 
                     android:orientation="vertical"
 
@@ -281,7 +282,7 @@
                         android:layout_gravity="center"
                         android:text="+"
                         android:textColor="@color/black"
-                        android:textSize="23sp"
+                        android:textSize="27sp"
 
 
                         />
