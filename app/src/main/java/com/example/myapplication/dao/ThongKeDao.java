@@ -27,7 +27,7 @@ public class ThongKeDao {
             cursorgiayluoi.moveToFirst();
             giayluoi = cursorgiayluoi.getInt(0);
         }
-        Cursor cursorgiayleonui = sqLiteDatabase.rawQuery("select sum(giagiay) from GIAY where magiay in (select magiay  from DONHANG where trangthai = 1 AND GIAY.maloaigiay = 3) ", null);
+        Cursor cursorgiayleonui = sqLiteDatabase.rawQuery("select sum(giagiay) from GIAY where magiay in (select magiay  from DONHANG where trangthai = 1 AND GIAY.maloaigiay = 3", null);
 
         if (cursorgiayleonui.getCount() != 0) {
             cursorgiayleonui.moveToFirst();

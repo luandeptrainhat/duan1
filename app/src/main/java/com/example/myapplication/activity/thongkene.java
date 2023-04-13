@@ -89,5 +89,6 @@ public class thongkene extends AppCompatActivity implements OnChartValueSelected
         PieData pieData=new PieData(pieDataSet);
         pieChart.setData(pieData);
         pieChart.invalidate();
-        pieChart.animateXY(2000,1250);    }
+        pieChart.animateXY(2000,1250);
+    }
 }
