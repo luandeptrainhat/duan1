@@ -47,5 +47,6 @@ public class GioHangActivity extends AppCompatActivity {
         list = dao.layItemGioHang(tk);
         adapter = new GioHangAdapter(this, list, dao);
         recycleviewGioHang.setAdapter(adapter);
+        ///dung mat code
     }
 }
