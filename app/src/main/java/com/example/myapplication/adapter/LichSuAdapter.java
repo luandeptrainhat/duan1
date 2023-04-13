@@ -40,6 +40,7 @@ public class LichSuAdapter extends RecyclerView.Adapter<LichSuAdapter.ViewHolder
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = ((Activity) context).getLayoutInflater();
         View view = inflater.inflate(R.layout.item_lich_su, parent, false);
+
         return new ViewHolder(view);
     }
 
