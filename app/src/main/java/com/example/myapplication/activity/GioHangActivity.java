@@ -57,6 +57,7 @@ public class GioHangActivity extends AppCompatActivity {
         list = dao.layItemGioHang(tk);
         adapter = new GioHangAdapter(this, list, dao,txtTongTien);
         recycleviewGioHang.setAdapter(adapter);
+        ///dung mat code
     }
     private void thanhToan(){
         listDXN = new ArrayList<>();
