@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -53,7 +54,8 @@ public class LoaiGiayMainAdapter extends RecyclerView.Adapter<LoaiGiayMainAdapte
         holder.linear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
+//                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
+                GridLayoutManager linearLayoutManager = new GridLayoutManager(context,2);
                 recyclerView.setLayoutManager(linearLayoutManager);
                 ArrayList<Product> list1  = new ArrayList<>();
                 GiayDAO dao1 = new GiayDAO(context);

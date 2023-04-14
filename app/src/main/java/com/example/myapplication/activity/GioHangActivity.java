@@ -69,7 +69,9 @@ public class GioHangActivity extends AppCompatActivity {
             dao.themVaoDH(0,tk,item.getMagiay(),item.getSoLuong());
         }
         dao.xoaItemGHDXN();
+        txtTongTien.setText("0 VNĐ");
         showList();
+
 //        
     }
 }

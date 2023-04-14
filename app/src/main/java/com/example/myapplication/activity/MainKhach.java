@@ -344,12 +344,14 @@ private DrawerLayout drawerLayout;
                     case R.id.miLichSuMuaHang :
                         startActivity(new Intent(MainKhach.this,LichSuDonHang.class));
                         break;
+                    case R.id.miTrangCaNhan:
+                        startActivity(new Intent(MainKhach.this,TrangCaNhanKhach.class));
+                        break;
                 }
                 return false;
             }
         });
 
     }
-
 
 }

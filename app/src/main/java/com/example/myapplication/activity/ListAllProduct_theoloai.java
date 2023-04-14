@@ -1,6 +1,7 @@
 package com.example.myapplication.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -58,7 +59,8 @@ public class ListAllProduct_theoloai extends AppCompatActivity {
     private void showList(int maloaigiay) {
         list = new ArrayList<>();
         dao = new GiayDAO(getApplicationContext());
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        GridLayoutManager linearLayoutManager = new GridLayoutManager(this,2);
         recycleviewallgiay.setLayoutManager(linearLayoutManager);
         list = dao.getDSPROLoai(maloaigiay);
         giayadapter = new GiayUserAdapter(this, list, dao);
