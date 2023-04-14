@@ -157,10 +157,10 @@
             android:layout_margin="5dp"
             android:layout_weight="6"
             android:id="@+id/txtgiohang"
-            android:drawableTop="@drawable/icon_giohang"
+            android:drawableTop="@drawable/baseline_logout_24"
             android:gravity="center"
             android:iconifiedByDefault="false"
-            android:text="Giỏ hàng"
+            android:text="Đăng xuất"
             android:textColor="#9d6855"
 
 

@@ -131,16 +131,19 @@ public class MainAdmin extends AppCompatActivity {
                         startActivity(intent2);
                         break;
                     case R.id.menuDangXuat:
-
+                        Intent intent3 = new Intent(MainAdmin.this, dangnhap.class);
+                        startActivity(intent3);
+                        finish();
                         break;
                     case R.id.menuDoiMatKhau:
                         dialogdoimatkhau();
                         break;
 
                     case R.id.menuThoat:
-                        Intent intentt = new Intent(MainAdmin.this, dangnhap.class);
-                        intentt.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intentt);
+                        Intent startMain = new Intent(Intent.ACTION_MAIN);
+                        startMain.addCategory(Intent.CATEGORY_HOME);
+                        startActivity(startMain);
+                        finish();
                         break;
 
                 }

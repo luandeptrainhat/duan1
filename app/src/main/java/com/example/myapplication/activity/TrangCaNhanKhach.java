@@ -55,7 +55,8 @@ Button btnvetrangchu;
       txtgiohang.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
-              startActivity( new Intent(TrangCaNhanKhach.this, GioHangActivity.class) );
+              startActivity( new Intent(TrangCaNhanKhach.this, dangnhap.class) );
+              finish();
           }
       });
       txtchatshop.setOnClickListener(new View.OnClickListener() {
