@@ -17,10 +17,10 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_gravity="right"
+        android:layout_margin="5dp"
         android:background="@android:color/transparent"
         android:backgroundTint="@android:color/transparent"
-        android:drawableBottom="@drawable/sua"
-        />
+        android:drawableBottom="@drawable/sua" />
 
     <ImageView
         android:id="@+id/anh"

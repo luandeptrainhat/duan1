@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -36,6 +37,7 @@ public class LoaiGiayActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loai_giay);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         recyclerViewLoaigiay = findViewById(R.id.recycleviewLoaigiay);
         floatingActionButton = findViewById(R.id.floatingActionButton);
         list = new ArrayList<>();
