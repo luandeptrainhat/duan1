@@ -138,6 +138,7 @@ private DrawerLayout drawerLayout;
                 startActivity(new Intent(MainKhach.this, GioHangActivity.class));
             }
         });
+
         searchView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
