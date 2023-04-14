@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.myapplication.database.Dbhelper;
 import com.example.myapplication.model.LoaiGiay;
-import com.example.myapplication.model.Product;
 
 import java.util.ArrayList;
 //
@@ -36,6 +35,18 @@ public class LoaiGiayDAO {
         ContentValues contentValues = new ContentValues();
         contentValues.put("tenloai",loaiGiay.getTenloai());
         long check  = sqLiteDatabase.insert("LOAIGIAY",null,contentValues);
+        return check > 0;
+    }
+    public boolean suaLoaiGiay (LoaiGiay loaiGiay){
+        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("tenloai",loaiGiay.getTenloai());
+        long check  = sqLiteDatabase.update("LOAIGIAY",contentValues,"maloaigiay = ?", new String[]{String.valueOf(loaiGiay.getMaloai())});
+        return check > 0;
+    }
+    public boolean xoaloaiGiay(int maloaigiay) {
+        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
+        long check = sqLiteDatabase.delete("LOAIGIAY", "maloaigiay=?", new String[]{String.valueOf(maloaigiay)});
         return check > 0;
     }
 }
