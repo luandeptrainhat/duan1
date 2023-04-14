@@ -15,8 +15,7 @@
 
         android:orientation="vertical"
 
-        android:layout_margin="10dp"
-        android:padding="10dp"
+
         android:background="@drawable/shapemain3">
 
 

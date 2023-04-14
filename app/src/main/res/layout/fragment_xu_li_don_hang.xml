@@ -4,7 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient">
+    android:background="@drawable/gradient"
+    android:orientation="vertical">
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        android:padding="5dp"
+        android:text="Đơn hàng cần được xử lí"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#884502"
+        android:textSize="20sp"
+        android:textStyle="bold" />
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:id="@+id/recycleviewdonhang"
