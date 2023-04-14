@@ -3,11 +3,12 @@
     android:layout_width="150dp"
     android:layout_height="wrap_content"
  android:id="@+id/txtshow"
-    android:layout_marginLeft="20dp"
+
 
     android:background="@drawable/shape4"
 
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="15dp">
 
 
     <ImageView

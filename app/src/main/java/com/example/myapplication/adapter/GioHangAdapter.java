@@ -1,7 +1,9 @@
 package com.example.myapplication.adapter;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -58,12 +60,30 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.ViewHold
         holder.btnXoaGioHang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (giayDAO.xoaItemGH(list.get(holder.getAdapterPosition()).getMagiohang())) {
-                    getDS();
-                    Toast.makeText(context, "Xóa thành công", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(context, "Xóa thất bại", Toast.LENGTH_SHORT).show();
-                }
+//                Hoi lai nguoi dung
+                AlertDialog.Builder b = new AlertDialog.Builder(context);
+                b.setTitle("Xác nhận xóa");
+                b.setPositiveButton("Xóa", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (giayDAO.xoaItemGH(list.get(holder.getAdapterPosition()).getMagiohang())) {
+                            getDS();
+                            Toast.makeText(context, "Xóa thành công", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(context, "Xóa thất bại", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+                b.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dlog, int which) {
+                        dlog.dismiss();
+                    }
+                });
+                AlertDialog al = b.create();
+                al.show();
+//
+
             }
         });
         if(holder.chkItemGH.isSelected()){

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/menuThemGiay"
-        android:title="Thêm Giày"
+        android:title="Quản lí giày"
         android:icon="@drawable/icon_trangchu">
 
     </item>
 
     <item android:id="@+id/menuThemLoai"
-        android:title="Thêm Loại Giày"
+        android:title="Quản lí loại giày"
         android:icon="@drawable/icon_trangchu">
 
     </item>

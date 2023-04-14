@@ -14,8 +14,17 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".activity.thongkene"
+            android:exported="true" />
+        <activity
+            android:name=".activity.TrangCaNhanKhach"
+            android:exported="true" />
+        <activity
+            android:name=".activity.Webview"
+            android:exported="true" />
+        <activity
             android:name=".XuLiDonHangActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.LoaiGiayActivity"
             android:exported="true" />
