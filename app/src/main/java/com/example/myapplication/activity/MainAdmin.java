@@ -33,6 +33,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
+import com.example.myapplication.XuLiDonHangActivity;
 import com.example.myapplication.adapter.GiayUserAdapter;
 import com.example.myapplication.adapter.Giayadapter;
 import com.example.myapplication.adapter.LoaiGiayAdapter;
@@ -121,12 +122,13 @@ public class MainAdmin extends AppCompatActivity {
                         startActivity(intentloaigiay);
                         break;
                     case R.id.menuXuLiDon:
-                        Intent intent1 = new Intent(MainAdmin.this, DonHangActivity.class);
+                        Intent intent1 = new Intent(MainAdmin.this, XuLiDonHangActivity.class);
                         startActivity(intent1);
                         break;
                     case R.id.menuDoanhThu:
 
-
+                        Intent intent2 = new Intent(MainAdmin.this, thongkene.class);
+                        startActivity(intent2);
                         break;
                     case R.id.menuDangXuat:
 
