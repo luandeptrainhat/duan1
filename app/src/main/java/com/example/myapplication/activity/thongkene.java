@@ -66,7 +66,7 @@ public class thongkene extends AppCompatActivity implements OnChartValueSelected
         ArrayList<PieEntry> entrys = new ArrayList<>();
         ThongKeDao thongKeDao = new ThongKeDao(thongkene.this);
         float[] yData = thongKeDao.layItemDonHang();
-        String[] xData = { "Tổng Doanh thu"};
+        String[] xData = { "TỔng Doanh Thu"};
 
         for (int i = 0; i < yData.length;i++){
             entrys.add(new PieEntry(yData[i], xData[i]));
@@ -78,6 +78,9 @@ public class thongkene extends AppCompatActivity implements OnChartValueSelected
 
         ArrayList<Integer> colors=new ArrayList<>();
         colors.add(Color.BLUE);
+        colors.add(Color.RED);
+        colors.add(Color.GREEN);
+
 
 
         pieDataSet.setColors(colors);

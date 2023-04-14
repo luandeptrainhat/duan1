@@ -16,20 +16,40 @@ public class ThongKeDao {
     }
     public float[] getThongTinThuChi() {
         SQLiteDatabase sqLiteDatabase = dbhelper.getReadableDatabase();
-        int giaythethao = 0;
+        int giaythethao = 0, giayluoi = 0, giayleonui = 0;
 
         Cursor cursorGiaythethao = sqLiteDatabase.rawQuery("SELECT  GIAY.giagiay " +
                 "FROM GIAY " +
                 "INNER JOIN DONHANG " +
                 "ON GIAY.magiay = DONHANG.magiay " +
-                "WHERE   DONHANG.trangthai= 1 ", null);
+                "WHERE   DONHANG.trangthai= 1 AND GIAY.maloaigiay = 1", null);
 
         if (cursorGiaythethao.getCount() != 0) {
             cursorGiaythethao.moveToFirst();
             giaythethao = cursorGiaythethao.getInt(0);
         }
+        Cursor cursorGiayluoi = sqLiteDatabase.rawQuery("SELECT  GIAY.giagiay " +
+                "FROM GIAY " +
+                "INNER JOIN DONHANG " +
+                "ON GIAY.magiay = DONHANG.magiay " +
+                "WHERE   DONHANG.trangthai= 1 AND GIAY.maloaigiay = 2", null);
 
-        float[] ketQua = new float[]{giaythethao};
+        if (cursorGiayluoi.getCount() != 0) {
+            cursorGiayluoi.moveToFirst();
+            giayluoi = cursorGiayluoi.getInt(0);
+        }
+        Cursor cursorGiayleonui = sqLiteDatabase.rawQuery("SELECT  GIAY.giagiay " +
+                "FROM GIAY " +
+                "INNER JOIN DONHANG " +
+                "ON GIAY.magiay = DONHANG.magiay " +
+                "WHERE   DONHANG.trangthai= 1 AND GIAY.maloaigiay = 3", null);
+
+        if (cursorGiayleonui.getCount() != 0) {
+            cursorGiayleonui.moveToFirst();
+            giayleonui = cursorGiayleonui.getInt(0);
+        }
+
+        float[] ketQua = new float[]{giaythethao,giayluoi,giayleonui};
         return ketQua;
     }
     public float[] layItemDonHang() {
