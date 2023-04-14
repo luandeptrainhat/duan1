@@ -54,7 +54,6 @@ public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.ViewHold
         holder.xacNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, ""+list.get(holder.getAdapterPosition()).getMadonhang(), Toast.LENGTH_SHORT).show();
                 if (giayDAO.chuyentrangtrangthai(list.get(holder.getAdapterPosition()).getMadonhang())){
                     getDS();
                     Toast.makeText(context, "Xác nhận thành công", Toast.LENGTH_SHORT).show();
