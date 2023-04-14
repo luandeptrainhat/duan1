@@ -106,13 +106,13 @@ public class LoaiGiayAdapter extends RecyclerView.Adapter<LoaiGiayAdapter.ViewHo
             @Override
             public void onClick(View view) {
 
-                if (dao.xoaloaiGiay(maloai)) {
-                    getDS();
-                    alertDialog.dismiss();
-                    Toast.makeText(context, "Xóa thành công", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(context, "Xóa thất bại", Toast.LENGTH_SHORT).show();
-                }
+//                if (dao.xoaloaiGiay(maloai)) {
+//                    getDS();
+//                    alertDialog.dismiss();
+//                    Toast.makeText(context, "Xóa thành công", Toast.LENGTH_SHORT).show();
+//                } else {
+//                    Toast.makeText(context, "Xóa thất bại", Toast.LENGTH_SHORT).show();
+//                }
             }
         });
     }
