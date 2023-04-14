@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_margin="10dp"
-    android:background="@drawable/shapemain5"
+    android:background="@drawable/gradient"
     android:padding="10dp">
 
 

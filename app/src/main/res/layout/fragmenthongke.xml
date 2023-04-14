@@ -6,7 +6,7 @@
     android:id="@+id/hienfragment"
     >
 
-    <com.github.mikephil.charting.charts.PieChart
+    <com.github.mikephil.charting.charts.PieChartpi
         android:id="@+id/piechart"
         android:layout_width="match_parent"
         android:layout_height="300dp"
