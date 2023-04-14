@@ -30,8 +30,9 @@ public class LoaiGiayActivity extends AppCompatActivity {
     ArrayList<LoaiGiay> list;
     LayoutInflater inflater;
     View view;
-    EditText edtmaloaigiay,edttenloaigiay;
+    EditText edttenloaigiay;
     Button btnThem,btnHuy;
+    int maloai;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,21 +44,20 @@ public class LoaiGiayActivity extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialogThem();
+                showDialogThem(list.get(maloai));
             }
         });
 
         getDS();
     }
 
-    private void showDialogThem() {
+    private void showDialogThem(LoaiGiay loaiGiay) {
         AlertDialog.Builder builder = new AlertDialog.Builder(LoaiGiayActivity.this);
         inflater = getLayoutInflater();
         view = inflater.inflate(R.layout.dialog_themloaigiay, null);
         builder.setView(view);
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
-        edtmaloaigiay = view.findViewById(R.id.edtmaloaigiay);
         edttenloaigiay = view.findViewById(R.id.edttenloaigiay);
         btnThem = view.findViewById(R.id.btnThem);
         btnHuy = view.findViewById(R.id.btnHuy);
@@ -65,7 +65,7 @@ public class LoaiGiayActivity extends AppCompatActivity {
         btnThem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int maloai = Integer.parseInt(edtmaloaigiay.getText().toString());
+                 maloai = loaiGiay.getMaloai();
                 String tenloai = edttenloaigiay.getText().toString();
 
                 LoaiGiay loaiGiay = new LoaiGiay(maloai,tenloai);
