@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:text="Bitis Hunter Air 4"
+                android:text="Nike chỉnh sửa"
                 android:textColor="@color/black"
                 android:textSize="19sp"
                 android:textStyle="bold"
@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="2.499.000VNĐ"
+                android:text="11111VNĐ"
                 android:layout_gravity="left"
                 android:textColor="#F58F8C8C"
                 android:textSize="19sp"
