@@ -8,7 +8,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
@@ -31,7 +30,6 @@ public class GioHangActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gio_hang);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         recycleviewGioHang = findViewById(R.id.recycleviewGioHang);
         showList();
 

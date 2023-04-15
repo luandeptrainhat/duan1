@@ -1,13 +1,11 @@
 package com.example.myapplication.dao;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.myapplication.database.Dbhelper;
 import com.example.myapplication.model.LoaiGiay;
-import com.example.myapplication.model.Product;
 
 import java.util.ArrayList;
 //
@@ -30,13 +28,5 @@ public class LoaiGiayDAO {
             }while (cursor.moveToNext());
         }
         return  list;
-    }
-    public boolean themLoaiGiay (LoaiGiay loaiGiay){
-        SQLiteDatabase sqLiteDatabase = dbhelper.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("maloaigiay",loaiGiay.getMaloai());
-        contentValues.put("tenloai",loaiGiay.getTenloai());
-        long check  = sqLiteDatabase.insert("LOAIGIAY",null,contentValues);
-        return check > 0;
     }
 }

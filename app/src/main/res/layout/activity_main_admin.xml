@@ -5,21 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
-    android:background="@drawable/gradient"
+    android:background="@android:color/transparent"
 
 
     tools:context=".activity.MainKhach">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient"
         android:orientation="vertical">
 
 
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:background="@drawable/gradient"
+            android:background="#AAA8A8"
             android:layout_width="match_parent"
 
             android:layout_height="50dp"/>
@@ -45,7 +44,6 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_marginTop="50dp"
-        android:background="@drawable/gradient"
         android:layout_height="match_parent">
 
 
@@ -56,7 +54,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient"
+        android:background="#E11F1F1F"
         android:padding="10dp"
         android:orientation="vertical">
 
@@ -75,7 +73,7 @@
             android:layout_width="290dp"
             android:layout_height="40dp"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/gradient_edittext"
+            android:background="#ABBFBFBF"
             android:iconifiedByDefault="false"
             android:drawableLeft="@drawable/baseline_search_24"
             android:padding="10dp"
@@ -90,7 +88,7 @@
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
-            android:background="@drawable/gradient_edittext"
+            android:background="#ABBFBFBF"
             android:src="@drawable/baseline_sort_24" />
 
 
@@ -107,20 +105,168 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:orientation="vertical">
-
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/loaigiay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:orientation="vertical">
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewLoai"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/lineartheothao"
+                android:layout_width="75dp"
+                android:layout_height="37dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shapemain3"
+
+
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/giaythethao"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="0dp"
+                    app:civ_circle_background_color="@color/white"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Giày thể thao"
+                    android:textColor="@color/black"
+                    android:textSize="7sp"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearleonui"
+                android:layout_width="75dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shapemain3"
+
+                android:orientation="vertical"
+
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/giayleonui"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="0dp"
+                    app:civ_circle_background_color="@color/white"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Giày leo núi"
+                    android:textColor="@color/black"
+                    android:textSize="7sp"
+
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:id="@+id/linearda"
+                android:layout_height="37dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shapemain3"
+                android:orientation="vertical"
+                android:padding="3dp"
+
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/giayda"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="0dp"
+                    app:civ_circle_background_color="@color/white"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Giày Da"
+                    android:textColor="@color/black"
+                    android:textSize="7sp"
+
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearthoitrang"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shapemain3"
+                android:orientation="vertical"
+                android:padding="3dp"
+
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/giaythoitrang"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="0dp"
+                    app:civ_circle_background_color="@color/white"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Giày Thời Trang"
+                    android:textColor="@color/black"
+                    android:textSize="7sp"
+
+
+                    />
+
+            </LinearLayout>
+
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -132,17 +278,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sản phẩm đặc biệt"
-                android:textColor="#9d6855"
+                android:textColor="@color/white"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="140dp"
                 android:text="Xem tất cả"
-                android:textColor="#9d6855"
+                android:textColor="@color/white"
                 android:textSize="14sp"
 
                 />
@@ -154,15 +299,7 @@
             android:id="@+id/fragmentchung"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:orientation="vertical" >
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycleview1"
-                android:background="@android:color/transparent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
+            android:orientation="vertical" />
 
     </LinearLayout>
 
@@ -175,7 +312,7 @@
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FEE686"
+        android:backgroundTint="#E1DCDC"
         app:fabCradleMargin="15dp"
         app:fabCradleVerticalOffset="10dp"
         app:fabCradleRoundedCornerRadius="20dp"
@@ -196,7 +333,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/icon_trangchu"
-        android:backgroundTint="#FEE686"
         app:layout_anchor="@id/bottomAppBar"/>
 
 
@@ -210,8 +346,7 @@
         app:headerLayout="@layout/header_layout"
         app:menu="@menu/menu_navigation"
         android:layout_gravity="start"
-        android:backgroundTint="#FEC5E6"
-
+        android:padding="10dp"
         android:fitsSystemWindows="true"/>
 </androidx.drawerlayout.widget.DrawerLayout>
 

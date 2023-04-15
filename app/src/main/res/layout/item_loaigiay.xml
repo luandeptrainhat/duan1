@@ -1,55 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="160dp"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="25dp"
-    android:padding="10dp"
-    android:background="@drawable/shape4"
-    android:orientation="vertical"
-    >
-
-    <Button
-        android:id="@+id/capNhat"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_gravity="right"
-        android:layout_marginTop="-5dp"
-        android:backgroundTint="#AED8D4D4"
-        android:drawableBottom="@drawable/sua"
-        />
-
-    <ImageView
-        android:id="@+id/anh"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:src="@drawable/air"
-
-        />
-
-
-
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <TextView
-        android:id="@+id/txtTenLoaiGiay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Nike Air Fly"
-        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:id="@+id/tenloai"
+        android:textAlignment="center"
         android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/gia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="2.344.999 VNĐ"
+        android:layout_margin="10dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:padding="10dp"
         android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-
-
+        android:background="@drawable/item_loaigiay"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
